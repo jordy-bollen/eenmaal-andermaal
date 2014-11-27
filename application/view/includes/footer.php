@@ -1,3 +1,0 @@
-testHTML footer
-</body>
-</html>
