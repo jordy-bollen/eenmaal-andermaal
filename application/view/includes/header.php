@@ -6,7 +6,7 @@
 
     <title>Eenmaal andermaal</title>
 
-    <link rel="stylesheet" href="css/styles.css?v=1.0">
+    <link rel="stylesheet" href="<?php echo SCRIPT_DIR ?>css/style.css">
 
 </head>
 

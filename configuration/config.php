@@ -19,3 +19,8 @@ $connectie = array(
  * Controller waar de website moet landen
  */
 $autoladen['startController'] = 'index';
+
+/**
+ * Variabele voor de base url
+ */
+$autoladen['baseUrl'] = 'http://localhost/eenmaal-andermaal/';
