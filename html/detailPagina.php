@@ -106,8 +106,17 @@
                         </div> 
                         <div id="biedingen">
                            <p>Biedingen</p>
-                            <p1>Plaats bod</p1>
-                            
+                           <p>Plaats bod</p>
+                           <form action="" method="post">
+                            <input type="text" name="bod" id="bod" width="10px">  
+                            <input type="submit" value="Bied nu">
+                               <hr>
+                            <p>Gebruiker:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Bod:</p>
+                               <hr>
+                            <p>Sjonnie55&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$500</p>
+                            <p>Sjonnie55&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$500</p>
+                            <p>Sjonnie55&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$500</p>
+                           </form>
                         </div>
                     </div> 
                    

@@ -267,9 +267,21 @@
 	.add-bottom { margin-bottom: 20px !important; }
 
 
+
 /*
 	CSS WEBSITE!
 */
+
+#biedingen p, hr
+{
+margin: 0;
+}
+
+#biedingen input
+{
+width:100px;
+display: inline-block;
+}
 
 
 
