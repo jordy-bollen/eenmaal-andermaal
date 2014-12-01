@@ -324,3 +324,7 @@ border:none;
     width: 115px;
 }
 
+#registratievelden {
+
+	border:1px solid red;
+}

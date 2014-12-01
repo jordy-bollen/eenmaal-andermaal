@@ -81,7 +81,7 @@
         ==================================================== -->
         <div id="content">
             <div id="rubriekenBalk">
-                <div class="four columns">
+                <div class="two columns">
                     <p>rubriek1</p>
                     <p>rubriek2</p>
                     <p>rubriek3</p>
