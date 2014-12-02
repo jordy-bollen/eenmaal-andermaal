@@ -268,9 +268,21 @@
 	.add-bottom { margin-bottom: 20px !important; }
 
 
+
 /*
 	CSS WEBSITE!
 */
+
+#biedingen p, hr
+{
+margin: 0;
+}
+
+#biedingen input
+{
+width:100px;
+display: inline-block;
+}
 
 
 
@@ -325,6 +337,7 @@ border:none;
     width: 115px;
 }
 
+<<<<<<< HEAD
 .zoekknop{
     border: 1px solid #ff9000;
     height: 31px;
@@ -341,4 +354,9 @@ border:none;
 .zoekveld{
 	float:left;
     border: 1px solid #ff9000;
+=======
+#registratievelden {
+
+	border:1px solid red;
+>>>>>>> f5b3e71c1b48fafb9a2536380216416556be4d5c
 }
