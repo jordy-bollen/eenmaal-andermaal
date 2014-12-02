@@ -340,3 +340,9 @@ border:none;
 
 	border:1px solid red;
 }
+
+.resizeTextBox
+{
+	width: 250px;
+	height: 150px;
+}
