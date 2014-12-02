@@ -79,7 +79,7 @@
             <input type='text' name='mobiel' class="invoerveld" maxlength=""50 />
 
             <input type='submit' name='submit' value='Registreer' class="registratiebutton"/>
-            <p><h5 class="veldenmet">Velden met een * zijn verplicht.</h5><p>
+            <p><h6 class="veldenmet">Velden met een * zijn verplicht.</h6><p>
             </div>
         </div>
     </form> 

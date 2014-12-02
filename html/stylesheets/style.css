@@ -12,7 +12,7 @@ img, img.scale-with-grid { outline: 0; max-width: 100%; height: auto; }
 }
 
 .geslacht{
-	width: 55px;
+	width: 62px;
 }
 
 .lengte {
@@ -31,4 +31,33 @@ img, img.scale-with-grid { outline: 0; max-width: 100%; height: auto; }
 
 .veldenmet {
 	margin-left: 95px;
+}
+  /*Contact*/
+
+.tekstlables{
+ height:100px;
+}
+
+.tekstlables .pmargin {
+  margin-top:28px;
+}
+
+.inputvelden{
+ margin-top: 15px;
+
+}
+
+.inputvelden .input
+{
+ margin-top:17px;
+ width: 62px;
+}
+
+.verplicht{
+	margin-bottom: 0px;
+	margin-top: -15px;
+}
+
+.verstuur{
+	margin-top: -5px;
 }
