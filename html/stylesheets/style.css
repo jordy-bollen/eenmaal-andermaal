@@ -8,9 +8,6 @@ div
 img, img.scale-with-grid { outline: 0; max-width: 100%; height: auto; }
 
 #registratievelden .invoerveld{
-<<<<<<< HEAD
-	width:60px;
-=======
 	width:150px;
 }
 
@@ -34,5 +31,4 @@ img, img.scale-with-grid { outline: 0; max-width: 100%; height: auto; }
 
 .veldenmet {
 	margin-left: 95px;
->>>>>>> 943b28e2dd834b254d6b791ae907e637e8b78948
 }
