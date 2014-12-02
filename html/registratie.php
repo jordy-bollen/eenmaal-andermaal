@@ -96,7 +96,7 @@
                     <p>rubriek12</p>
                 </div>
             </div>
-			<?php include 'registratieformulier.php'; ?>
+			<?php include 'registratiepagina.php'; ?>
     </div>
 </div>
 
