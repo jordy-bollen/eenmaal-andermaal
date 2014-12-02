@@ -8,6 +8,27 @@ div
 img, img.scale-with-grid { outline: 0; max-width: 100%; height: auto; }
 
 #registratievelden .invoerveld{
-	border:1px solid red;
-	width:60px;
+	width:150px;
+}
+
+.geslacht{
+	width: 55px;
+}
+
+.lengte {
+	width: 160px;
+}
+
+.datum {
+	width: 155px;
+	margin-bottom:20px;
+
+}
+
+.registratiebutton {
+	margin-left: 250px;
+}
+
+.veldenmet {
+	margin-left: 95px;
 }
