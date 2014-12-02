@@ -30,8 +30,9 @@
 		border: 0;
 		font-size: 100%;
 		font: inherit;
-		vertical-align: baseline; }
-	article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+		vertical-align: baseline; 
+		}
+	article, aside, details, figcaption, figure, footer, 	header, hgroup, menu, nav, section {
 		display: block; }
 	body {
 		line-height: 1; }
@@ -336,7 +337,26 @@ border:none;
     width: 115px;
 }
 
+<<<<<<< HEAD
+.zoekknop{
+    border: 1px solid #ff9000;
+    height: 31px;
+    position: relative;
+    width: 120px;
+    background-color: #ff9000;
+    color:#FFF;
+}
+
+.zoeken{
+	height:42px;
+}
+
+.zoekveld{
+	float:left;
+    border: 1px solid #ff9000;
+=======
 #registratievelden {
 
 	border:1px solid red;
+>>>>>>> f5b3e71c1b48fafb9a2536380216416556be4d5c
 }
