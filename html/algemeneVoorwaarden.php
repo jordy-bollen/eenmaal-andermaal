@@ -144,11 +144,7 @@
         
            <!-- Footer 
         ==================================================== -->
-        <div id="footer">
-            <div class="sixteen columns">
-            <p>HIER KOMT ALLE FOOTER INFO - CONTACT ETC</p>
-            </div>
-        </div>
+           <?php include 'footer.php'; ?>
         
     </div>
 

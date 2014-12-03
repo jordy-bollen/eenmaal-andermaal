@@ -456,10 +456,19 @@ border:none;
 }
 /*--------------  FOOTER -----------------------*/
 
-.footer{
-	height:300px;
+.footer, .footer a
+{
+	height:50px;
 	background-color: #4a9ec9;
-	margin-top: -25px;
+	color: #FFF;
+    	border-radius: 5px;	
+	text-align: center;		
+}
+
+.footer p
+{
+	margin: 0;
+	padding: 0;
 }
 
 .resizeTextBox

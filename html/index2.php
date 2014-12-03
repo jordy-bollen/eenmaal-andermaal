@@ -92,6 +92,19 @@
                     <a href="#"> <li>rubiek 1</li></a>
                     <a href="#">  <li>rubiek 1</li></a>
                     <a href="#">  <li>rubiek 1</li></a>
+                    <a href="#"><li>rubiek 1</li></a>
+                    <a href="#"><li>rubiek 1</li></a>
+                    <a href="#"> <li>rubiek 1</li></a>
+                    <a href="#"> <li>rubiek 1</li></a>
+                    <a href="#"> <li>rubiek 1</li></a>
+                    <a href="#">  <li>rubiek 1</li></a>
+                    <a href="#">  <li>rubiek 1</li></a>
+                    <a href="#"><li>rubiek 1</li></a>
+                    <a href="#"><li>rubiek 1</li></a>
+                    <a href="#"> <li>rubiek 1</li></a>
+                    <a href="#"> <li>rubiek 1</li></a>
+                 
+                    
                 </ul>
             </div>
             
@@ -172,9 +185,8 @@
             <!-- Footer
             ====================================================
             -->
-            <div class="sixteen columns footer">
-                <p>HIER KOMT ALLE FOOTER INFO - CONTACT ETC</p>
-            </div>
+            
+          <?php include 'footer.php'; ?>
             
         </body>
     </html>
