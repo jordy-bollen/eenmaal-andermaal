@@ -69,14 +69,15 @@
         
          <!-- Zoekbalk 
         ==================================================== -->
-        <div id="zoekBalk">
-            <div class="nine columns">
+       <div class="nine columns ">
                 <p>Witruimte -> e.v.t breadcrumbs?</p>
             </div>
-            <div class="six columns">
-                <p>zoekbalk + knop</p>
+            <div class="seven columns zoeken">
+                <form>
+                    <input type="text" class="zoekveld"></input>
+                    <button class="zoekknop">ZOEK</button>
+                </form>
             </div>
-        </div>
         
          <!-- Kopteksten 
         ==================================================== -->
