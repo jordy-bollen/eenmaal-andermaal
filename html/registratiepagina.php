@@ -1,6 +1,6 @@
 <!-- Registratie pagina
 ==================================================== -->
-<div class="thirtheen columns"><h3>Registreren</h3>
+<div class="thirtheen columns">
     <form id='register' action='' method='post'
     accept-charset='UTF-8'>
     <input type='hidden' name='submitted' id='submitted' value='1'/>
