@@ -57,11 +57,11 @@
             ==================================================== -->
             
             <div class="sixteen columns menubalk">
-                <a href="/pagina">Home</a>
+                <a href="/eenmaal-andermaal/html/index2.php">Home</a>
                 <a href="/pagina">Veilingen</a>
-                <a href="/pagina">Registreren</a>
-                <a href="/pagina">Algemene voorwaarden</a>
-                <a href="/pagina">Contact</a>
+                <a href="/eenmaal-andermaal/html/registratie.php">Registreren</a>
+                <a href="/eenmaal-andermaal/html/algemeneVoorwaarden.php">Algemene voorwaarden</a>
+                <a href="/eenmaal-andermaal/html/contactpagina.php">Contact</a>
             </div>
             
             

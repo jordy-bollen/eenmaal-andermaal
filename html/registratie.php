@@ -35,25 +35,39 @@
       
         <!-- Bovenste balk: logo, headerplaatje en inlogmenu 
         ==================================================== -->
-        <div id="topBalk">
-            <div class="four columns">
-                <img src="images/logo2.png">
+            <div class="topBalk">
+                <div class="eleven columns logo">
+                    <img src="images/logo.png">
+                </div>
+                <div class="five columns login">
+                    <form>
+                        <label for="regularInput">Gebruikersnaam</label>
+                        <input type="text" id="regularInput" />
+                        <label for="regularInput">Wachtwoord</label>
+                        <input type="password" id="regularInput" />
+                        
+                        <label for="regularCheckbox">
+                            <input type="checkbox" id="regularCheckbox" value="checkbox 1" />
+                            <span>Onthoud mij</span>
+                            
+                            <button>Login</button>
+                            
+                        </label>
+                    </form>
+                </div>
+                
             </div>
-            <div class="ten columns">
-                <img src="images/headerImageTest.jpg">
-            </div>  
-            <div class="two columns">
-                <p>HIER KOMT INLOG GEDEELTE -- INLOG INLOG</p>
-            </div> 
-        </div>
         
         <!-- Menu balk: menu met knoppen
         ==================================================== -->
-        <div id="menuBalk">
-            <div class="sixteen columns">
-                <p>HIER KOMEN KNOPPEN MENU</p>
+    <div class="sixteen columns menubalk">
+                <a href="/eenmaal-andermaal/html/index2.php">Home</a>
+                <a href="/pagina">Veilingen</a>
+                <a href="/eenmaal-andermaal/html/registratie.php">Registreren</a>
+                <a href="/eenmaal-andermaal/html/algemeneVoorwaarden.php">Algemene voorwaarden</a>
+                <a href="/eenmaal-andermaal/html/contactpagina.php">Contact</a>
             </div>
-        </div>
+            
         
          <!-- Zoekbalk 
          ==================================================== -->
@@ -68,34 +82,23 @@
         
          <!-- Kopteksten 
          ==================================================== -->
-         <div id="rubriekenKop">
-            <div class="four columns">
-                <p>Rubrieken</p>
+          <h2>Rubrieken</h2>
+            <div class="three columns rubriekenmenu">
+                <ul>
+                    <a href="#"><li>rubiek 1</li></a>
+                    <a href="#"><li>rubiek 1</li></a>
+                    <a href="#"> <li>rubiek 1</li></a>
+                    <a href="#"> <li>rubiek 1</li></a>
+                    <a href="#"> <li>rubiek 1</li></a>
+                    <a href="#">  <li>rubiek 1</li></a>
+                    <a href="#">  <li>rubiek 1</li></a>
+                </ul>
             </div>
-            <div class="twelve columns">
-                <p>Leeg ruimte</p>
-            </div>
-        </div>
         
         <!-- Rubriekenbalk + advertenties middenscherm
         ==================================================== -->
         <div id="content">
-            <div id="rubriekenBalk">
-                <div class="two columns">
-                    <p>rubriek1</p>
-                    <p>rubriek2</p>
-                    <p>rubriek3</p>
-                    <p>rubriek4</p>
-                    <p>rubriek5</p>
-                    <p>rubriek6</p>
-                    <p>rubriek7</p>
-                    <p>rubriek8</p>
-                    <p>rubriek9</p>
-                    <p>rubriek10</p>
-                    <p>rubriek11</p>
-                    <p>rubriek12</p>
-                </div>
-            </div>
+     
 			<?php include 'registratiepagina.php'; ?>
     </div>
 </div>
