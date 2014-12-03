@@ -33,6 +33,7 @@ img, img.scale-with-grid { outline: 0; max-width: 100%; height: auto; }
   margin-top:-1px;
   margin-bottom: 29px;
   margin-left: 30px;
+  font-weight: bold;
 }
 .inputvelden{
  margin-top: 15px;
