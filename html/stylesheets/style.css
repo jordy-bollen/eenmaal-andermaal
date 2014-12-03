@@ -1,66 +1,52 @@
-
-
 img, img.scale-with-grid { outline: 0; max-width: 100%; height: auto; }
 
+/*Registeren*/
 #registratievelden .invoerveld{
 	width:150px;	
 }
-
 #registratievelden{
 	margin-left: 30px;
 }
-
 .geslacht{
 	width: 62px;
 }
-
 .lengte {
 	width: 160px;
 }
-
 .datum {
 	width: 155px;
 	margin-bottom:20px;
 }
-
 .registratiebutton {
 	margin-left: 250px;
 }
-
 .veldenmet {
 	margin-left: 175px;
 	margin-top: -25px;
-
 }
-  /*Contact*/
 
+  /*Contact*/
 .tekstlables{
  height:100px;
 }
-
 .tekstlables .pmargin {
   margin-top:-1px;
   margin-bottom: 29px;
   margin-left: 30px;
 }
-
 .inputvelden{
  margin-top: 15px;
 
 }
-
 .inputvelden .input
 {
  width: 62px;
  margin-top: -15px
 }
-
 .verplicht{
 	margin-bottom: 0px;
 	margin-top: -15px;
 }
-
 .verstuur{
 	margin-top: -5px;
 }
-
