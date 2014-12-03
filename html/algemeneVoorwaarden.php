@@ -105,8 +105,10 @@
                  </div>
                  <br>
                  <br>
-                  <hr>
+                 <hr>
                  <br>
+                 
+                 <!-- TXT.php files zijn grote lappen tekst, vandaar dat ze extern opgeslagen zijn -->
                  <div class="twelve columns">
                     <?php include 'AlgemeneVoorwaardenTXT.php'; ?>
                      <br>

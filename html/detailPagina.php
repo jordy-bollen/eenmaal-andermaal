@@ -5,7 +5,7 @@
 	<!-- Basic Page Needs
   ================================================== -->
 	<meta charset="utf-8">
-	<title>Your Page Title Here :)</title>
+	<title>Detailpagina</title>
 	<meta name="description" content="">
 	<meta name="author" content="">
 
