@@ -463,8 +463,7 @@ margin-bottom: -25px;
 	color: #FFF;
     	border-radius: 5px;	
 	text-align: center;
-	margin-top:20px;			
-
+	margin-top:20px;		
 }
 
 .footer p
@@ -504,4 +503,11 @@ margin-bottom: -25px;
 	margin-bottom: 5px;
 }
 
+.main 
+{
+	-webkit-box-shadow:0 0 10px rgba(0, 0, 0, 0.5);
+	-moz-box-shadow:0 0 10px rgba(0, 0, 0, 0.5);
+	box-shadow:0 0 10px rgba(0, 0, 0, 0.5);
+	padding: 5px;
+}
 
