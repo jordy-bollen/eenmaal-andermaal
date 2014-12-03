@@ -53,7 +53,7 @@
 ================================================== */
 	body {
 		background: #fff;
-		font: 14px/21px "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+		font: 14px/21px "verdana";
 		color: #444;
 		-webkit-font-smoothing: antialiased; /* Fix for webkit rendering */
 		-webkit-text-size-adjust: 100%;
@@ -64,7 +64,7 @@
 ================================================== */
 	h1, h2, h3, h4, h5, h6 {
 		color: #181818;
-		font-family: "Georgia", "Times New Roman", serif;
+		font-family: "verdana";
 		font-weight: normal; }
 	h1 a, h2 a, h3 a, h4 a, h5 a, h6 a { font-weight: inherit; }
 	h1 { font-size: 46px; line-height: 50px; margin-bottom: 14px;}
@@ -133,13 +133,13 @@
 	input[type="submit"],
 	input[type="reset"],
 	input[type="button"] {
-		background: #eee; /* Old browsers */
-		background: #eee -moz-linear-gradient(top, rgba(255,255,255,.2) 0%, rgba(0,0,0,.2) 100%); /* FF3.6+ */
-		background: #eee -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,.2)), color-stop(100%,rgba(0,0,0,.2))); /* Chrome,Safari4+ */
-		background: #eee -webkit-linear-gradient(top, rgba(255,255,255,.2) 0%,rgba(0,0,0,.2) 100%); /* Chrome10+,Safari5.1+ */
-		background: #eee -o-linear-gradient(top, rgba(255,255,255,.2) 0%,rgba(0,0,0,.2) 100%); /* Opera11.10+ */
-		background: #eee -ms-linear-gradient(top, rgba(255,255,255,.2) 0%,rgba(0,0,0,.2) 100%); /* IE10+ */
-		background: #eee linear-gradient(top, rgba(255,255,255,.2) 0%,rgba(0,0,0,.2) 100%); /* W3C */
+/*		background: #eee; /* Old browsers */
+		/*background: #eee -moz-linear-gradient(top, rgba(255,255,255,.2) 0%, rgba(0,0,0,.2) 100%); /* FF3.6+ */
+		/*background: #eee -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,.2)), color-stop(100%,rgba(0,0,0,.2))); /* Chrome,Safari4+ */
+		/*background: #eee -webkit-linear-gradient(top, rgba(255,255,255,.2) 0%,rgba(0,0,0,.2) 100%); /* Chrome10+,Safari5.1+ */
+		/*background: #eee -o-linear-gradient(top, rgba(255,255,255,.2) 0%,rgba(0,0,0,.2) 100%); /* Opera11.10+ */
+		/*background: #eee -ms-linear-gradient(top, rgba(255,255,255,.2) 0%,rgba(0,0,0,.2) 100%); /* IE10+ */
+		/*background: #eee linear-gradient(top, rgba(255,255,255,.2) 0%,rgba(0,0,0,.2) 100%); /* W3C */
 	  border: 1px solid #aaa;
 	  border-top: 1px solid #ccc;
 	  border-left: 1px solid #ccc;
@@ -273,8 +273,31 @@
 	CSS WEBSITE!
 */
 
-#biedingen p, hr
-{
+h1{
+    border-bottom: 1px solid #ff9000;
+    border-top: 1px solid #ff9000;
+    font-size: 27px;
+    line-height: 40px;    
+}
+
+h2{
+    font-size: 22px;
+    line-height: 40px;
+    margin-bottom: 0;
+}
+
+h3{
+	font-size:17px;
+	text-align: center;
+}
+
+h4{
+	border-bottom: 1px solid #ff9000;
+    border-top: 1px solid #ff9000;
+	margin-bottom: 10px;
+}
+
+#biedingen p, hr{
 margin: 0;
 }
 
@@ -283,8 +306,6 @@ margin: 0;
 width:100px;
 display: inline-block;
 }
-
-
 
 .topBalk
 {
@@ -310,11 +331,12 @@ border:none;
 
 .menubalk a{
 	height:40px;
-	width:160px;
+	width:186px;
 	display:block;
 	float:left;
 	color:#FFF;
 	border-right: 2px solid #8fdaff;
+	border-bottom: 2px solid #8fdaff;
 	text-align: center;
 	padding-top:10px;
 	text-decoration: none;
@@ -322,7 +344,7 @@ border:none;
 
 .menubalk a:hover{
 	height:40px;
-	width:160px;
+	width:186px;
 	background-color:#ff9000;
 }
 
@@ -337,9 +359,10 @@ border:none;
     width: 115px;
 }
 
-<<<<<<< HEAD
+
+/*---------------ZOEKEN --------------------*/
 .zoekknop{
-    border: 1px solid #ff9000;
+    border:1px solid #ff9000;
     height: 31px;
     position: relative;
     width: 120px;
@@ -349,14 +372,92 @@ border:none;
 
 .zoeken{
 	height:42px;
+	margin-top:20px;
 }
 
 .zoekveld{
 	float:left;
-    border: 1px solid #ff9000;
-=======
-#registratievelden {
+    border: 1px solid #ff9000 !important;
+}
 
+/*--------------------Registratie ofzo --------------------------*/
+
+#registratievelden {
 	border:1px solid red;
->>>>>>> f5b3e71c1b48fafb9a2536380216416556be4d5c
+}
+
+
+/*-------------- RUBRIEKEN --------------------*/
+
+.rubriekenmenu{
+	background-color: #b8e3f9;
+
+}
+
+.rubriekenmenu a{
+	padding-top:10px;
+	margin-top:10px;
+	text-decoration: none;
+}
+
+.rubriekenmenu li{
+    background-image: url("../images/orange-arrow.png");
+    background-position: 140px 17px;
+    background-repeat: no-repeat;
+    border-bottom: 1px solid #ff9000;
+    height: 30px;
+    margin-bottom: 0px;
+    padding:10px 0px 0px 10px;
+}
+
+.rubriekenmenu li:hover{
+	background-color:#ff9517;
+	color:#FFF;	
+	background-image: url("../images/white-arrow.png");
+	background-position: 140px 17px;
+    background-repeat: no-repeat;
+}
+/*-------------- CONTENT --------------------*/
+
+.content{
+	margin-left:20px;
+	width:81%;
+}
+
+/*--------------- content/Veiling verlopen ------------*/
+
+.veiling{
+	width:90%;
+	border:1px solid #f1efef;
+	box-shadow: 10px,10px,10px,10px;
+	margin-bottom:15px;
+    margin-left: 32px !important;
+}
+
+.veilingverlopen{
+	background-color: #ffdbdb;
+	width:100%;
+	height:26px;
+}
+
+.veiling span{
+	text-align: center;
+	margin-left:57px;
+}
+
+.veiling img{
+	background-position: center;
+	margin-left:23px;
+}
+
+.veiling p{
+	text-align: center;
+	margin-top:10px;
+}
+/*--------------  FOOTER -----------------------*/
+
+.footer{
+	height:300px;
+	background-color: #4a9ec9;
+	margin-top: -25px;
 }
