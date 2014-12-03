@@ -78,7 +78,7 @@
         <div id="content">
              
              <div class="thirtheen columns"><h3>Algemene Gebruiksvoorwaarden</h3>
-                 
+                 <div id="voorwaardenKlein">
                  <div class="six columns">
                     <div id="voorwaarden1">
                         <strong>I. Algemene Gebruiksvoorwaarden</strong><br>
@@ -100,6 +100,7 @@
                         <button href="#regelsPlaatsen">Lees meer</button>
                     </div>
                  </div>
+                     </div>
                  <br>
                  <br>
                  <hr>
