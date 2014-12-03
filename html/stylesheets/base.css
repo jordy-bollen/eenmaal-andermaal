@@ -52,7 +52,7 @@
 /* #Basic Styles
 ================================================== */
 	body {
-		background: #fff;
+		background-color: #fff;
 		font: 14px/21px "verdana";
 		color: #444;
 		-webkit-font-smoothing: antialiased; /* Fix for webkit rendering */
@@ -322,6 +322,7 @@ display: inline-block;
 .login{
 
 border:none;
+margin-bottom: -25px;
 }
 
 .menubalk{
@@ -359,6 +360,9 @@ border:none;
     width: 115px;
 }
 
+.login button:hover  {
+  background-color:#ff9000;
+}
 
 /*---------------ZOEKEN --------------------*/
 .zoekknop{
@@ -471,4 +475,10 @@ border:none;
 {
 	width: 250px;
 	height: 150px;
+}
+
+.container 
+{
+	background-color: #FFF;
+	
 }

@@ -71,7 +71,9 @@
                                 };
                         };
 
-                    </script>
+                    </script> 
+                    
+
                     <br><br>
                     <input type='submit' name='submit' value='Advertentie plaatsen' />
                 </div>
