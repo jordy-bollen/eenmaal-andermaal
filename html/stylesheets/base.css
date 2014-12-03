@@ -461,3 +461,9 @@ border:none;
 	background-color: #4a9ec9;
 	margin-top: -25px;
 }
+
+.resizeTextBox
+{
+	width: 250px;
+	height: 150px;
+}

@@ -5,7 +5,7 @@
 	<!-- Basic Page Needs
   ================================================== -->
 	<meta charset="utf-8">
-	<title>Detailpagina</title>
+	<title>Contact</title>
 	<meta name="description" content="">
 	<meta name="author" content="">
 
@@ -72,58 +72,38 @@
                 <p>Rubrieken</p>
             </div>
             <div class="twelve columns">
-                <p>PRODUCT TITEL</p>
+                <p>WIT RUIMTE</p>
             </div>
         </div>
         
-        <!-- Rubriekenbalk + advertenties middenscherm
+        <!-- Contact
         ==================================================== -->
         <div id="content">
-              <?php include 'rubriekenbalk.php'; ?> 
-            
-            <div id="veiling">
-               <div class="thirteen columns">
-                  
-                   <!-- "Linker" gedeelte van detailpagina -->
-                  <div class="six columns">
-                        <div id="advertentieFotos">
-                            <img src="images/advertentieFotos.jpg">
-                         </div>
-                        <div id ="countdownTimer">  
-                            <p>RESTERENDE TIJD - 14uur 20min 15s</p>
-                        </div>
-                        <div id ="productOmschrijving">  
-                            <p>PRODUCTOMSCHRIJVING</p>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sagittis nulla turpis, sagittis pulvinar justo congue id. Duis ac dolor eu eros                                      dapibus consequat nec in purus. Donec sed erat molestie, scelerisque leo eget, laoreet lorem. Sed non est vestibulum, congue enim eu, aliquam eros.                                Pellentesque condimentum dapibus libero, a ullamcorper felis finibus eget. Quisque commodo sapien lacus, ac efficitur sem efficitur vel.                                       </p>
-                        </div>
-                        
-                  </div>
-                 
-                   <!-- "Rechter" gedeelte van detailpagina -->
-                   <div class="six columns"> 
-                        <div id="gebruikersInfo">
-                            <img src="images/verkoperInfo.png">
-                        </div> 
-                        <div id="biedingen">
-                           <p>Biedingen</p>
-                           <p>Plaats bod</p>
-                           <form action="" method="post">
-                            <input type="text" name="bod" id="bod" width="10px">  
-                            <input type="submit" value="Bied nu">
-                               <hr>
-                            <p>Gebruiker:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Bod:</p>
-                               <hr>
-                            <p>Sjonnie55&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$500</p>
-                            <p>Sjonnie55&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$500</p>
-                            <p>Sjonnie55&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$500</p>
-                           </form>
-                        </div>
-                    </div> 
-                   
-               </div>
+            <?php include 'rubriekenbalk.php'; ?>
+            <div class="four column tekstlables">
+                <p class="pmargin">Aanhef*</p>
+                <p class="pmargin">Voornaam*</p>
+                <p class="pmargin">Achternaam*</p>
+                <p class="pmargin">E-mailadres*</p>
+                <p class="pmargin">Telefeoon</p>
+                <p class="pmargin">Onderwerp*</p>
+                <p class="pmargin">Bericht*</p>
             </div>
-        </div>
-        
+
+            <div class="four column inputvelden">
+                <select name="aanhef" class="input">
+                    <option value="Dhr.">Dhr.</option>
+                    <option value="Mevr.">Mevr.</option>
+                </select>
+                <input type="text" name="Voornaam" maxlength="50" size="30">
+                <input type="text" name="Achternaam" maxlength="50" size="30">
+                <input type="text" name="emailadres" maxlength="80" size="30">
+                <input type="text" name="telefoon" maxlength="30" size="30">
+                <input type="text" name="onderwerp" maxlength="50" size="30">
+                <textarea  name="bericht" maxlength="1000" cols="40" rows="5"></textarea><p class="verplicht"><h6>Velden met * zijn verplicht.</p></h6>
+                <input type="submit" value="Versturen" class="verstuur">
+            </div>
+
            <!-- Footer 
         ==================================================== -->
         <div id="footer">
@@ -133,6 +113,7 @@
         </div>
         
     </div>
+
 
 </body>
 </html>
