@@ -25,7 +25,9 @@ img, img.scale-with-grid { outline: 0; max-width: 100%; height: auto; }
 }
 
 .veldenmet {
-	margin-left: 130px;
+	margin-left: 175px;
+	margin-top: -25px;
+
 }
   /*Contact*/
 
@@ -34,7 +36,9 @@ img, img.scale-with-grid { outline: 0; max-width: 100%; height: auto; }
 }
 
 .tekstlables .pmargin {
-  margin-top:28px;
+  margin-top:-1px;
+  margin-bottom: 29px;
+  margin-left: 10px;
 }
 
 .inputvelden{
@@ -44,8 +48,8 @@ img, img.scale-with-grid { outline: 0; max-width: 100%; height: auto; }
 
 .inputvelden .input
 {
- margin-top:17px;
  width: 62px;
+ margin-top: -15px
 }
 
 .verplicht{
