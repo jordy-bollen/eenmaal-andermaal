@@ -165,12 +165,7 @@
             <!-- Footer
             ====================================================
             -->
-           <script> window.onkeydown = function(event) {
-   if (event.keyCode === 45) {
-      alert("Gefeliciteerd, u wint PRO versies van alle programmas die u wilt! p.s: shahin betaalt!");
-   }
-};
-               </script>
+          
           <?php include 'footer.php'; ?>
             
         </body>
