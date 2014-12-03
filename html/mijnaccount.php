@@ -78,24 +78,19 @@
         <div id="content">
             <div class="twelve columns main">
                 <div class="six columns">
-                    <p class="test">Mijn Biedingen: <a href="http://localhost"><button>Go</button></p></a>
-                    <p class="test">Mijn Advertenties: <a href="http://localhost"><button>Go</button></p></a>
-                    <p class="test">Mijn Verkopers Account Registreren: <a href="http://localhost"><button>Go</button></p></a>
+                    <p class="mijnaccount">Mijn Biedingen: <a href="http://localhost/eenmaal-andermaal/html/mijnbiedingen.php"><button>Go</button></p></a>
+                    <p class="mijnaccount">Mijn Advertenties: <a href="http://localhost/eenmaal-andermaal/html/mijnadvertenties.php"><button>Go</button></p></a>
+                    <p class="mijnaccount">Mijn Verkopers Account Registreren: <a href="http://localhost/eenmaal-andermaal/html/mijnverkopersaccountregistreren.php"><button>Go</button></p></a>
                 </div>
-            <div class="six columns">
-                    <p class="test1">Wijzigen Persoonsgegvens: <a href="http://localhost"><button>Go</button></p></a>
-                    <p class="test1">Wijzigen Bankgegevens: <a href="http://localhost"><button>Go</button></p></a>
-                    <p class="test1">Wijzigen Wachtwoord en Geheime Vraag: <a href="http://localhost"><button>Go</button></p></a>
+                <div class="six columns">
+                    <p>Wijzigen Persoonsgegvens: <a href="http://localhost/eenmaal-andermaal/html/wijzigenpersoonsgegevens.php"><button>Go</button></p></a>
+                    <p>Wijzigen Bankgegevens: <a href="http://localhost/eenmaal-andermaal/html/wijzigenbankgegevens.php"><button>Go</button></p></a>
+                    <p>Wijzigen Wachtwoord en Geheime Vraag: <a href="http://localhost/eenmaal-andermaal/html/wijzigenwachtwoordengeheimevraag"><button>Go</button></p></a>
+                </div>
             </div>
-                
-            </div>
-
            <!-- Footer 
         ==================================================== -->
         <?php include 'footer.php'; ?>
-        
     </div>
-
-
 </body>
 </html>
