@@ -51,3 +51,12 @@ img, img.scale-with-grid { outline: 0; max-width: 100%; height: auto; }
 .verstuur{
 	margin-top: -5px;
 }
+/*Mijn Account*/
+.main {
+
+    border: 1px solid #000000;
+    border-style: solid;
+}
+.mijnaccount{
+	margin-left: 20px;
+}
