@@ -3,7 +3,11 @@
 img, img.scale-with-grid { outline: 0; max-width: 100%; height: auto; }
 
 #registratievelden .invoerveld{
-	width:150px;
+	width:150px;	
+}
+
+#registratievelden{
+	margin-left: 30px;
 }
 
 .geslacht{
@@ -17,7 +21,6 @@ img, img.scale-with-grid { outline: 0; max-width: 100%; height: auto; }
 .datum {
 	width: 155px;
 	margin-bottom:20px;
-
 }
 
 .registratiebutton {
@@ -38,7 +41,7 @@ img, img.scale-with-grid { outline: 0; max-width: 100%; height: auto; }
 .tekstlables .pmargin {
   margin-top:-1px;
   margin-bottom: 29px;
-  margin-left: 10px;
+  margin-left: 30px;
 }
 
 .inputvelden{
