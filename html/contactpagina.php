@@ -46,6 +46,7 @@
         <!-- Contact
         ==================================================== -->
         <div id="content">
+            <div class="twelve columns"><h1>Contact</h1></div>
             <div class="four column tekstlables">
                 <p class="pmargin">Aanhef*</p>
                 <p class="pmargin">Voornaam*</p>
