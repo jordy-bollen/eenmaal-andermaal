@@ -38,25 +38,11 @@
       
         <!-- Menu balk: menu met knoppen
         ==================================================== -->
-         <div class="sixteen columns menubalk">
-                <a href="/eenmaal-andermaal/html/index2.php">Home</a>
-                <a href="/pagina">Veilingen</a>
-                <a href="/eenmaal-andermaal/html/registratie.php">Registreren</a>
-                <a href="/eenmaal-andermaal/html/algemeneVoorwaarden.php">Algemene voorwaarden</a>
-                <a href="/eenmaal-andermaal/html/contactpagina.php">Contact</a>
-            </div>
+       <?php include 'menubalk.php'; ?>
         
          <!-- Zoekbalk 
         ==================================================== -->
-        <div class="nine columns ">
-                <p>Witruimte -> e.v.t breadcrumbs?</p>
-            </div>
-            <div class="seven columns zoeken">
-                <form>
-                    <input type="text" class="zoekveld"></input>
-                    <button class="zoekknop">ZOEK</button>
-                </form>
-            </div>
+         <?php include 'zoekbalk.php'; ?>
         
          <!-- Kopteksten 
         ==================================================== -->
