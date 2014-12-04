@@ -95,8 +95,8 @@
                  <div class="seven columns">
                     <div id="voorwaarden2">
                         <strong>II. Regels voor het plaatsen van advertenties</strong><br>
-                         Om onze site zo schoon en overzichtelijk mogelijk te houden, heeft EenmaalAndermaal regels opgesteld voor het plaatsen van een advertentie. U kunt deze regels                          raadplegen door het drukken op onderstaande onderwerpen: EenmaalAndermaal is een advertentieplatform Algemene regels voor het plaatsen van een advertentie op                            website Het plaatsen van een Advertentie Ontbindingsrecht Biedingen zijn niet bindend
-                         Regels voor het aanbieden van de prijs/betaalmethoden in een Advertentie Melden van illegale of inbreukmakende Advertenties op EenmaalAndermaal Wij geven geen                          garanties Vrijwaring dienst Advertenties en beperking aansprakelijkheid EenmaalAndermaal Wijzigingen De Advertentie kan ook elders gepubliceerd worden<br>
+                         Om onze site zo schoon en overzichtelijk mogelijk te houden, heeft EenmaalAndermaal regels opgesteld voor het plaatsen van een advertentie. U kunt deze regels                          raadplegen door te drukken op onderstaande onderwerpen:  Algemene regels voor het plaatsen van een advertentie op                            website Het plaatsen van een Advertentie 
+                         Regels voor het aanbieden van de prijs/betaalmethoden in een Advertentie Melden van illegale of inbreukmakende Advertenties op EenmaalAndermaal.<br>
                         <button href="#regelsPlaatsen">Lees meer</button>
                     </div>
                  </div>
