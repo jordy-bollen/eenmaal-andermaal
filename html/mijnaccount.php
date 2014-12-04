@@ -38,7 +38,8 @@
         
         <!-- Mijn account content
         ==================================================== -->
-        <div id="content">           
+        <div id="content">
+        <h1>Mijn Account</h1>           
             <div class="one column">&nbsp;</div>
             <div class="eleven columns main">
                 <div class="four columns">

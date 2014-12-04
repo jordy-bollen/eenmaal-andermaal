@@ -40,9 +40,8 @@
         <!-- Rubriekenbalk + advertenties middenscherm
         ==================================================== -->
         <div id="content">
-     
 			<?php include 'registratiepagina.php'; ?>
-    </div>
+        </div>
 
 
            <!-- Footer 
