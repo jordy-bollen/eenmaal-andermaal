@@ -61,18 +61,30 @@
         
         <!-- Contact
         ==================================================== -->
-        <div id="content">
-            <div class="twelve columns main">
-                <div class="six columns">
-                    <p class="mijnaccount">Mijn Biedingen <a href="http://localhost/eenmaal-andermaal/html/mijnbiedingen.php"><button>Go</button></p></a>
-                    <p class="mijnaccount">Mijn Advertenties <a href="http://localhost/eenmaal-andermaal/html/mijnadvertenties.php"><button>Go</button></p></a>
-                    <p class="mijnaccount">Mijn Verkopers Account<br>Registreren<a href="http://localhost/eenmaal-andermaal/html/mijnverkopersaccountregistreren.php"><button>Go</button></p></a>
+        <div id="content">           
+            <div class="one column">&nbsp;</div>
+            <div class="eleven columns main">
+                <div class="four columns">
+                    <p class="mijnaccount">Mijn Biedingen</p>
+                    <p class="mijnaccount">Mijn Advertenties</p>
+                    <p class="mijnaccount">Mijn Verkopers Account<br>Registreren</p>
                 </div>
-                <div class="six columns">
-                    <p>Wijzigen Persoonsgegvens <a href="http://localhost/eenmaal-andermaal/html/wijzigenpersoonsgegevens.php"><button>Go</button></p></a>
-                    <p>Wijzigen Bankgegevens <a href="http://localhost/eenmaal-andermaal/html/wijzigenbankgegevens.php"><button>Go</button></p></a>
-                    <p>Wijzigen Wachtwoord en<br>Geheime Vraag<a href="http://localhost/eenmaal-andermaal/html/wijzigenwachtwoordengeheimevraag"><button>Go</button></p></a>
+            
+                <div class="one column">
+                    <a href="http://localhost/eenmaal-andermaal/html/mijnbiedingen.php"><button>Go</button></a>
+                    <a href="http://localhost/eenmaal-andermaal/html/mijnadvertenties.php"><button>Go</button></a>
+                    <a href="http://localhost/eenmaal-andermaal/html/mijnverkopersaccountregistreren.php"><button>Go</button></a>
                 </div>
+                <div class="five columns">
+                    <p>Wijzigen Persoonsgegvens</p
+                    <p>Wijzigen Bankgegevens</p>
+                    <p>Wijzigen Wachtwoord en<br>Geheime Vraag</p>
+                </div>
+                <div class="one column">
+                    <a href="http://localhost/eenmaal-andermaal/html/wijzigenpersoonsgegevens.php"><button>Go</button></a>
+                    <a href="http://localhost/eenmaal-andermaal/html/wijzigenbankgegevens.php"><button>Go</button></a>
+                    <a href="http://localhost/eenmaal-andermaal/html/wijzigenwachtwoordengeheimevraag"><button>Go</button></a>
+               </div> 
             </div>
            <!-- Footer 
         ==================================================== -->
