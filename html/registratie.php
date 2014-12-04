@@ -29,11 +29,11 @@
                 <ul>
                     <a href="#"><li>rubiek 1</li></a>
                     <a href="#"><li>rubiek 1</li></a>
-                    <a href="#"> <li>rubiek 1</li></a>
-                    <a href="#"> <li>rubiek 1</li></a>
-                    <a href="#"> <li>rubiek 1</li></a>
-                    <a href="#">  <li>rubiek 1</li></a>
-                    <a href="#">  <li>rubiek 1</li></a>
+                    <a href="#"><li>rubiek 1</li></a>
+                    <a href="#"><li>rubiek 1</li></a>
+                    <a href="#"><li>rubiek 1</li></a>
+                    <a href="#"><li>rubiek 1</li></a>
+                    <a href="#"><li>rubiek 1</li></a>
                 </ul>
             </div>
         
