@@ -5,4 +5,3 @@
     <a href="/eenmaal-andermaal/html/contactpagina.php">Contact</a>
     <p>Copyright © 2014 EenmaalAndermaal.nl b.v.</p>
 </div>
-<?php include 'egg.php'; ?>
