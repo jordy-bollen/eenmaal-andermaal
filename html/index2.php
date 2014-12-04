@@ -7,15 +7,14 @@
             <?php include 'headTag.php'; ?>
 
     <body> 
-            <?php include 'livechat.php'; ?>
+           
         <div class="container">
             
             <!-- header logo / login
             ==================================================== -->
            <?php include 'header.php'; ?>
             
-            
-            
+        
             <!-- Menu top
             ==================================================== -->
             
