@@ -1,14 +1,21 @@
 <?php
 
-class index {
+class index extends controller{
 
+     private $modelRubrieken;
+    private $rubrieken;
+    private $data;
     function __constructor() {
         parent::__construct();
+
     }
 
     public function index() {
-        echo '<a href="'.SITE_URL.'registreren" >Registreren</a><br />';
-        echo '<a href="'.SITE_URL.'veilingen" >Veilingen</a><br />';
-        echo '<a href="'.SITE_URL.'login" >Inloggen</a><br />';
+        $this->modelRubrieken = $this->loadModel('rubriek');
+        $this->rubrieken = $this->modelRubrieken->getHoofdRubrieken();
+        $this->data['rubrieken'] = $this->rubrieken;
+        $this->loadView('includes/header');
+        $this->loadView('index', $this->data);
+        $this->loadView('includes/footer');
     }
 } 

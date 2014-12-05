@@ -6,7 +6,7 @@
  * @version    Versie 1.0
  * ...
  */
-
+session_start();
 class controller{
 
     protected $libraryloader;

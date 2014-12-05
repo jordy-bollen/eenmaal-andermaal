@@ -6,7 +6,6 @@
  * @version    Versie 1.0
  * ...
  */
-session_start();
 
 class registreren extends controller{
 
@@ -63,9 +62,9 @@ class registreren extends controller{
            else {
                session_unset($_SESSION['checkcode']);
                 $this->loadView('includes/header');
+               echo'u heeft geregistreerd';
                 $gebruikersdata = $this->formatData($_POST);
                 $modelGebruiker->registreer($gebruikersdata);
-                echo'u heeft geregistreerd';
                 $this->loadView('includes/footer');
             }
         }

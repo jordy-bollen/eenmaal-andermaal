@@ -18,6 +18,10 @@
     <link rel="stylesheet" type="text/css" href="<?= SKINS_DIR ?>css/style.css">
     <!-- Favicons
     ================================================== -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.9/jquery.validate.min.js"></script>
+
+    <script src="<?= SKINS_DIR ?>js/validate.js"></script>
 </head>
 <body>
 
@@ -30,20 +34,28 @@
             <img src="<?= SKINS_DIR ?>img/logo.png">
         </div>
         <div class="five columns login">
-            <form>
+            <?php if(!isset($_SESSION['loggedIn'])): ?>
+
+            <form action="<?php echo SITE_URL ?>login" method="POST">
                 <label for="regularInput">Gebruikersnaam</label>
-                <input type="text" id="regularInput" />
+                <input type="text" name="gebruikersnaam" id="regularInput" />
                 <label for="regularInput">Wachtwoord</label>
-                <input type="password" id="regularInput" />
+                <input type="password" name="wachtwoord" id="regularInput" />
 
                 <label for="regularCheckbox">
                     <input type="checkbox" id="regularCheckbox" value="checkbox 1" />
                     <span>Onthoud mij</span>
 
-                    <button>Login</button>
+                    <button name="submit" type="submit">Login</button>
 
                 </label>
             </form>
+            <?php else: ?>
+                <?php if($_SESSION['loggedIn'] != false): ?>
+                    <p>Gebruiker: <?= $_SESSION['gebruikersnaam'] ?></p>
+            <a href="<?= SITE_URL ?>logout">uitloggen</a>
+                    <?php endif; ?>
+            <?php endif; ?>
         </div>
 
     </div>
@@ -54,11 +66,15 @@
     ==================================================== -->
 
     <div class="sixteen columns menubalk">
-        <a href="/eenmaal-andermaal/html/index2.php">Home</a>
-        <a href="/pagina">Veilingen</a>
-        <a href="/eenmaal-andermaal/html/registratie.php">Registreren</a>
-        <a href="/eenmaal-andermaal/html/algemeneVoorwaarden.php">Algemene voorwaarden</a>
-        <a href="/eenmaal-andermaal/html/contactpagina.php">Contact</a>
+        <a href="<?= SITE_URL ?>">Home</a>
+        <a href="<?= SITE_URL ?>veilingen">Veilingen</a>
+        <?php if(isset($_SESSION['loggedIn'])): ?>
+        <a href="<?= SITE_URL ?>account">Mijn account</a>
+        <?php else: ?>
+            <a href="<?= SITE_URL ?>registreren">Registreren</a>
+        <?php endif; ?>
+        <a href="<?= SITE_URL ?>algemeneVoorwaarden">Algemene voorwaarden</a>
+        <a href="<?= SITE_URL ?>contact">Contact</a>
     </div>
 
 

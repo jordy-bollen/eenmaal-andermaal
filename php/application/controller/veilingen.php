@@ -26,6 +26,8 @@ class veilingen extends controller{
         $modelRubrieken = $this->loadModel('rubriek');
         $rubrieken = $modelRubrieken->getHoofdRubrieken();
         $alleRubrieken = $modelRubrieken->getAlleRubrieken();
+        $alleVoorwerpen = $modelVoorwerp->getVoorwerpen();
+        $this->data['veilingen'] = $alleVoorwerpen;
         $this->data['allerubrieken'] = $alleRubrieken;
         $this->data['rubrieken'] = $rubrieken;
         if(count($this->segments) <= 3) {

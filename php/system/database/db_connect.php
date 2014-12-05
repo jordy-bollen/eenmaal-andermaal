@@ -33,13 +33,13 @@ class db_connect {
      * Maakt connectie met de database host
      */
     public function connect() {
-        $this->connectie = sqlsrv_connect("213.163.71.16\\SQLEXPRESS",$this->connectionInfo) or die(print_r( sqlsrv_errors(), true));
+        $this->connectie = sqlsrv_connect("PC-JORDY\\SQLEXPRESS",$this->connectionInfo) or die(print_r( sqlsrv_errors(), true));
 
     }
 
 
     public function query($query) {
-        $resultaat = sqlsrv_query($this->connectie,$query) or die(mysql_error());
+        $resultaat = sqlsrv_query($this->connectie,$query)  or die(print_r( sqlsrv_errors(), true));
         return $resultaat;
     }
 

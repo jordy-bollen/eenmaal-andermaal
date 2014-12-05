@@ -5,7 +5,7 @@
  * Date: 2-12-14
  * Time: 12:53
  */
-session_start();
+
 class login extends controller{
 
     function __constructor() {
@@ -31,10 +31,15 @@ class login extends controller{
         $rows = sqlsrv_fetch_array($query);
     if($rows) {
         $_SESSION['loggedIn'] = true;
-        echo 'gelukt';
+        $_SESSION['gebruikersnaam'] = $gebruikersnaam;
+        $_SESSION['wachtwoord'] = $wachtwoord;
+        header("location:" .SITE_URL );
     }
         else {
+            $this->loadView('includes/header');
+
             echo 'mislukt';
+            $this->loadView('includes/footer');
         }
     }
 } 
