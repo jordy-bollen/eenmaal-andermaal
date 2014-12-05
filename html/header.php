@@ -1,3 +1,4 @@
+ <?php include 'livechat.php'; ?>
 <div class="topBalk">
                 <div class="eleven columns logo">
                     <img src="images/logo.png">

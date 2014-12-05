@@ -1,33 +1,11 @@
 <!DOCTYPE html>
 <html lang="en"> 
-<head>
+
 
 	<!-- Basic Page Needs
   ================================================== -->
-	<meta charset="utf-8">
-	<title>Algemene voorwaarden</title>
-	<meta name="description" content="">
-	<meta name="author" content="">
+    <?php include 'headTag.php'; ?>
 
-	<!-- Mobile Specific Metas
-  ================================================== -->
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-
-	<!-- CSS
-  ================================================== -->
-	<link rel="stylesheet" href="stylesheets/base.css">
-	<link rel="stylesheet" href="stylesheets/skeleton.css">
-	<link rel="stylesheet" href="stylesheets/layout.css">
-    <link rel="stylesheet" href="stylesheets/style.css">
-
-	<!-- Favicons
-	================================================== -->
-	<link rel="shortcut icon" href="images/favicon.ico">
-	<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
-	<link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
-	<link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
-
-</head>
 <body>
  
 	<div class="container">
@@ -38,25 +16,11 @@
       
         <!-- Menu balk: menu met knoppen
         ==================================================== -->
-        <div class="sixteen columns menubalk">
-                <a href="/eenmaal-andermaal/html/index2.php">Home</a>
-                <a href="/pagina">Veilingen</a>
-                <a href="/eenmaal-andermaal/html/registratie.php">Registreren</a>
-                <a href="/eenmaal-andermaal/html/algemeneVoorwaarden.php">Algemene voorwaarden</a>
-                <a href="/eenmaal-andermaal/html/contactpagina.php">Contact</a>
-            </div>
+        <?php include 'menubalk.php'; ?>
         
          <!-- Zoekbalk 
         ==================================================== -->
-       <div class="nine columns ">
-                <p>Witruimte -> e.v.t breadcrumbs?</p>
-            </div>
-            <div class="seven columns zoeken">
-                <form>
-                    <input type="text" class="zoekveld"></input>
-                    <button class="zoekknop">ZOEK</button>
-                </form>
-            </div>
+         <?php include 'zoekbalk.php'; ?>
         
          <!-- Kopteksten 
         ==================================================== -->
@@ -77,8 +41,8 @@
         ==================================================== -->
         <div id="content">
              
-             <div class="thirtheen columns"><h3>Algemene Gebruiksvoorwaarden</h3>
-                 
+             <div class="thirtheen columns"><h1>Algemene Gebruiksvoorwaarden</h1>
+                 <div id="voorwaardenKlein">
                  <div class="six columns">
                     <div id="voorwaarden1">
                         <strong>I. Algemene Gebruiksvoorwaarden</strong><br>
@@ -95,11 +59,12 @@
                  <div class="seven columns">
                     <div id="voorwaarden2">
                         <strong>II. Regels voor het plaatsen van advertenties</strong><br>
-                         Om onze site zo schoon en overzichtelijk mogelijk te houden, heeft EenmaalAndermaal regels opgesteld voor het plaatsen van een advertentie. U kunt deze regels                          raadplegen door het drukken op onderstaande onderwerpen: EenmaalAndermaal is een advertentieplatform Algemene regels voor het plaatsen van een advertentie op                            website Het plaatsen van een Advertentie Ontbindingsrecht Biedingen zijn niet bindend
-                         Regels voor het aanbieden van de prijs/betaalmethoden in een Advertentie Melden van illegale of inbreukmakende Advertenties op EenmaalAndermaal Wij geven geen                          garanties Vrijwaring dienst Advertenties en beperking aansprakelijkheid EenmaalAndermaal Wijzigingen De Advertentie kan ook elders gepubliceerd worden<br>
+                         Om onze site zo schoon en overzichtelijk mogelijk te houden, heeft EenmaalAndermaal regels opgesteld voor het plaatsen van een advertentie. U kunt deze regels                          raadplegen door te drukken op onderstaande onderwerpen:  Algemene regels voor het plaatsen van een advertentie op                            website Het plaatsen van een Advertentie 
+                         Regels voor het aanbieden van de prijs/betaalmethoden in een Advertentie Melden van illegale of inbreukmakende Advertenties op EenmaalAndermaal.<br>
                         <button href="#regelsPlaatsen">Lees meer</button>
                     </div>
                  </div>
+                     </div>
                  <br>
                  <br>
                  <hr>

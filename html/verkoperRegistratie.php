@@ -40,7 +40,7 @@
         <!-- Rubriekenbalk + advertenties middenscherm
         ==================================================== -->
         <div id="content">
-			<?php include 'registratiepagina.php'; ?>
+			<?php include 'verkoperRegistrerenFormulier.php'; ?>
         </div>
 
 

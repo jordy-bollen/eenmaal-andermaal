@@ -1,9 +1,9 @@
             
-            <div class="thirtheen columns"><h3>Registreren</h3>
+            <div class="thirtheen columns"><h1>Registreren</h1>
                 <form id='register' action='' method='post'
                 accept-charset='UTF-8'>
                 <input type='hidden' name='submitted' id='submitted' value='1'/>
-                <div id='registratievelden'>
+                <div class='registratievelden'>
                 <div class="six columns">
                     <label for='aanhef' class="two column">Aanhef*</label>
                     <select name="aanhef" class="invoerveld">
