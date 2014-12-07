@@ -16,8 +16,6 @@
             <input type='submit' name='submit' value='Registreer Verkoper' class="verkoperregistratiebutton"/>
  
         </div>
- 
-        
         </div>
     </form> 
 </div>
