@@ -94,8 +94,8 @@
 
                     <label for='telefoonnummer2'>Telefoonnummer 2</label>
                     <input type='text' name='telefoonnummer2' maxlegnth="255"/>
-                
-                <div class="twelve columns">
+              
+            </div>
                     <label for='adres1'>Adres 1</label>
                     <input type='text' name='adres1' maxlength="50"/>
 
@@ -110,9 +110,8 @@
 
                     <label for='land'>Land</label>
                     <input type='text' name='plaats' maxlength="50"/>
-                </div>
-
-                    <input type='submit' name='submit' value='Opslaan' />    
+                    <div "">
+                    <input type='submit' name='submit' value='Opslaan' class="opslaanbutton"/>    
                 </div>
             </div>
            <!-- Footer 

@@ -56,3 +56,8 @@ img, img.scale-with-grid { outline: 0; max-width: 100%; height: auto; }
 .mijnaccount{
 	margin-left: 10px;
 }
+
+/*Wijzigen persoonsgegevens*/
+.opslaanbutton{
+	margin-left: 55px;
+}
