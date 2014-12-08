@@ -11,14 +11,7 @@
                             <img src="<?= SKINS_DIR ?>img/producten/doelwit.jpg" width="200" height="200">
                          </div>
                         <div id ="countdownTimer">
-                            <p>RESTERENDE TIJD -
-                                <?php
-                                $datetest = new DateTime();
-                                $date2 = $obj->eindmoment;
-                                $interval = $datetest->diff($date2);
-                                echo $interval->d." dagen, ".$interval->h. " uren, ".$interval->i." minuten, ".$interval->s." seconden";
-                                ?>
-                            </p>
+                            Resterende tijd - <p id="countdownTime"></p>
                         </div>
                         <div id="productOmschrijving">
                             <p>PRODUCTOMSCHRIJVING</p>
@@ -56,4 +49,13 @@
                </div>
             </div>
         </div>
+
+<script type="text/javascript">
+    $("#countdownTime")
+    .countdown("<?php echo date_format($obj->eindmoment,'Y-m-d H:m:s'); ?>", function(event) {
+        $(this).text(
+            event.strftime('%D days %H:%M:%S')
+        );
+        });
+    </script>
 <?php endwhile; ?>

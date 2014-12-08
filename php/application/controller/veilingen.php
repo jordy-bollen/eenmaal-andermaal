@@ -30,7 +30,7 @@ class veilingen extends controller{
         $this->data['veilingen'] = $alleVoorwerpen;
         $this->data['allerubrieken'] = $alleRubrieken;
         $this->data['rubrieken'] = $rubrieken;
-        if(count($this->segments) <= 3) {
+        if(count($this->segments) <= 4) {
 
         $this->loadView('includes/header');
         $this->loadView('veilingen', $this->data);
@@ -43,7 +43,7 @@ class veilingen extends controller{
              unset($this->segments[2]);
              $this->segments = array_values($this->segments);
             $lastSegment = $this->segments[count($this->segments) - 1];
-             $string  = explode("-", $lastSegment, 2);
+             $string  = explode("-", $lastSegment, 3);
              $id = $string[0];
              echo $id;
             $veilingen = $modelVoorwerp->getVoorwerpenRubriek($id);

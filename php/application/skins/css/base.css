@@ -464,6 +464,11 @@ margin-bottom: -25px;
 	text-align: center;
 	margin-top:10px;
 }
+
+#countdownTime {
+    font-size: 18px;
+    color: red;
+}
 /*--------------  FOOTER -----------------------*/
 
 .footer, .footer a

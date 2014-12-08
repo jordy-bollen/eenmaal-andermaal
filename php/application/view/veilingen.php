@@ -20,16 +20,19 @@
             <h3><a href="<?= SITE_URL ?>producten/<?= $obj->voorwerpnummer . '-' . trim( preg_replace( "/[^0-9a-z]+/i", "",str_replace(" ","-",strtolower($obj->titel)))) ?>"><?= $obj->titel ?></a></h3>
             <img src="images/veiling-tv.jpg">
             <div class="veilingverlopen">
-                <span> <?php
-                    date_default_timezone_set('Europe/Berlin');
-                    $datetest = new DateTime();
-                    $date2 = $obj->eindmoment;
-                    $interval = $datetest->diff($date2);
-                    echo $interval->d." dagen, ".$interval->h. " uren, ".$interval->i." minuten, ".$interval->s." seconden";
-                    ?></span>
+                <p id="countdownTime"></p>
             </div>
+            <script type="text/javascript">
+                $("#countdownTime")
+                    .countdown("<?php echo date_format($obj->eindmoment,'Y-m-d H:m:s'); ?>", function(event) {
+                        $(this).text(
+                            event.strftime('%D days %H:%M:%S')
+                        );
+                    });
+            </script>
         </div>
             <?php endif; ?>
+
     <?php endwhile; ?>
 </div>
 <?php endif; ?>
