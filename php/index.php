@@ -14,7 +14,7 @@ define('DS', DIRECTORY_SEPARATOR);
 //define root
 define("ROOT", __DIR__ ."/");
 //define site url
-define("SITE_URL", "http://localhost/jframe/");
+define("SITE_URL", "http://localhost/eenmaal-andermaal/php/");
 //styles
 define("SKINS_DIR", SITE_URL . "application/skins/");
 
