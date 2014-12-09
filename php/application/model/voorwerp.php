@@ -39,25 +39,25 @@ FROM Voorwerp p
 WHERE cp.rubriekOpLaagsteNiveau IN (
    SELECT c.rubrieknummer
    FROM rubriek c
-   WHERE c.rubrieknaam = '".mysql_real_escape_string($rubriek)."'
+   WHERE c.rubrieknaam = '".str_replace("'", "''",$rubriek)."'
    UNION ALL
    SELECT c2.rubrieknummer
    FROM rubriek c
       LEFT JOIN rubriek c2 ON c.rubrieknummer = c2.rubriek
-   WHERE c.rubrieknaam = '".mysql_real_escape_string($rubriek)."'
+   WHERE c.rubrieknaam = '".str_replace("'", "''",$rubriek)."'
    UNION ALL
    SELECT c3.rubrieknummer
    FROM rubriek c
       LEFT JOIN rubriek c2 ON c.rubrieknummer = c2.rubriek
       LEFT JOIN rubriek c3 ON c2.rubrieknummer = c3.rubriek
-   WHERE c.rubrieknaam = '".mysql_real_escape_string($rubriek)."'
+   WHERE c.rubrieknaam = '".str_replace("'", "''",$rubriek)."'
    UNION ALL
    SELECT c4.rubrieknummer
    FROM rubriek c
       LEFT JOIN rubriek c2 ON c.rubrieknummer = c2.rubriek
       LEFT JOIN rubriek c3 ON c2.rubrieknummer = c3.rubriek
       LEFT JOIN rubriek c4 ON c3.rubrieknummer = c4.rubriek
-   WHERE c.rubrieknaam = '".mysql_real_escape_string($rubriek)."'
+   WHERE c.rubrieknaam = '".str_replace("'", "''",$rubriek)."'
    UNION ALL
    SELECT c5.rubrieknummer
    FROM rubriek c
@@ -65,7 +65,7 @@ WHERE cp.rubriekOpLaagsteNiveau IN (
       LEFT JOIN rubriek c3 ON c2.rubrieknummer = c3.rubriek
       LEFT JOIN rubriek c4 ON c3.rubrieknummer = c4.rubriek
       LEFT JOIN rubriek c5 ON c4.rubrieknummer = c5.rubriek
-   WHERE c.rubrieknaam = '".mysql_real_escape_string($rubriek)."'
+   WHERE c.rubrieknaam = '".str_replace("'", "''",$rubriek)."'
 );");
     }
 

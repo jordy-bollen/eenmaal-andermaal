@@ -55,8 +55,8 @@ class rubriek extends model{
      * @param $bovenliggendeRubriek
      * @return mixed
      */
-    public function getSubRubrieken($bovenliggendeRubriek) {
-        return $this->database->query("SELECT * FROM rubriek WHERE rubriek = '".$bovenliggendeRubriek."'");
+    public function getSubRubrieken() {
+        return $this->database->query("SELECT * FROM rubriek WHERE rubriek != NULL");
     }
 
 

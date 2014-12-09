@@ -24,7 +24,10 @@ class producten extends controller{
         $this->segments = explode('/', $_SERVER['REQUEST_URI_PATH']);
         $modelVoorwerp = $this->loadModel('voorwerp');
         $modelBod = $this->loadModel('bod');
-             unset($this->segments[0]);
+        $modelRubrieken = $this->loadModel('rubriek');
+        $rubrieken = $modelRubrieken->getHoofdRubrieken();
+
+        unset($this->segments[0]);
              unset($this->segments[1]);
              unset($this->segments[2]);
              $this->segments = array_values($this->segments);
@@ -39,6 +42,7 @@ class producten extends controller{
         }
         $this->data['voorwerp'] = $voorwerp;
         $this->data['boden'] = $boden;
+        $this->data['rubrieken'] = $rubrieken;
         if(!isset($_POST['submitBod'])) {
             $this->loadView('includes/header');
              $this->loadView('product', $this->data);
@@ -52,6 +56,7 @@ class producten extends controller{
             $bodinformatie['gebruiker'] = $_SESSION['gebruikersnaam'];
             $modelBod->registreerBod($bodinformatie);
             echo 'Bod geplaatst';
+                header("location:" .SITE_URL. 'producten/' .$lastSegment );
             }
             else {
                 echo 'Bod niet geplaatst error..';

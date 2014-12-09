@@ -1,3 +1,14 @@
+<div class="three columns rubriekenmenu">
+
+    <ul>
+
+        <?php while( $obj = sqlsrv_fetch_object( $data['rubrieken'] )): ?>
+            <?php if($obj->rubriek == NULL): ?>
+                <li><a href="<?= SITE_URL ?>veilingen/<?= $obj->rubrieknummer . '-' . trim( preg_replace( "/[^0-9a-z]+/i", "", str_replace(" ","",strtolower($obj->rubrieknaam)))) ?>"><?= $obj->rubrieknaam ?></a></li>
+            <?php endif; ?>
+        <?php endwhile; ?>
+    </ul>
+</div>
 <?php while( $obj = sqlsrv_fetch_object( $data['voorwerp'] )): ?>
     <div id="content">
 
@@ -8,7 +19,13 @@
                    <!-- "Linker" gedeelte van detailpagina -->
                   <div class="six columns">
                         <div id="advertentieFotos">
+                            <div id="foto1">
                             <img src="<?= SKINS_DIR ?>img/producten/doelwit.jpg" width="200" height="200">
+                            </div>
+                            <div id="fotoklein">
+                            <div id="foto2"><img src="<?= SKINS_DIR ?>img/producten/doelwit.jpg" width="200" height="200"></div>
+                            <div id="foto3"><img src="<?= SKINS_DIR ?>img/producten/doelwit.jpg" width="200" height="200"></div>
+                            </div>
                          </div>
                         <div id ="countdownTimer">
                             Resterende tijd - <p id="countdownTime"></p>
@@ -21,12 +38,15 @@
                   </div>
 
                    <!-- "Rechter" gedeelte van detailpagina -->
-                   <div class="six columns">
+                   <div id="detailrechts" class="six columns">
                         <div id="gebruikersInfo">
-                            <img src="images/verkoperInfo.png">
+                            <h2>Gebruikersinfo</h2>
+                            <p>Verkoper: <?= $obj->verkoper ?></p>
+                            <p>Locatie: <?= $obj->plaatsnaam ?></p>
+                            <p>Betaalmethode: <?= $obj->betalingswijze ?></p>
                         </div>
                         <div id="biedingen">
-                           <p>Biedingen</p>
+                           <h2>Biedingen</h2>
                             <?php if(isset($_SESSION['loggedIn'])): ?>
                            <p>Plaats bod</p>
                            <form id="bod" action="<?= SITE_URL ?>producten/<?= $obj->voorwerpnummer ?>-<?= trim( preg_replace( "/[^0-9a-z]+/i", "",str_replace(" ","-",strtolower($obj->titel)))) ?>" method="post">
@@ -36,12 +56,12 @@
                                <?php else: ?>
                                <p>log eerst in om te bieden</p>
                                <?php endif; ?>
-                               <hr>
-                            <p>Gebruiker:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Bod:</p>
-                               <hr>
+
+                            <table border="1"><thead><tr><td>Gebruiker:</td><td>Bod:</td></tr></thead>
                                <?php while( $bod = sqlsrv_fetch_object( $data['boden'] )): ?>
-                            <p><?= $bod->gebruiker ?>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<?= $bod->bodbedrag ?></p>
+                            <tr><td><?= $bod->gebruiker ?></td><td><?= $bod->bodbedrag ?></td></tr>
                                <?php endwhile; ?>
+                                </table>
                            </form>
                         </div>
                     </div>
@@ -49,13 +69,14 @@
                </div>
             </div>
         </div>
-
+<?php
+$eindmoment = $obj->eindmoment;
+endwhile; ?>
 <script type="text/javascript">
     $("#countdownTime")
-    .countdown("<?php echo date_format($obj->eindmoment,'Y-m-d H:m:s'); ?>", function(event) {
-        $(this).text(
-            event.strftime('%D days %H:%M:%S')
-        );
+        .countdown("<?php echo date_format($eindmoment,'Y-m-d H:m:s'); ?>", function(event) {
+            $(this).text(
+                event.strftime('%D dagen %H:%M:%S')
+            );
         });
-    </script>
-<?php endwhile; ?>
+</script>

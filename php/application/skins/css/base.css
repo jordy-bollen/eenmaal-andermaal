@@ -49,6 +49,8 @@
 		border-spacing: 0; }
 
 
+
+
 /* #Basic Styles
 ================================================== */
 	body {
@@ -438,6 +440,10 @@ margin-bottom: -25px;
 
 /*--------------- content/Veiling verlopen ------------*/
 
+#advertentieFotos img {
+    height: 200px;
+}
+
 .veiling{
 	width:90%;
 	border:1px solid #f1efef;
@@ -465,9 +471,64 @@ margin-bottom: -25px;
 	margin-top:10px;
 }
 
+#countdownTimer {
+    height:30px;
+    padding-top: 10px;
+    margin-top: 40px;
+    color: #ffffff;
+    background: #ff9517;
+    text-align: center;
+}
+
 #countdownTime {
+    display: inline;
     font-size: 18px;
-    color: red;
+
+}
+
+#biedingen table {
+    width:400px;
+}
+
+#biedingen table thead{
+    font-weight: bold;
+}
+
+#productOmschrijving {
+    margin-top: 50px;
+}
+
+#advertentieFotos {
+    overflow:hidden;
+}
+
+#foto1 {
+    width: 200px;
+    height: 200px;
+    float:left;
+}
+
+#fotoklein {
+    width: 100px;
+    height: 200px;
+    float:right;
+}
+
+#foto2 img{
+    height: 100px;
+}
+
+#foto3 img{
+    height: 100px;
+}
+
+#detailrechts {
+    float:right;
+}
+
+#detailrechts h2{
+    border-top: 1px solid #3da1d4 !important;
+    border-bottom: 1px solid #3da1d4 !important;
 }
 /*--------------  FOOTER -----------------------*/
 

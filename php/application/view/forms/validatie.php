@@ -2,5 +2,6 @@
       accept-charset='UTF-8'>
 <label for='email' >code*:</label>
         <input type='text' name='code' id='code' maxlength="50" /><br />
+    <input type='hidden' name='email' value="<?php echo $_POST['email'] ?>" maxlength="50" />
     <input type='submit' name='submitValidatie' value='Submit' />
 </form>

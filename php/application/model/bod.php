@@ -11,7 +11,7 @@ class bod extends model{
     public function registreerBod($bodinfo) {
         $this->database->query("
 INSERT INTO Bod(voorwerp, bodbedrag, gebruiker, bodmoment) VALUES
-(".$bodinfo['voorwerp'].", ".$bodinfo['bodbedrag'].", '".$bodinfo['gebruiker']."', '".$bodinfo['tijd']."')");
+(".str_replace("'", "''",$bodinfo['voorwerp']).", ".str_replace("'", "''",$bodinfo['bodbedrag']).", '".str_replace("'", "''",$bodinfo['gebruiker'])."', '".str_replace("'", "''",$bodinfo['tijd'])."')");
     }
 
     public function getBoden($productid) {

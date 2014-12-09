@@ -17,7 +17,7 @@ class gebruiker extends model{
        //gebruiker wordt toegevoegd aan database
         $gebruikerQuery = "INSERT INTO Gebruiker (gebruikersnaam, voornaam, achternaam, adresregel1, adresregel2, postcode,
 plaatsnaam, land, geboorteDatum, mailadres, wachtwoord, vraag, antwoordtekst, verkoper)
-        VALUES ('".$gebruikersdata['gebruikersnaam']."','".$gebruikersdata['voornaam']."', '".$gebruikersdata['achternaam']."', '".$gebruikersdata['adres1']."', NULL, '".$gebruikersdata['postcode']."', '".$gebruikersdata['plaats']."', '".$gebruikersdata['land']."'
+        VALUES ('".str_replace("'", "''",$gebruikersdata['gebruikersnaam'])."','".str_replace("'", "''",$gebruikersdata['voornaam'])."', '".str_replace("'", "''",$gebruikersdata['achternaam'])."', '".str_replace("'", "''",$gebruikersdata['adres1'])."', NULL, '".str_replace("'", "''",$gebruikersdata['postcode'])."', '".str_replace("'", "''",$gebruikersdata['plaats'])."', '".str_replace("'", "''",$gebruikersdata['land'])."'
         , '".$gebruikersdata['geboortedatum']."', '".$gebruikersdata['email']."', '".$gebruikersdata['wachtwoord']."', ".$gebruikersdata['vraag']." ,'".$gebruikersdata['antwoord']."', 'niet')";
         $this->database->query($gebruikerQuery);
     }

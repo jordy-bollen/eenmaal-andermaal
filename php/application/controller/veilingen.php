@@ -27,11 +27,12 @@ class veilingen extends controller{
         $rubrieken = $modelRubrieken->getHoofdRubrieken();
         $alleRubrieken = $modelRubrieken->getAlleRubrieken();
         $alleVoorwerpen = $modelVoorwerp->getVoorwerpen();
+        $subrubrieken = $modelRubrieken->getSubRubrieken();
         $this->data['veilingen'] = $alleVoorwerpen;
         $this->data['allerubrieken'] = $alleRubrieken;
         $this->data['rubrieken'] = $rubrieken;
+        $this->data['subrubrieken'] = $subrubrieken;
         if(count($this->segments) <= 4) {
-
         $this->loadView('includes/header');
         $this->loadView('veilingen', $this->data);
         $this->loadView('includes/footer');
