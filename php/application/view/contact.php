@@ -1,28 +1,11 @@
 <!-- Kopteksten
        ==================================================== -->
-<div class="three columns rubriekenmenu">
-    <h2>Rubrieken</h2>
-    <ul>
-        <a href="#"><li>rubiek 1</li></a>
-        <a href="#"><li>rubiek 1</li></a>
-        <a href="#"> <li>rubiek 1</li></a>
-        <a href="#"> <li>rubiek 1</li></a>
-        <a href="#"> <li>rubiek 1</li></a>
-        <a href="#">  <li>rubiek 1</li></a>
-        <a href="#">  <li>rubiek 1</li></a>
-        <a href="#">  <li>rubiek 1</li></a>
-        <a href="#">  <li>rubiek 1</li></a>
-        <a href="#">  <li>rubiek 1</li></a>
-        <a href="#">  <li>rubiek 1</li></a>
-        <a href="#">  <li>rubiek 1</li></a>
-        <a href="#">  <li>rubiek 1</li></a>
-        <a href="#">  <li>rubiek 1</li></a>
-    </ul>
-</div>
+<?php include 'includes/rubriekenMenu.php'; ?>
 
 <!-- Contact
 ==================================================== -->
 <div id="content">
+    <h2>Contact</h2>
     <div class="four column tekstlables">
         <p class="pmargin">Aanhef*</p>
         <p class="pmargin">Voornaam*</p>

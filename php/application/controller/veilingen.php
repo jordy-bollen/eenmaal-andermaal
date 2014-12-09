@@ -50,10 +50,8 @@ class veilingen extends controller{
             $lastSegment = $this->segments[count($this->segments) - 1];
              $string  = explode("-", $lastSegment, 3);
              $id = $string[0];
-             echo $id;
             $veilingen = $modelVoorwerp->getVoorwerpenRubriek($id);
             $this->data['veilingen'] = $veilingen;
-             echo $lastSegment;
             $this->loadView('includes/header');
              $this->loadView('veilingen', $this->data);
             $this->loadView('includes/footer');

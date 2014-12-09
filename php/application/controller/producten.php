@@ -57,7 +57,7 @@ class producten extends controller{
             if($hoogstebod < $_POST['bodbedrag'] && $_POST['bodbedrag'] > 0) {
             $bodinformatie = $_POST;
             $bodinformatie['tijd'] = date("Y-m-d H:i:s");
-            $bodinformatie['gebruiker'] = $_SESSION['gebruikersnaam'];
+            $bodinformatie['gebruiker'] = $_COOKIE['gebruikersnaam'];
             $modelBod->registreerBod($bodinformatie);
             echo 'Bod geplaatst';
                 header("location:" .SITE_URL. 'producten/' .$lastSegment );
