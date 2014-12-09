@@ -36,9 +36,10 @@ class producten extends controller{
              $string  = explode("-", $lastSegment, 2);
              $id = $string[0];
         $boden = $modelBod->getBoden($id);
+        $afbeeldingen = $modelBestanden->getAfbeelding($id);
         $voorwerp = $modelVoorwerp->getVoorwerp($id);
         $hoogsteboden = $modelBod->getHoogsteBod($id);
-        $afbeeldingen = $modelBestanden->getAfbeelding($id);
+
         while( $bod = sqlsrv_fetch_object( $hoogsteboden )) {
         $hoogstebod = $bod->bodbedrag;
         }

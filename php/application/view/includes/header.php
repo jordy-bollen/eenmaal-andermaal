@@ -39,12 +39,13 @@
 
             <form action="<?php echo SITE_URL ?>login" method="POST">
                 <label for="regularInput">Gebruikersnaam</label>
-                <input type="text" name="gebruikersnaam" id="regularInput" />
+                <input type="text" name="gebruikersnaam" id="regularInput"  value="<?php if (isset($_COOKIE['remember_me'])) {
+                echo $_COOKIE['remember_me']; } ?>"/>
                 <label for="regularInput">Wachtwoord</label>
                 <input type="password" name="wachtwoord" id="regularInput" />
 
                 <label for="regularCheckbox">
-                    <input type="checkbox" id="regularCheckbox" value="checkbox 1" />
+                    <input type="checkbox" id="regularCheckbox" name="onthoud" value="checkbox 1" />
                     <span>Onthoud mij</span>
 
                     <button name="submit" type="submit">Login</button>
@@ -53,8 +54,8 @@
             </form>
             <?php else: ?>
                 <?php if($_SESSION['loggedIn'] != false): ?>
-                    <p>Gebruiker: <?= $_SESSION['gebruikersnaam'] ?></p>
-            <a href="<?= SITE_URL ?>logout">uitloggen</a>
+                    <p>Gebruiker: <?= $_COOKIE['gebruikersnaam'] ?></p>
+            <a href="<?= SITE_URL ?>logout">uitloggen</a> | <a href="<?= SITE_URL ?>account">Mijn account</a>
                     <?php endif; ?>
             <?php endif; ?>
         </div>

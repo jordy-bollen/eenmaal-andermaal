@@ -117,6 +117,7 @@ class registreren extends controller{
     private function formatData($gebruikersdata) {
         $gebruikersdata['postcode'] = str_replace(' ','',$gebruikersdata['postcode']);
         $gebruikersdata['geboortedatum'] = date("Y/M/d", strtotime($gebruikersdata['geboortedatum']));
+        $gebruikersdata['wachtwoord'] = md5($gebruikersdata['wachtwoord']);
         return $gebruikersdata;
     }
 }

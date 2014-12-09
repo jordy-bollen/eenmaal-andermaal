@@ -43,6 +43,7 @@ while( $img = sqlsrv_fetch_object( $data['afbeeldingen'] )) {
                         );
                     });
             </script>
+            <p>Hoogte bod: <strong>€800</strong></p>
         </div>
             <?php endif; ?>
 

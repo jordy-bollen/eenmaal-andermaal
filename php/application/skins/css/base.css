@@ -431,6 +431,9 @@ margin-bottom: -25px;
 	background-position: 140px 17px;
     background-repeat: no-repeat;
 }
+.rubriekenmenu h2 {
+    background-color: #ffffff;
+}
 /*-------------- CONTENT --------------------*/
 
 .content{
