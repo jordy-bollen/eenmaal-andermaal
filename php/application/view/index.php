@@ -21,13 +21,13 @@
 <!-- content/
 ==================================================== -->
 <div class="thirtheen columns content">
-<<<<<<< HEAD
+
 
     <h1>Populaire veilingen</h1>
-=======
+
     
     <h1>Home</h1>
->>>>>>> de6e3f915b9af4fde7bacbd803fabb2b4603a8d4
+
     <div class="four columns veiling">
         <h3>Tv scherm</h3>
         <img src="images/veiling-tv.jpg">
