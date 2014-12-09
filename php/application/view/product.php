@@ -57,6 +57,7 @@ while( $img = sqlsrv_fetch_object( $data['afbeeldingen'] )) {
                            <form id="bod" action="<?= SITE_URL ?>producten/<?= $obj->voorwerpnummer ?>-<?= trim( preg_replace( "/[^0-9a-z]+/i", "",str_replace(" ","-",strtolower($obj->titel)))) ?>" method="post">
                             <input type="text" name="bodbedrag" id="bod" width="10px">
                                <input type="hidden" name="voorwerp" value="<?= $obj->voorwerpnummer ?>">
+                               <input type="hidden" name="verkoper" value="<?= $obj->verkoper ?>">
                             <input type="submit" name="submitBod" value="Bied nu">
                                <?php else: ?>
                                <p>log eerst in om te bieden</p>

@@ -1,22 +1,13 @@
-                 <h2>Rubrieken</h2>
-            <div class="three columns rubriekenmenu">
-                <ul>
-                    <a href="#"><li>rubiek 1</li></a>
-                    <a href="#"><li>rubiek 1</li></a>
-                    <a href="#"> <li>rubiek 1</li></a>
-                    <a href="#"> <li>rubiek 1</li></a>
-                    <a href="#"> <li>rubiek 1</li></a>
-                    <a href="#">  <li>rubiek 1</li></a>
-                    <a href="#">  <li>rubiek 1</li></a>
-                </ul>
-            </div>
+<?php include 'includes/rubriekenMenu.php'; ?>
         
         <!-- Mijn account content
         ==================================================== -->
         <div id="content">
-        <h1>Mijn Account</h1>           
+
             <div class="one column">&nbsp;</div>
+
             <div class="eleven columns main">
+                <h2>Mijn Account</h2>
                 <div class="four columns">
                     <p class="mijnaccount">Mijn Biedingen</p>
                     <p class="mijnaccount">Mijn Advertenties</p>

@@ -55,12 +55,16 @@ class producten extends controller{
         else {
 
             if($hoogstebod < $_POST['bodbedrag'] && $_POST['bodbedrag'] > 0) {
+                if ($_COOKIE['gebruikersnaam'] != $_POST['verkoper']) {
             $bodinformatie = $_POST;
+                $bodinformatie['bodbedrag'] = str_replace(",",".",$bodinformatie['bodbedrag']);
+                $bodinformatie['bodbedrag'] = round( $bodinformatie['bodbedrag'], 2, PHP_ROUND_HALF_DOWN);
             $bodinformatie['tijd'] = date("Y-m-d H:i:s");
             $bodinformatie['gebruiker'] = $_COOKIE['gebruikersnaam'];
             $modelBod->registreerBod($bodinformatie);
             echo 'Bod geplaatst';
                 header("location:" .SITE_URL. 'producten/' .$lastSegment );
+            }
             }
             else {
                 echo 'Bod niet geplaatst error..';
