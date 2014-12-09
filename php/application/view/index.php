@@ -2,9 +2,10 @@
 <!-- Menu left
 =====================================================
 -->
-
-<div class="three columns rubriekenmenu">
+<div class="three columns">
     <h2>Rubrieken</h2>
+<div class="three columns rubriekenmenu">
+   
     <ul>
 
         <?php while( $obj = sqlsrv_fetch_object( $data['rubrieken'] )): ?>
@@ -13,12 +14,14 @@
             <?php endif; ?>
         <?php endwhile; ?>
     </ul>
-</div>
+    </div>
+     </div>
+
 
 <!-- content/
 ==================================================== -->
 <div class="thirtheen columns content">
-
+    
     <h1>Home</h1>
     <div class="four columns veiling">
         <h3>Tv scherm</h3>
