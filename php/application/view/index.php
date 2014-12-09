@@ -2,9 +2,9 @@
 <!-- Menu left
 =====================================================
 -->
-<h2>Rubrieken</h2>
-<div class="three columns rubriekenmenu">
 
+<div class="three columns rubriekenmenu">
+    <h2>Rubrieken</h2>
     <ul>
 
         <?php while( $obj = sqlsrv_fetch_object( $data['rubrieken'] )): ?>

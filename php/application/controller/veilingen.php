@@ -24,14 +24,17 @@ class veilingen extends controller{
         $this->segments = explode('/', $_SERVER['REQUEST_URI_PATH']);
         $modelVoorwerp = $this->loadModel('voorwerp');
         $modelRubrieken = $this->loadModel('rubriek');
+        $modelBestanden = $this->loadModel('bestand');
         $rubrieken = $modelRubrieken->getHoofdRubrieken();
         $alleRubrieken = $modelRubrieken->getAlleRubrieken();
         $alleVoorwerpen = $modelVoorwerp->getVoorwerpen();
         $subrubrieken = $modelRubrieken->getSubRubrieken();
+        $afbeeldingen = $modelBestanden->getAfbeeldingen();
         $this->data['veilingen'] = $alleVoorwerpen;
         $this->data['allerubrieken'] = $alleRubrieken;
         $this->data['rubrieken'] = $rubrieken;
         $this->data['subrubrieken'] = $subrubrieken;
+        $this->data['afbeeldingen'] = $afbeeldingen;
         if(count($this->segments) <= 4) {
         $this->loadView('includes/header');
         $this->loadView('veilingen', $this->data);

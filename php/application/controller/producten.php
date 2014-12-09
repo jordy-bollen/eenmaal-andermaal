@@ -25,6 +25,7 @@ class producten extends controller{
         $modelVoorwerp = $this->loadModel('voorwerp');
         $modelBod = $this->loadModel('bod');
         $modelRubrieken = $this->loadModel('rubriek');
+        $modelBestanden = $this->loadModel('bestand');
         $rubrieken = $modelRubrieken->getHoofdRubrieken();
 
         unset($this->segments[0]);
@@ -37,12 +38,14 @@ class producten extends controller{
         $boden = $modelBod->getBoden($id);
         $voorwerp = $modelVoorwerp->getVoorwerp($id);
         $hoogsteboden = $modelBod->getHoogsteBod($id);
+        $afbeeldingen = $modelBestanden->getAfbeelding($id);
         while( $bod = sqlsrv_fetch_object( $hoogsteboden )) {
         $hoogstebod = $bod->bodbedrag;
         }
         $this->data['voorwerp'] = $voorwerp;
         $this->data['boden'] = $boden;
         $this->data['rubrieken'] = $rubrieken;
+        $this->data['afbeeldingen'] = $afbeeldingen;
         if(!isset($_POST['submitBod'])) {
             $this->loadView('includes/header');
              $this->loadView('product', $this->data);

@@ -1,7 +1,12 @@
+<?php
+$i = 0;
+while( $img = sqlsrv_fetch_object( $data['afbeeldingen'] )) {
+    $afbeeldingen[$i] = $img;
+    $i++;
+}
+?>
 <div class="three columns rubriekenmenu">
-
     <ul>
-
         <?php while( $obj = sqlsrv_fetch_object( $data['rubrieken'] )): ?>
             <?php if($obj->rubriek == NULL): ?>
                 <li><a href="<?= SITE_URL ?>veilingen/<?= $obj->rubrieknummer . '-' . trim( preg_replace( "/[^0-9a-z]+/i", "", str_replace(" ","",strtolower($obj->rubrieknaam)))) ?>"><?= $obj->rubrieknaam ?></a></li>
@@ -20,11 +25,11 @@
                   <div class="six columns">
                         <div id="advertentieFotos">
                             <div id="foto1">
-                            <img src="<?= SKINS_DIR ?>img/producten/doelwit.jpg" width="200" height="200">
+                            <img src="<?= SKINS_DIR ?>img/producten/<?= $afbeeldingen[0]->filenaam ?>" width="200" height="200">
                             </div>
                             <div id="fotoklein">
-                            <div id="foto2"><img src="<?= SKINS_DIR ?>img/producten/doelwit.jpg" width="200" height="200"></div>
-                            <div id="foto3"><img src="<?= SKINS_DIR ?>img/producten/doelwit.jpg" width="200" height="200"></div>
+                            <div id="foto2"><img src="<?= SKINS_DIR ?>img/producten/<?= $afbeeldingen[0]->filenaam ?>" width="200" height="200"></div>
+                            <div id="foto3"><img src="<?= SKINS_DIR ?>img/producten/<?= $afbeeldingen[0]->filenaam ?>" width="200" height="200"></div>
                             </div>
                          </div>
                         <div id ="countdownTimer">

@@ -457,6 +457,10 @@ margin-bottom: -25px;
 	width:100%;
 }
 
+.veilinglopen {
+    background-color: #b7ffbe
+}
+
 .veiling span{
 	text-align: center;
 }
@@ -464,6 +468,8 @@ margin-bottom: -25px;
 .veiling img{
 	background-position: center;
 	margin-left:23px;
+    width: 170px;
+    height: 160px;
 }
 
 .veiling p{

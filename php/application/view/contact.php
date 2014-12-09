@@ -1,7 +1,7 @@
 <!-- Kopteksten
        ==================================================== -->
-<h2>Rubrieken</h2>
 <div class="three columns rubriekenmenu">
+    <h2>Rubrieken</h2>
     <ul>
         <a href="#"><li>rubiek 1</li></a>
         <a href="#"><li>rubiek 1</li></a>
