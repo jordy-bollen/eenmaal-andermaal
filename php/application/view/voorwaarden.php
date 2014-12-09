@@ -1,4 +1,4 @@
-<?php include 'rubriekenMenu.php'; ?>
+<?php include 'includes/rubriekenMenu.php'; ?>
 
 <!-- Rubriekenbalk + Algemene voorwaarden etc.
 ==================================================== -->

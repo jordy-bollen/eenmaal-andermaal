@@ -23,77 +23,55 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="gebruiker.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/model/gebruiker.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="39" column="42" selection-start="1799" selection-end="1799" vertical-scroll-proportion="-21.423077" vertical-offset="301" max-vertical-offset="1144">
-              <folding>
-                <marker date="1418128472085" expanded="true" signature="1944:1985" placeholder="SELECT * FRO..Gebruiker..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="vraag.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/model/vraag.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="0" selection-start="362" selection-end="362" vertical-scroll-proportion="-12.692307" vertical-offset="0" max-vertical-offset="572">
-              <folding>
-                <marker date="1417010871399" expanded="true" signature="339:358" placeholder="SELECT * FRO..Vraag..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="veilingen.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/view/veilingen.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="4" selection-start="174" selection-end="240" vertical-scroll-proportion="-2.1730769" vertical-offset="129" max-vertical-offset="1298">
+            <state line="8" column="0" selection-start="168" selection-end="168" vertical-scroll-proportion="-0.5" vertical-offset="150" max-vertical-offset="1078">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="vergeten.php" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/application/controller/vergeten.php">
+      <file leaf-file-name="index.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/view/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="30" selection-start="868" selection-end="868" vertical-scroll-proportion="0.4088785" vertical-offset="134" max-vertical-offset="990">
+            <state line="4" column="16" selection-start="90" selection-end="90" vertical-scroll-proportion="-3.3846154" vertical-offset="0" max-vertical-offset="1760">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="vraag.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/view/forms/vraag.php">
+      <file leaf-file-name="contact.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/view/contact.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="43" selection-start="79" selection-end="79" vertical-scroll-proportion="-0.84615386" vertical-offset="0" max-vertical-offset="330">
+            <state line="7" column="17" selection-start="234" selection-end="234" vertical-scroll-proportion="-5.923077" vertical-offset="0" max-vertical-offset="814">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="mail.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/view/forms/mail.php">
+      <file leaf-file-name="contact.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/controller/contact.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="50" selection-start="50" selection-end="50" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="264">
+            <state line="20" column="41" selection-start="467" selection-end="467" vertical-scroll-proportion="-12.692307" vertical-offset="0" max-vertical-offset="528">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="mailVergeten.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/view/forms/mailVergeten.php">
+      <file leaf-file-name="producten.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/application/controller/producten.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="56" selection-start="56" selection-end="56" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="264">
+            <state line="59" column="49" selection-start="2002" selection-end="2002" vertical-scroll-proportion="0.4602804" vertical-offset="772" max-vertical-offset="1628">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="registratie.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/view/forms/registratie.php">
+      <file leaf-file-name="footer.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/view/includes/footer.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="42" column="20" selection-start="2586" selection-end="2967" vertical-scroll-proportion="-12.692307" vertical-offset="594" max-vertical-offset="2024">
+            <state line="10" column="19" selection-start="370" selection-end="370" vertical-scroll-proportion="-8.461538" vertical-offset="0" max-vertical-offset="484">
               <folding />
             </state>
           </provider>
@@ -102,16 +80,34 @@
       <file leaf-file-name="algemenevoorwaarden.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/controller/algemenevoorwaarden.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="2" selection-start="112" selection-end="369" vertical-scroll-proportion="-12.692307" vertical-offset="0" max-vertical-offset="462">
+            <state line="16" column="8" selection-start="241" selection-end="393" vertical-scroll-proportion="-9.307693" vertical-offset="0" max-vertical-offset="528">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="login.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/controller/login.php">
+      <file leaf-file-name="veilingen.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/controller/veilingen.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="30" column="8" selection-start="758" selection-end="793" vertical-scroll-proportion="-14.307693" vertical-offset="178" max-vertical-offset="1078">
+            <state line="51" column="22" selection-start="1719" selection-end="1719" vertical-scroll-proportion="-38.076923" vertical-offset="0" max-vertical-offset="1342">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="vergeten.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/controller/vergeten.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="27" column="30" selection-start="868" selection-end="868" vertical-scroll-proportion="-18.615385" vertical-offset="0" max-vertical-offset="990">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="voorwaarden.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/view/voorwaarden.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="46" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="1188">
               <folding />
             </state>
           </provider>
@@ -129,19 +125,13 @@
       <list>
         <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/application/model/voorwerp.php" />
-        <option value="$PROJECT_DIR$/application/view/includes/footer.php" />
         <option value="$PROJECT_DIR$/application/model/bod.php" />
         <option value="$PROJECT_DIR$/application/model/rubriek.php" />
         <option value="$PROJECT_DIR$/application/view/forms/validatie.php" />
         <option value="$PROJECT_DIR$/application/view/forms/registratie.php" />
-        <option value="$PROJECT_DIR$/application/view/contact.php" />
         <option value="$PROJECT_DIR$/application/model/bestand.php" />
         <option value="$PROJECT_DIR$/application/view/product.php" />
-        <option value="$PROJECT_DIR$/application/view/index.php" />
         <option value="$PROJECT_DIR$/application/skins/css/base.css" />
-        <option value="$PROJECT_DIR$/application/view/veilingen.php" />
-        <option value="$PROJECT_DIR$/application/controller/producten.php" />
-        <option value="$PROJECT_DIR$/application/controller/veilingen.php" />
         <option value="$PROJECT_DIR$/application/controller/login.php" />
         <option value="$PROJECT_DIR$/application/view/includes/header.php" />
         <option value="$PROJECT_DIR$/application/controller/registreren.php" />
@@ -149,6 +139,15 @@
         <option value="$PROJECT_DIR$/application/view/forms/vraag.php" />
         <option value="$PROJECT_DIR$/application/model/gebruiker.php" />
         <option value="$PROJECT_DIR$/application/controller/vergeten.php" />
+        <option value="$PROJECT_DIR$/application/controller/algemenevoorwaarden.php" />
+        <option value="$PROJECT_DIR$/application/view/voorwaarden.php" />
+        <option value="$PROJECT_DIR$/application/view/veilingen.php" />
+        <option value="$PROJECT_DIR$/application/view/index.php" />
+        <option value="$PROJECT_DIR$/application/controller/contact.php" />
+        <option value="$PROJECT_DIR$/application/view/includes/footer.php" />
+        <option value="$PROJECT_DIR$/application/view/contact.php" />
+        <option value="$PROJECT_DIR$/application/controller/veilingen.php" />
+        <option value="$PROJECT_DIR$/application/controller/producten.php" />
       </list>
     </option>
   </component>
@@ -270,90 +269,6 @@
               <option name="myItemId" value="application" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="view" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="forms" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="php" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="php" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="application" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="php" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="php" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="application" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="skins" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="php" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="php" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="application" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="skins" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="php" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="php" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="application" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="skins" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -435,7 +350,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1" y="1" width="1918" height="1038" extended-state="1" />
+    <frame x="1" y="1" width="1918" height="1038" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -475,20 +390,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="46" selection-start="316" selection-end="316" vertical-scroll-proportion="-8.461538" vertical-offset="0" max-vertical-offset="814">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/controller/contact.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="884">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/skins/js/jquery.countdown.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="4202">
@@ -499,13 +400,6 @@
     <entry file="jar://$APPLICATION_HOME_DIR$/lib/phpstorm.jar!/resources/html5-schema/tables.rnc">
       <provider selected="true" editor-type-id="text-editor">
         <state line="49" column="23" selection-start="1138" selection-end="1138" vertical-scroll-proportion="0.3325792" vertical-offset="784" max-vertical-offset="5610">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/view/includes/footer.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="25" selection-start="353" selection-end="353" vertical-scroll-proportion="-6.769231" vertical-offset="0" max-vertical-offset="440">
           <folding />
         </state>
       </provider>
@@ -524,13 +418,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/view/AlgemeneVoorwaardenTXT.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2024">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/view/includes/rubrieken.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="10" column="18" selection-start="267" selection-end="291" vertical-scroll-proportion="0.26347306" vertical-offset="0" max-vertical-offset="835">
@@ -545,28 +432,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/view/contact.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="63" selection-start="79" selection-end="79" vertical-scroll-proportion="-0.84615386" vertical-offset="0" max-vertical-offset="1188">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/view/forms/validatie.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="4" column="4" selection-start="219" selection-end="308" vertical-scroll-proportion="-3.3846154" vertical-offset="0" max-vertical-offset="264">
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/model/rubriek.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="24" selection-start="149" selection-end="149" vertical-scroll-proportion="-5.923077" vertical-offset="0" max-vertical-offset="1408">
-          <folding>
-            <marker date="1418115414273" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..rubriek..." />
-            <marker date="1418115414273" expanded="true" signature="-1:-1" placeholder="select root...Rubriek..." />
-            <marker date="1418115414273" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..rubriek..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -593,27 +462,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/controller/veilingen.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="0" selection-start="912" selection-end="912" vertical-scroll-proportion="-14.346154" vertical-offset="199" max-vertical-offset="1386">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/controller/producten.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="44" column="9" selection-start="1218" selection-end="1376" vertical-scroll-proportion="-14.346154" vertical-offset="463" max-vertical-offset="1628">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/view/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="44" column="8" selection-start="1446" selection-end="1486" vertical-scroll-proportion="-16.923077" vertical-offset="528" max-vertical-offset="2156">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/view/product.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="31" column="100" selection-start="1464" selection-end="1464" vertical-scroll-proportion="-13.538462" vertical-offset="330" max-vertical-offset="2024">
@@ -624,27 +472,6 @@
     <entry file="file://$PROJECT_DIR$/application/controller/registreren.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="119" column="58" selection-start="3743" selection-end="3743" vertical-scroll-proportion="-95.61539" vertical-offset="0" max-vertical-offset="2684">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/controller/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="882">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/view/includes/header.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="53" column="19" selection-start="2360" selection-end="2360" vertical-scroll-proportion="-16.923077" vertical-offset="726" max-vertical-offset="2200">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/controller/algemenevoorwaarden.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="2" selection-start="112" selection-end="369" vertical-scroll-proportion="-12.692307" vertical-offset="0" max-vertical-offset="462">
           <folding />
         </state>
       </provider>
@@ -677,19 +504,35 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/model/gebruiker.php">
+    <entry file="file://$PROJECT_DIR$/application/controller/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="42" selection-start="1799" selection-end="1799" vertical-scroll-proportion="-21.423077" vertical-offset="301" max-vertical-offset="1144">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="882">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/view/includes/header.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="53" column="19" selection-start="2360" selection-end="2360" vertical-scroll-proportion="-2.4615386" vertical-offset="1102" max-vertical-offset="2222">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/model/vraag.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="0" selection-start="362" selection-end="362" vertical-scroll-proportion="-12.692307" vertical-offset="0" max-vertical-offset="572">
           <folding>
-            <marker date="1418128472085" expanded="true" signature="1944:1985" placeholder="SELECT * FRO..Gebruiker..." />
+            <marker date="1417010871399" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..Vraag..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/view/veilingen.php">
+    <entry file="file://$PROJECT_DIR$/application/model/gebruiker.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="4" selection-start="174" selection-end="240" vertical-scroll-proportion="-2.1730769" vertical-offset="129" max-vertical-offset="1298">
-          <folding />
+        <state line="39" column="42" selection-start="1799" selection-end="1799" vertical-scroll-proportion="-21.423077" vertical-offset="301" max-vertical-offset="1144">
+          <folding>
+            <marker date="1418128472085" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..Gebruiker..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -700,18 +543,97 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/model/vraag.php">
+    <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="0" selection-start="362" selection-end="362" vertical-scroll-proportion="-12.692307" vertical-offset="0" max-vertical-offset="572">
+        <state line="16" column="46" selection-start="316" selection-end="316" vertical-scroll-proportion="-8.461538" vertical-offset="0" max-vertical-offset="814">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/model/rubriek.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="24" selection-start="149" selection-end="149" vertical-scroll-proportion="-0.84615386" vertical-offset="132" max-vertical-offset="1408">
           <folding>
-            <marker date="1417010871399" expanded="true" signature="339:358" placeholder="SELECT * FRO..Vraag..." />
+            <marker date="1418115414273" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..rubriek..." />
+            <marker date="1418115414273" expanded="true" signature="-1:-1" placeholder="select root...Rubriek..." />
+            <marker date="1418115414273" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..rubriek..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/view/AlgemeneVoorwaardenTXT.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2024">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controller/algemenevoorwaarden.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="8" selection-start="241" selection-end="393" vertical-scroll-proportion="-9.307693" vertical-offset="0" max-vertical-offset="528">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/view/contact.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="17" selection-start="234" selection-end="234" vertical-scroll-proportion="-5.923077" vertical-offset="0" max-vertical-offset="814">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/view/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="16" selection-start="90" selection-end="90" vertical-scroll-proportion="-3.3846154" vertical-offset="0" max-vertical-offset="1760">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/view/voorwaarden.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="46" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="1188">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/controller/vergeten.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="30" selection-start="868" selection-end="868" vertical-scroll-proportion="0.4088785" vertical-offset="134" max-vertical-offset="990">
+        <state line="27" column="30" selection-start="868" selection-end="868" vertical-scroll-proportion="-18.615385" vertical-offset="0" max-vertical-offset="990">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controller/veilingen.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="51" column="22" selection-start="1719" selection-end="1719" vertical-scroll-proportion="-38.076923" vertical-offset="0" max-vertical-offset="1342">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/view/veilingen.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="0" selection-start="168" selection-end="168" vertical-scroll-proportion="-0.5" vertical-offset="150" max-vertical-offset="1078">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/view/includes/footer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="19" selection-start="370" selection-end="370" vertical-scroll-proportion="-8.461538" vertical-offset="0" max-vertical-offset="484">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controller/contact.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="41" selection-start="467" selection-end="467" vertical-scroll-proportion="-12.692307" vertical-offset="0" max-vertical-offset="528">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controller/producten.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="59" column="49" selection-start="2002" selection-end="2002" vertical-scroll-proportion="0.4602804" vertical-offset="772" max-vertical-offset="1628">
           <folding />
         </state>
       </provider>

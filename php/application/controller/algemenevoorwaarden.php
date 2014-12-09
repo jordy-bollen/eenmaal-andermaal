@@ -14,8 +14,11 @@ class algemenevoorwaarden extends controller{
     }
 
     public function index() {
+        $modelRubrieken = $this->loadModel('rubriek');
+        $rubrieken = $modelRubrieken->getHoofdRubrieken();
+        $this->data['rubrieken'] = $rubrieken;
         $this->loadView('includes/header');
-        $this->loadView('voorwaarden');
+        $this->loadView('voorwaarden',$this->data);
         $this->loadView('includes/footer');
     }
 } 

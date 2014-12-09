@@ -14,8 +14,11 @@ class contact extends controller{
     }
 
     public function index() {
+        $modelRubrieken = $this->loadModel('rubriek');
+        $rubrieken = $modelRubrieken->getHoofdRubrieken();
+        $this->data['rubrieken'] = $rubrieken;
         $this->loadView('includes/header');
-        $this->loadView('contact');
+        $this->loadView('contact', $this->data);
         $this->loadView('includes/footer');
     }
 } 
