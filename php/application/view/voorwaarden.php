@@ -1,15 +1,4 @@
-<h2>Rubrieken</h2>
-<div class="three columns rubriekenmenu">
-    <ul>
-        <a href="#"><li>rubiek 1</li></a>
-        <a href="#"><li>rubiek 1</li></a>
-        <a href="#"> <li>rubiek 1</li></a>
-        <a href="#"> <li>rubiek 1</li></a>
-        <a href="#"> <li>rubiek 1</li></a>
-        <a href="#">  <li>rubiek 1</li></a>
-        <a href="#">  <li>rubiek 1</li></a>
-    </ul>
-</div>
+<?php include 'rubriekenMenu.php'; ?>
 
 <!-- Rubriekenbalk + Algemene voorwaarden etc.
 ==================================================== -->
