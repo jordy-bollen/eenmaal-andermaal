@@ -1,4 +1,4 @@
-<a name="#algemeen"></a>
+<a name="algemeen"></a>
 <p><strong>I Algemene Gebruiksvoorwaarden</strong></p>
 
 <p>
