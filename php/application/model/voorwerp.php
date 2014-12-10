@@ -19,6 +19,10 @@ class voorwerp extends model{
 
 }
 
+    public function getVoorwerpHoogsteBod() {
+        return $this->database->query("SELECT v.voorwerpnummer, MAX(b.bodbedrag) AS hoogste FROM Voorwerp v INNER JOIN bod b ON b.voorwerp = v.voorwerpnummer GROUP BY ALL v.voorwerpnummer");
+    }
+
     /**
      * getVoorwerpenRubriek
      *
@@ -84,7 +88,7 @@ WHERE cp.rubriekOpLaagsteNiveau IN (
     }
 
     public function getAflopendeVoorwerpen() {
-        return $this->database->query("select * from Voorwerp ORDER BY eindmoment ASC");
+        return $this->database->query("select TOP(3) * from Voorwerp WHERE veilingGesloten = 'niet' ORDER BY eindmoment ASC");
     }
 
 

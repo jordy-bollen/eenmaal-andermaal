@@ -28,10 +28,12 @@ class veilingen extends controller{
         $rubrieken = $modelRubrieken->getHoofdRubrieken();
         $alleRubrieken = $modelRubrieken->getAlleRubrieken();
         $alleVoorwerpen = $modelVoorwerp->getVoorwerpen();
+        $hoogsteboden = $modelVoorwerp->getVoorwerpHoogsteBod();
         $subrubrieken = $modelRubrieken->getSubRubrieken();
         $afbeeldingen = $modelBestanden->getAfbeeldingen();
 
         $this->data['veilingen'] = $alleVoorwerpen;
+        $this->data['hoogsteboden'] = $hoogsteboden;
         $this->data['allerubrieken'] = $alleRubrieken;
         $this->data['rubrieken'] = $rubrieken;
         $this->data['subrubrieken'] = $subrubrieken;
