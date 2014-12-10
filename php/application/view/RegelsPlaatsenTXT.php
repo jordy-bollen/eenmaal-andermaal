@@ -1,4 +1,4 @@
-<a name="#regelsPlaatsen"></a>
+<a name="regelsPlaatsen"></a>
 <p><strong>II Regels voor het plaatsen van advertenties</strong></p>
 
 <p>1. EenmaalAndermaal is een advertentieplatform</p>

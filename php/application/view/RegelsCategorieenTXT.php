@@ -1,4 +1,4 @@
-<a name="#regelsCatogorieen"></a>
+<a name="regelsCatogorieen"></a>
 <p><strong>III Aanvullende regels voor bepaalde categorie&euml;n</strong></p>
 
 <p>

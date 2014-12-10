@@ -334,9 +334,22 @@ display: inline-block;
 }
 
 .login{
+	margin-top: 5px;
+	margin-bottom: 7px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	border: 2px solid grey;
+	padding: 5px;	
+	
+}
 
-border:none;
-margin-bottom: -25px;
+.login form {
+ margin-bottom: 0px;   
+}
+
+.login input {
+    margin-bottom: 2px;   
 }
 
 .menubalk{
@@ -370,7 +383,9 @@ margin-bottom: -25px;
     font-weight: normal;
     height: 32px;
     margin-left: 7px;
+    margin-top: 10px;
     padding-top: 5px;
+    margin-bottom: 5px;
     width: 115px;
 }
 
