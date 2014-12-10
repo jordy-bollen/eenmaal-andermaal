@@ -344,6 +344,11 @@ display: inline-block;
 	
 }
 
+.logo
+{
+    margin-bottom: 5px;   
+}
+
 .login form {
  margin-bottom: 0px;   
 }
