@@ -574,6 +574,59 @@ display: inline-block;
     border-top: 1px solid #3da1d4 !important;
     border-bottom: 1px solid #3da1d4 !important;
 }
+
+/*------------ Registeren ---------------------*/
+#registratievelden .invoerveld{
+	width:150px;	
+}
+#registratievelden{
+	margin-left: 30px;
+}
+.geslacht{
+	width: 62px;
+}
+.lengte {
+	width: 160px;
+}
+.datum {
+	width: 155px;
+	margin-bottom:20px;
+}
+.registratiebutton {
+	margin-left: 250px;
+}
+.veldenmet {
+	margin-left: 175px;
+	margin-top: -25px;
+}
+
+ /*-------------- Contact -------------------*/
+.tekstlables{
+ height:100px;
+}
+.tekstlables .pmargin {
+  margin-top:-1px;
+  margin-bottom: 29px;
+  margin-left: 30px;
+  font-weight: bold;
+}
+.inputvelden{
+ margin-top: 15px;
+
+}
+.inputvelden .input
+{
+ width: 62px;
+ margin-top: -15px
+}
+.verplicht{
+	margin-bottom: 0px;
+	margin-top: -15px;
+}
+.verstuur{
+	margin-top: -5px;
+}
+
 /*--------------  FOOTER -----------------------*/
 
 .footer, .footer a
@@ -623,7 +676,7 @@ display: inline-block;
 	margin-bottom: 5px;
 }
 
-.main 
+.accountMenu 
 {
 	-webkit-box-shadow:0 0 10px rgba(0, 0, 0, 0.5);
 	-moz-box-shadow:0 0 10px rgba(0, 0, 0, 0.5);
@@ -631,7 +684,6 @@ display: inline-block;
 	padding: 10px;
 	
 }
-
 .verkoperReg p
 {
 	font-weight:bold;

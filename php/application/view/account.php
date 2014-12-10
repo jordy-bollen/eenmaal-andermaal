@@ -8,7 +8,8 @@
 
             <div class="eleven columns main">
                 <?php while( $gebruiker = sqlsrv_fetch_object( $data['gebruiker'] )): ?>
-                <h2>Mijn Account</h2>
+                <h1>Mijn Account</h1>
+              <div class="eleven columns accountMenu">
                     <p>- <?= $gebruiker->gebruikersnaam ?></p>
                 <?php endwhile; ?>
                 <div class="four columns">
@@ -33,5 +34,6 @@
                     <a href="http://localhost/eenmaal-andermaal/html/wijzigenbankgegevens.php"><button>Go</button></a>
                     <a href="http://localhost/eenmaal-andermaal/html/wijzigenwachtwoordengeheimevraag"><button>Go</button></a>
                </div> 
-            </div> 
+          </div>
+        </div>
     </div>
