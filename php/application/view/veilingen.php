@@ -4,6 +4,11 @@ while( $img = sqlsrv_fetch_object( $data['afbeeldingen'] )) {
     $afbeeldingen[$i] = $img;
     $i++;
 }
+$i = 0;
+while( $hoogsteboden = sqlsrv_fetch_object($data['hoogsteboden'])) {
+    $hoogstebod[$i] = $hoogsteboden;
+    $i++;
+}
 ?>
 <?php include 'includes/rubriekenMenu.php'; ?>
 
@@ -38,7 +43,10 @@ while( $img = sqlsrv_fetch_object( $data['afbeeldingen'] )) {
                         );
                     });
             </script>
-            <p>Hoogte bod: <strong>€800</strong></p>
+            <?php for( $j = 0; $j < count($hoogstebod); $j++ ):
+                if($hoogstebod[$j]->voorwerpnummer == $obj->voorwerpnummer): ?>
+            <p>Hoogste bod: <strong><?= $hoogstebod[$j]->hoogste ?></strong></p>
+            <?php endif; endfor; ?>
         </div>
             <?php endif; ?>
 
