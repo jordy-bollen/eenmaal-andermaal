@@ -10,7 +10,12 @@ while( $img = sqlsrv_fetch_object( $data['afbeeldingen'] )) {
 
 <?php if(isset($data['veilingen'])): ?>
 <div class="thirtheen columns content">
-    <h4 class="thirteen columns">Rubriek producten</h4>
+
+   <?php if(isset($data['rubriek'])):  while( $rub = sqlsrv_fetch_object( $data['rubriek'] )): ?>
+    <h4 class="thirteen columns"><?= $rub->rubrieknaam ?></h4>
+    <?php endwhile; else:?>
+       <h4 class="thirteen columns">Alle producten</h4>
+    <?php endif; ?>
     <?php $i = 0; while( $obj = sqlsrv_fetch_object($data['veilingen'])): ?>
         <?php if($obj->veilingGesloten == 'niet'): ?>
         <div class="four columns veiling">

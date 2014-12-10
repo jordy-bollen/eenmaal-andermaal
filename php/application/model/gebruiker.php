@@ -36,6 +36,10 @@ plaatsnaam, land, geboorteDatum, mailadres, wachtwoord, vraag, antwoordtekst, ve
 
     }
 
+    public function getGebruiker($gebruikersnaam) {
+        return $this->database->query("SELECT * FROM Gebruiker WHERE gebruikersnaam = '".$gebruikersnaam."'");
+    }
+
     public function getGebruikerVraag($mailadres) {
         return $this->database->query("SELECT * FROM Gebruiker WHERE mailadres = '".$mailadres."'");
     }

@@ -12,6 +12,8 @@ class index extends controller{
 
     public function index() {
         $this->modelRubrieken = $this->loadModel('rubriek');
+        $modelVoorwerpen = $this->loadModel('voorwerp');
+        $modelVoorwerpen->getAflopendeVoorwerpen();
         $this->rubrieken = $this->modelRubrieken->getHoofdRubrieken();
         $this->data['rubrieken'] = $this->rubrieken;
         $this->loadView('includes/header');

@@ -21,6 +21,11 @@ class rubriek extends model{
     }
 
 
+    public function getRubriek($id) {
+        return $this->database->query("SELECT * FROM rubriek WHERE rubrieknummer = '".$id."'");
+    }
+
+
     public function getAlleRubrieken() {
        $query = "select root.rubrieknaam  as root_name
      , down1.rubrieknaam as down1_name

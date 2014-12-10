@@ -14,9 +14,12 @@ class account extends controller{
     }
 
     public function index() {
+        $modelGebruiker = $this->loadModel('gebruiker');
         $modelRubrieken = $this->loadModel('rubriek');
+        $gebruiker = $modelGebruiker->getGebruiker($_COOKIE['gebruikersnaam']);
         $rubrieken = $modelRubrieken->getHoofdRubrieken();
         $this->data['rubrieken'] = $rubrieken;
+        $this->data['gebruiker'] = $gebruiker;
         $this->loadView('includes/header');
         $this->loadView('account', $this->data);
         $this->loadView('includes/footer');

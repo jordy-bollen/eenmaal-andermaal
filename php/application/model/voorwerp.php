@@ -83,5 +83,9 @@ WHERE cp.rubriekOpLaagsteNiveau IN (
         return $this->database->query("SELECT * FROM Voorwerp WHERE voorwerpnummer = '".$id."'");
     }
 
+    public function getAflopendeVoorwerpen() {
+        return $this->database->query("select * from Voorwerp ORDER BY eindmoment ASC");
+    }
+
 
 } 
