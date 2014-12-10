@@ -24,7 +24,7 @@ class voorwerp extends model{
     }
 
     public function getPopulaireVoorwerpen() {
-        return $this->database->query("SELECT v.voorwerpnummer, v.titel, v.eindmoment, count(b.bodbedrag) AS aantalboden FROM Voorwerp v INNER JOIN bod b ON b.voorwerp = v.voorwerpnummer GROUP BY v.voorwerpnummer, v.titel, v.eindmoment, v.veilingGesloten HAVING v.veilingGesloten = 'niet' ORDER BY count(b.bodbedrag) DESC");
+        return $this->database->query("SELECT top(3) v.voorwerpnummer, v.titel, v.eindmoment, count(b.bodbedrag) AS aantalboden FROM Voorwerp v INNER JOIN bod b ON b.voorwerp = v.voorwerpnummer GROUP BY v.voorwerpnummer, v.titel, v.eindmoment, v.veilingGesloten HAVING v.veilingGesloten = 'niet' ORDER BY count(b.bodbedrag) DESC");
     }
 
     /**

@@ -16,11 +16,6 @@ class login extends controller{
     if(isset($_POST['submit'])) {
         $this->verifyLogin($_POST['gebruikersnaam'], $_POST['wachtwoord']);
     }
-        else {
-            $this->loadView('includes/header');
-            $this->loadView('forms/login');
-            $this->loadView('includes/footer');
-        }
     }
 
     public function verifyLogin($gebruikersnaam, $wachtwoord) {
