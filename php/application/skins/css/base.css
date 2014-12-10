@@ -503,11 +503,11 @@ margin-bottom: -25px;
     font-weight: bold;
 }
 
-<<<<<<< .merge_file_a07600
 #productOmschrijving {
     word-wrap:break-word;
     margin-top: 50px;
-=======
+}
+
 #productOmschrijving p {
 
 -webkit-box-shadow:0 0 10px rgba(0, 0, 0, 0.5);
@@ -519,7 +519,6 @@ margin-bottom: -25px;
 #productOmschrijving 
 {
 	margin-top: 25px;
->>>>>>> .merge_file_a06184
 }
 
 #advertentieFotos {
