@@ -36,7 +36,7 @@ while( $img = sqlsrv_fetch_object( $data['afbeeldingen'] )) {
                             Resterende tijd - <p id="countdownTime"></p>
                         </div>
                         <div id="productOmschrijving">
-                            <p>PRODUCTOMSCHRIJVING</p>
+                            <h2>PRODUCTOMSCHRIJVING</h2>
                             <p><?= $obj->beschrijving ?></p>
                         </div>
 
