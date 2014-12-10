@@ -5,7 +5,7 @@
 <!-- Contact
 ==================================================== -->
 <div id="content">
-    <h2>Contact</h2>
+    <h1 class="thirteen columns">Contact</h1>
     <div class="four column tekstlables">
         <p class="pmargin">Aanhef*</p>
         <p class="pmargin">Voornaam*</p>
