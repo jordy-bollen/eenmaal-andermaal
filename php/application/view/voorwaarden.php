@@ -4,7 +4,7 @@
 ==================================================== -->
 <div id="content">
 
-    <div class="thirtheen columns"><h3>Algemene Gebruiksvoorwaarden</h3>
+    <div class="thirtheen columns"><h1>Algemene Gebruiksvoorwaarden</h1>
 
         <div class="six columns">
             <div id="voorwaarden1">
