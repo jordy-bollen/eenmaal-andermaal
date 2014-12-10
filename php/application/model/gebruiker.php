@@ -32,7 +32,7 @@ plaatsnaam, land, geboorteDatum, mailadres, wachtwoord, vraag, antwoordtekst, ve
      * @return bool
      */
     public function login($gebruikersnaam, $wachtwoord) {
-        return $this->database->query("SELECT * FROM Gebruiker WHERE gebruikersnaam = '".$gebruikersnaam."' and wachtwoord = '".$wachtwoord."'");
+        return $this->database->query("SELECT * FROM Gebruiker WHERE gebruikersnaam = '".str_replace("'","''",$gebruikersnaam)."' and wachtwoord = '".str_replace("'","''",$wachtwoord)."'");
 
     }
 

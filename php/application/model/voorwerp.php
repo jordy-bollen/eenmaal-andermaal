@@ -23,6 +23,10 @@ class voorwerp extends model{
         return $this->database->query("SELECT v.voorwerpnummer, MAX(b.bodbedrag) AS hoogste FROM Voorwerp v INNER JOIN bod b ON b.voorwerp = v.voorwerpnummer GROUP BY ALL v.voorwerpnummer");
     }
 
+    public function getPopulaireVoorwerpen() {
+        return $this->database->query("SELECT v.voorwerpnummer, v.titel, v.eindmoment, count(b.bodbedrag) AS aantalboden FROM Voorwerp v INNER JOIN bod b ON b.voorwerp = v.voorwerpnummer GROUP BY v.voorwerpnummer, v.titel, v.eindmoment, v.veilingGesloten HAVING v.veilingGesloten = 'niet' ORDER BY count(b.bodbedrag) DESC");
+    }
+
     /**
      * getVoorwerpenRubriek
      *

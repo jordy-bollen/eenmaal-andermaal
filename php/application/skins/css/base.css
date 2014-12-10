@@ -463,6 +463,7 @@ display: inline-block;
 }
 
 .veiling{
+    height: 302px;
 	width:90%;
 	border:1px solid #f1efef;
 	box-shadow: 10px,10px,10px,10px;
