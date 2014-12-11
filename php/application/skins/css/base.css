@@ -643,6 +643,18 @@ display: inline-block;
   	margin-left: 30px;
 }
 
+/*------------------- Mijn biedingen ---------------*/
+
+.table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+.tabelplaats{
+	margin-left: 50px;
+	margin-top: 25px;
+}
+
 /*--------------  FOOTER -----------------------*/
 
 .footer, .footer a
