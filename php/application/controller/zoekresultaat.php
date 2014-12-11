@@ -17,6 +17,23 @@ class zoekresultaat extends controller{
         $this->loadView('includes/header');
         $min_length = 1;
         $modelZoeken = $this->loadModel('zoeken');
+         $modelVoorwerp = $this->loadModel('voorwerp');
+        $modelRubrieken = $this->loadModel('rubriek');
+        $modelBestanden = $this->loadModel('bestand');
+        $rubrieken = $modelRubrieken->getHoofdRubrieken();
+        $alleRubrieken = $modelRubrieken->getAlleRubrieken();
+        $alleVoorwerpen = $modelVoorwerp->getVoorwerpen();
+        $hoogsteboden = $modelVoorwerp->getVoorwerpHoogsteBod();
+        $subrubrieken = $modelRubrieken->getSubRubrieken();
+        $afbeeldingen = $modelBestanden->getAfbeeldingen();
+
+        $this->data['veilingen'] = $alleVoorwerpen;
+        $this->data['hoogsteboden'] = $hoogsteboden;
+        $this->data['allerubrieken'] = $alleRubrieken;
+        $this->data['rubrieken'] = $rubrieken;
+        $this->data['subrubrieken'] = $subrubrieken;
+        $this->data['afbeeldingen'] = $afbeeldingen;
+    
                     
         if(strlen($_POST['query']) >= $min_length)
         {
@@ -36,6 +53,7 @@ class zoekresultaat extends controller{
         
        
     }
-         $this->loadView('includes/footer');
+         
+        $this->loadView('includes/footer');
   } 
 }
