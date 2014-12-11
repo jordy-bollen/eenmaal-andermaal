@@ -627,6 +627,34 @@ display: inline-block;
 	margin-top: -5px;
 }
 
+/*--------------- Feedback --------------------*/
+.beoordelinginput{
+	width: 110px;
+	margin-top: -15px;
+	
+}
+
+.commentaarveldlanger{
+	width: 325px;
+}
+
+.feedbackgeven{
+  	margin-top: -1px;
+  	margin-left: 30px;
+}
+
+/*------------------- Mijn biedingen ---------------*/
+
+.table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+.tabelplaats{
+	margin-left: 50px;
+	margin-top: 25px;
+}
+
 /*--------------  FOOTER -----------------------*/
 
 .footer, .footer a
