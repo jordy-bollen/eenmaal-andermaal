@@ -16,7 +16,7 @@ class account extends controller{
     public function index() {
         $modelGebruiker = $this->loadModel('gebruiker');
         $modelRubrieken = $this->loadModel('rubriek');
-        $gebruiker = $modelGebruiker->getGebruiker($_COOKIE['gebruikersnaam']);
+        $gebruiker = $modelGebruiker->getGebruiker($_SESSION['gebruikersnaam']);
         $rubrieken = $modelRubrieken->getHoofdRubrieken();
         $this->data['rubrieken'] = $rubrieken;
         $this->data['gebruiker'] = $gebruiker;
