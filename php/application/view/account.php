@@ -32,7 +32,7 @@
                 <div class="one column">
                     <a href="http://localhost/eenmaal-andermaal/html/wijzigenpersoonsgegevens.php"><button>Go</button></a>
                     <a href="http://localhost/eenmaal-andermaal/html/wijzigenbankgegevens.php"><button>Go</button></a>
-                    <a href="http://localhost/eenmaal-andermaal/html/wijzigenwachtwoordengeheimevraag"><button>Go</button></a>
+                    <a href="http://localhost/eenmaal-andermaal/php/wijzigenwachtwoord"><button>Go</button></a>
                </div> 
           </div>
         </div>
