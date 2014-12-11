@@ -42,4 +42,6 @@ while( $hoogsteboden = sqlsrv_fetch_object($data['hoogsteboden'])) {
         </div>
         
     <?php $i++;endif; endwhile; ?>
+
+    
 </div>
