@@ -62,6 +62,7 @@ $( "#datepicker" ).datepicker();
                     <p>Gebruiker: <?= $_COOKIE['gebruikersnaam'] ?></p>
                     <a href="<?= SITE_URL ?>account">Mijn account</a> | <a href="<?= SITE_URL ?>logout">uitloggen</a>
                     <?php endif; ?>
+<<<<<<< HEAD
                     <?php endif; ?>
                 </div>
             </div>
@@ -89,3 +90,41 @@ $( "#datepicker" ).datepicker();
                     <button class="zoekknop">ZOEK</button>
                 </form>
             </div>
+=======
+            <?php endif; ?>
+        </div>
+
+    </div>
+
+
+
+    <!-- Menu top
+    ==================================================== -->
+
+    <div class="sixteen columns menubalk">
+        <a href="<?= SITE_URL ?>">Home</a>
+        <a href="<?= SITE_URL ?>veilingen">Veilingen</a>
+        <?php if(isset($_SESSION['loggedIn'])): ?>
+        <a href="<?= SITE_URL ?>account">Mijn account</a>
+        <?php else: ?>
+            <a href="<?= SITE_URL ?>registreren">Registreren</a>
+        <?php endif; ?>
+        <a href="<?= SITE_URL ?>algemeneVoorwaarden">Algemene voorwaarden</a>
+        <a href="<?= SITE_URL ?>contact">Contact</a>
+    </div>
+
+
+    <!-- Zoekbalk
+    ==================================================== -->
+
+    <div class="nine columns ">
+        <p>Witruimte -> e.v.t breadcrumbs?</p>
+    </div>
+    <div class="seven columns zoeken">
+        <form method="POST" action="<?php echo SITE_URL ?>zoekresultaat">
+            <input type="text" name="query" class="zoekveld"></input>
+            <input type="submit" value="ZOEK" class="zoekknop"></input>
+        </form>
+    </div>
+    
+>>>>>>> 1963ddcb9785723acd7dc24b667ed9605e67fc22

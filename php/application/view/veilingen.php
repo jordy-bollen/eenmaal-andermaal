@@ -21,9 +21,16 @@ while( $hoogsteboden = sqlsrv_fetch_object($data['hoogsteboden'])) {
     <?php endwhile; else:?>
        <h4 class="thirteen columns">Alle producten</h4>
     <?php endif; ?>
+   
+    
+    
+    
+    
+    
+    
     <?php $i = 0; while( $obj = sqlsrv_fetch_object($data['veilingen'])): ?>
         <?php if($obj->veilingGesloten == 'niet'): ?>
-        <div class="four columns veiling">
+    <div class="four columns veiling">
             <h3><a href="<?= SITE_URL ?>producten/<?= $obj->voorwerpnummer . '-' . trim( preg_replace( "/[^0-9a-z]+/i", "",str_replace(" ","-",strtolower($obj->titel)))) ?>"><?= $obj->titel ?></a></h3>
             <?php for( $j = 0; $j < count($afbeeldingen); $j++ ):
 
@@ -49,6 +56,11 @@ while( $hoogsteboden = sqlsrv_fetch_object($data['hoogsteboden'])) {
             <?php endif; endfor; ?>
         </div>
             <?php endif; ?>
+    
+    
+    
+    
+    
 
     <?php $i++; endwhile; ?>
 </div>
