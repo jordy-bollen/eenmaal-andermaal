@@ -26,8 +26,7 @@ class login extends controller{
         $rows = sqlsrv_fetch_array($query);
     if($rows) {
         $_SESSION['loggedIn'] = true;
-        $hour = time() + 3600;
-        setcookie('gebruikersnaam', $_POST['gebruikersnaam'], $hour);
+        $_SESSION['gebruikersnaam'] = $gebruikersnaam;
         header("location:" .SITE_URL );
         if(isset($_POST['onthoud'])) {
             $year = time() + 31536000;

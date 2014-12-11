@@ -61,7 +61,7 @@
                 </form>
             <?php else: ?>
                 <?php if($_SESSION['loggedIn'] != false): ?>
-                    <p>Gebruiker: <?= $_COOKIE['gebruikersnaam'] ?></p>
+                    <p>Gebruiker: <?= $_SESSION['gebruikersnaam'] ?></p>
                     <a href="<?= SITE_URL ?>account">Mijn account</a> | <a href="<?= SITE_URL ?>logout">uitloggen</a>
                 <?php endif; ?>
             <?php endif; ?>
