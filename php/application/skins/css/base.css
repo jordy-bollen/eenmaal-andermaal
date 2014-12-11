@@ -645,14 +645,11 @@ display: inline-block;
 
 /*------------------- Mijn biedingen ---------------*/
 
-.table, th, td {
-    border: 1px solid black;
-    border-collapse: collapse;
-}
-
-.tabelplaats{
+.tabelplaats, .tabelplaats tr td{
 	margin-left: 50px;
 	margin-top: 25px;
+	border: 1px solid black;
+    border-collapse: collapse;
 }
 
 /*--------------  FOOTER -----------------------*/
