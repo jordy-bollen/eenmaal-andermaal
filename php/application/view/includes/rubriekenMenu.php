@@ -6,7 +6,7 @@
 
         <?php while( $obj = sqlsrv_fetch_object( $data['rubrieken'] )): ?>
             <?php if($obj->rubriek == NULL): ?>
-                <li><a href="<?= SITE_URL ?>veilingen/<?= $obj->rubrieknummer . '-' . trim( preg_replace( "/[^0-9a-z]+/i", "", str_replace(" ","",strtolower($obj->rubrieknaam)))) ?>"><?= $obj->rubrieknaam ?></a></li>
+                <a href="<?= SITE_URL ?>veilingen/<?= $obj->rubrieknummer . '-' . trim( preg_replace( "/[^0-9a-z]+/i", "", str_replace(" ","",strtolower($obj->rubrieknaam)))) ?>"><li><?= $obj->rubrieknaam ?></li></a>
             <?php endif; ?>
         <?php endwhile; ?>
     </ul>
