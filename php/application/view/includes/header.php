@@ -87,9 +87,9 @@
         <p>Witruimte -> e.v.t breadcrumbs?</p>
     </div>
     <div class="seven columns zoeken">
-        <form>
-            <input type="text" class="zoekveld"></input>
-            <button class="zoekknop">ZOEK</button>
+        <form method="POST" action="<?php echo SITE_URL ?>zoekresultaat">
+            <input type="text" name="query" class="zoekveld"></input>
+            <input type="submit" value="ZOEK" class="zoekknop"></input>
         </form>
     </div>
     
