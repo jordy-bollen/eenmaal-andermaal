@@ -60,7 +60,7 @@ class producten extends controller{
                 $bodinformatie['bodbedrag'] = str_replace(",",".",$bodinformatie['bodbedrag']);
                 $bodinformatie['bodbedrag'] = round( $bodinformatie['bodbedrag'], 2, PHP_ROUND_HALF_DOWN);
             $bodinformatie['tijd'] = date("Y-m-d H:i:s");
-            $bodinformatie['gebruiker'] = $_COOKIE['gebruikersnaam'];
+            $bodinformatie['gebruiker'] = $_SESSION['gebruikersnaam'];
             $modelBod->registreerBod($bodinformatie);
             echo 'Bod geplaatst';
                 header("location:" .SITE_URL. 'producten/' .$lastSegment );

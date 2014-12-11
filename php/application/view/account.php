@@ -7,11 +7,8 @@
             <div class="one column">&nbsp;</div>
 
             <div class="eleven columns main">
-                <?php while( $gebruiker = sqlsrv_fetch_object( $data['gebruiker'] )): ?>
                 <h1>Mijn Account</h1>
               <div class="eleven columns accountMenu">
-                    <p>- <?= $gebruiker->gebruikersnaam ?></p>
-                <?php endwhile; ?>
                 <div class="four columns">
                     <p class="mijnaccount">Mijn Biedingen</p>
                     <p class="mijnaccount">Mijn Advertenties</p>
