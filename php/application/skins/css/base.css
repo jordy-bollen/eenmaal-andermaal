@@ -646,7 +646,7 @@ display: inline-block;
 /*------------------- Mijn biedingen ---------------*/
 
 .tabelplaats, .tabelplaats tr td{
-	margin-left: 50px;
+	margin-left: 30px;
 	margin-top: 25px;
 	border: 1px solid black;
     border-collapse: collapse;
