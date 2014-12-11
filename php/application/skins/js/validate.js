@@ -1,3 +1,7 @@
+
+
+
+
 $(function() {
 
     // Setup form validation on the #register-form element
@@ -16,12 +20,20 @@ $(function() {
                 required: true,
                 minlength: 5
             },
+            
+            geboortedatum: {dateFormat: true},
             code: "required",
             antwoord: "required",
             adres1: "required",
             postcode: "required",
             woonplaats: "required",
+            geboortedatum: {
+                required: true,
+                date: true
+            },
             telefoonnummer: "required"
+
+
         },
 
         // Specify the validation error messages
@@ -33,6 +45,7 @@ $(function() {
                 required: "Voer een wachtwoord in",
                 minlength: "Wachtwoord moet minstens 5 karakters lang zijn"
             },
+            geboortedatum: "Voer een geldige datum in",
             email: "Voer een geldig e-mailadres in",
             code: "Voer een geldige code in",
             antwoord: "Voer een antwoord in",
@@ -46,6 +59,8 @@ $(function() {
             form.submit();
         }
     });
+
+
 
     $("#bod").validate({
 
@@ -81,5 +96,4 @@ $(function() {
         }
         if(hasError == true) {return false;}
     });
-
 });

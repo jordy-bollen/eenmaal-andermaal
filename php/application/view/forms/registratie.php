@@ -29,7 +29,7 @@
                     <input type='text' name='email' class="invoerveld" value="<?php echo $_POST['email'] ?>" maxlength="50" />
 
                     <label for='geboortedatum' class="three columns">Geboortedatum*</label>
-                    <input type='date' name='geboortedatum' class="datum" maxlength="50" />
+                    <input type='text' name='geboortedatum' class="datum "id="datepicker"  maxlength="50" />
 
                     <label for='wachtwoord' class="three columns">Wachtwoord*</label>
                     <input id="wachtwoord" type='password' name='wachtwoord' class="invoerveld" maxlength="50" />
