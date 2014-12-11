@@ -2,10 +2,10 @@
        ==================================================== -->
 <?php include 'includes/rubriekenMenu.php'; ?>
 
-<!-- Feedback
+<!-- Feedback geven
 ==================================================== -->
 <div id="content">
-    <h1 class="thirteen columns">Feedback</h1>
+    <h1 class="thirteen columns">Feedback geven</h1>
     <div class="eleven columns">
             <p class="feedbackgeven">Feedback geven aan [Gebruiker]</p>
             <p class="feedbackgeven">Voorwerp: [Voorwerp nummer]</p>  
@@ -17,9 +17,9 @@
 
     <div class="six column inputvelden">
         <select name="beoordeling" class="beoordelinginput">
-            <option value="Onvoldoende">Negatief</option>
-            <option value="Voldoende">Neutral</option>
-            <option value="Goed">Positief</option>
+            <option value="negatief">Negatief</option>
+            <option value="neutraal">Neutraal</option>
+            <option value="positief">Positief</option>
         </select>
             <textarea name="bericht" maxlength="1000" rows="8" class="commentaarveldlanger"></textarea>
             <input type="submit" value="Verzenden" class="verstuur">

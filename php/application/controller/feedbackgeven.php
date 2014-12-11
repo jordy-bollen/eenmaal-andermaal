@@ -6,7 +6,7 @@
  * Time: 15:18
  */
 
-class feedback extends controller{
+class feedbackgeven extends controller{
 
     function __constructor() {
         parent::__construct();
@@ -18,7 +18,7 @@ class feedback extends controller{
         $rubrieken = $modelRubrieken->getHoofdRubrieken();
         $this->data['rubrieken'] = $rubrieken;
         $this->loadView('includes/header');
-        $this->loadView('feedback', $this->data);
+        $this->loadView('feedbackgeven', $this->data);
         $this->loadView('includes/footer');
     }
 } 
