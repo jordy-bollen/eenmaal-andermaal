@@ -34,7 +34,12 @@ while( $hoogsteboden = sqlsrv_fetch_object($data['hoogsteboden'])) {
             <?php endif;
         endfor; ?>
         <div class="veilinglopen">
+<<<<<<< HEAD
             <p id="countdownTime<?= $time ?>"></p>
+=======
+            <p>Veiling loopt nog:</p><p id="countdownTime<?= $i ?>"></p>
+            <p>Hoogte bod: <strong>€800</strong></p>
+>>>>>>> 47758567244f46de4279cd1cc6d2e53bb94223c6
         </div>
         <script type="text/javascript">
             $("#countdownTime<?= $time ?>")
@@ -44,7 +49,8 @@ while( $hoogsteboden = sqlsrv_fetch_object($data['hoogsteboden'])) {
                     );
                 });
         </script>
-        <p>Hoogte bod: <strong>€800</strong></p>
+        
+        <a href="#" class="ganaarveilingbutton"> button </a>
     </div>
     <?php $time++; endwhile; ?>
 
@@ -74,7 +80,9 @@ while( $hoogsteboden = sqlsrv_fetch_object($data['hoogsteboden'])) {
             if($hoogstebod[$j]->voorwerpnummer == $aflopend->voorwerpnummer): ?>
                 <p>Hoogste bod: <strong><?= $hoogstebod[$j]->hoogste ?></strong></p>
             <?php elseif($hoogstebod[$j]->hoogste == NULL): ?>test<?php  endif; endfor; ?>
+    <a href="#" class="ganaarveilingbutton"> button </a>
     </div>
     <?php $i++; endwhile; ?>
+
 </div>
 

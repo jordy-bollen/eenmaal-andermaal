@@ -46,7 +46,7 @@ class zoekresultaat extends controller{
         
         else
         {
-            echo "Helaas, geen producten gevonden!";
+            $this->loadView('niksgevonden');
         }  
         
         
