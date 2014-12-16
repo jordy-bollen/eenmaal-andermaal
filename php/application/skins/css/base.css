@@ -499,6 +499,7 @@ display: inline-block;
 .veiling p{
 	text-align: center;
 	margin-top:10px;
+	margin-bottom: 3px;
 }
 
 #countdownTimer {
@@ -712,4 +713,10 @@ display: inline-block;
 .verkoperReg p
 {
 	font-weight:bold;
+}
+
+.veiling input
+{
+	margin-top: 15px;
+	margin-left: 7px;
 }
