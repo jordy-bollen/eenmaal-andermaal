@@ -652,6 +652,20 @@ display: inline-block;
     border-collapse: collapse;
 }
 
+/*------------------- Veiling toevoegen ---------------*/
+#kiesCategorie {
+    width: 800px;
+}
+
+.veilingCat {
+    width: 200px;
+    float:left;
+}
+
+#kiesCategorie input {
+    display: block;
+}
+
 /*--------------  FOOTER -----------------------*/
 
 .footer, .footer a

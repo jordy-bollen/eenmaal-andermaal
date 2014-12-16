@@ -60,8 +60,8 @@ class rubriek extends model{
      * @param $bovenliggendeRubriek
      * @return mixed
      */
-    public function getSubRubrieken() {
-        return $this->database->query("SELECT * FROM rubriek WHERE rubriek != NULL");
+    public function getSubRubrieken($id) {
+        return $this->database->query("SELECT * FROM rubriek WHERE rubriek='".$id."'");
     }
 
 
