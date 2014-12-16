@@ -34,12 +34,9 @@ while( $hoogsteboden = sqlsrv_fetch_object($data['hoogsteboden'])) {
             <?php endif;
         endfor; ?>
         <div class="veilinglopen">
-<<<<<<< HEAD
             <p id="countdownTime<?= $time ?>"></p>
-=======
             <p>Veiling loopt nog:</p><p id="countdownTime<?= $i ?>"></p>
             <p>Hoogte bod: <strong>€800</strong></p>
->>>>>>> 47758567244f46de4279cd1cc6d2e53bb94223c6
         </div>
         <script type="text/javascript">
             $("#countdownTime<?= $time ?>")
