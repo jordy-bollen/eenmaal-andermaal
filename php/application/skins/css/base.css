@@ -425,6 +425,7 @@ display: inline-block;
 
 .rubriekenmenu{
 	background-color: #b8e3f9;
+	border-left: 3px solid #45b5f0;
 
 }
 
@@ -436,24 +437,72 @@ display: inline-block;
 
 .rubriekenmenu li{
     background-image: url("../img/orange-arrow.png");
-    background-position: 150px 25px;
+    background-position: 150px 17px;
     background-repeat: no-repeat;
     border-bottom: 1px solid #ff9000;
     min-height: 25px;
     margin-bottom: 0;
-    padding: 2px 10px 7px;
+    padding: 10px 10px 7px;
 }
 
 .rubriekenmenu li:hover{
 	background-color:#ff9517;
 	color:#FFF;	
-	background-image: url("../images/white-arrow.png");
-	background-position: 140px 17px;
+	background-image: url("../img/white-arrow.png");
+    background-position: 150px 17px;
     background-repeat: no-repeat;
 }
 .rubriekenmenu h2 {
     background-color: #ffffff;
 }
+
+.rubriekenmenu a:hover{
+	color:#FFF;
+}
+
+/*-------------- RUBRIEKEN SUBMENU ------------------*/
+
+
+#menu li ul.sub-menu
+{
+    background-color: #b8e3f9;
+    display: none;
+    height: auto;
+    position: absolute;
+    width: 162px;
+    left: 143px;
+    margin-top: -28px;    
+}
+
+#menu li:hover ul.sub-menu
+{
+	display: block;
+	color:#FFF;	
+} 
+
+.menu-sub a:hover {
+	color:#FFF;
+}
+
+#menu li ul.sub-menu-twee
+{
+	clear: both;
+    background-color: #b8e3f9;
+    display: none;
+    height: auto;
+    position: absolute;
+    width: 162px;
+    left: 143px;
+    margin-top: -28px;    
+}
+
+#menu li:hover ul.sub-menu-twee
+{
+	display: block;
+	color:#FFF;	
+} 
+
+
 /*-------------- CONTENT --------------------*/
 
 .content{
@@ -468,12 +517,11 @@ display: inline-block;
 }
 
 .veiling{
-    height: 302px;
-	width:90%;
-	border:1px solid #f1efef;
-	box-shadow: 10px,10px,10px,10px;
-	margin-bottom:15px;
-    margin-left: 32px !important;
+    border: 1px solid #f1efef;
+    height: 345px;
+    margin-bottom: 15px;
+    margin-left: 4px !important;
+    width: 246px !important;
 }
 
 .veilingverlopen{
@@ -482,7 +530,8 @@ display: inline-block;
 }
 
 .veilinglopen {
-    background-color: #b7ffbe
+    background-color: #b7ffbe;
+    height:75px;
 }
 
 .veiling span{
@@ -490,16 +539,19 @@ display: inline-block;
 }
 
 .veiling img{
-	background-position: center;
-	margin-left:23px;
-    width: 170px;
-    height: 160px;
+    background-position: center center;
+    height: 201px;
+    margin-left: 5px;
+    width: 237px;
 }
 
 .veiling p{
 	text-align: center;
+<<<<<<< HEAD
 	margin-top:10px;
 	margin-bottom: 3px;
+=======
+>>>>>>> 1dbb54f8ed533045346be695b40a1af4d615be3d
 }
 
 #countdownTimer {
@@ -601,6 +653,11 @@ display: inline-block;
 	margin-top: -25px;
 }
 
+.ganaarveilingbutton{
+	border:1px solid red;
+	margin-left:40%;
+}
+
  /*-------------- Contact -------------------*/
 .tekstlables{
  height:100px;
@@ -651,6 +708,20 @@ display: inline-block;
 	margin-top: 25px;
 	border: 1px solid black;
     border-collapse: collapse;
+}
+
+/*------------------- Veiling toevoegen ---------------*/
+#kiesCategorie {
+    width: 800px;
+}
+
+.veilingCat {
+    width: 200px;
+    float:left;
+}
+
+#kiesCategorie input {
+    display: block;
 }
 
 /*--------------  FOOTER -----------------------*/
