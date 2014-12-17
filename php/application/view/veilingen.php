@@ -23,10 +23,7 @@ while( $hoogsteboden = sqlsrv_fetch_object($data['hoogsteboden'])) {
     <?php endif; ?>
    
     
-    
-    
-    
-    
+   
     
     <?php $i = 0; while( $obj = sqlsrv_fetch_object($data['veilingen'])): ?>
         <?php if($obj->veilingGesloten == 'niet'): ?>

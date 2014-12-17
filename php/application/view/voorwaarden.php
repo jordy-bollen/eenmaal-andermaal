@@ -6,7 +6,7 @@
 
     <div class="thirtheen columns"><h1>Algemene Gebruiksvoorwaarden</h1>
 
-        <div class="six columns">
+<!--         <div class="six columns">
             <div id="voorwaarden1">
                 <strong>I. Algemene Gebruiksvoorwaarden</strong><br>
                 Het is voor iedereen mogelijk om eenvoudig en snel gebruik te maken van EenmaalAndermaal. Wij hebben daarvoor duidelijke spelregels opgesteld. Dit betekent dat                          de EenmaalAndermaal Gebruiksvoorwaarden op u van toepassing zijn door het bezoeken van onze website. We raden u dan ook aan om deze Gebruiksvoorwaarden                                  regelmatig door te lezen.<br>
@@ -33,7 +33,7 @@
         <br>
         <br>
         <hr>
-        <br>
+        <br> -->
 
         <!-- TXT.php files zijn grote lappen tekst, vandaar dat ze extern opgeslagen zijn -->
         <div class="twelve columns">

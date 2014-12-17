@@ -54,7 +54,7 @@
 /* #Basic Styles
 ================================================== */
 	body {
-		background-color: #fff;
+		background-color: #dcf3ff;
 		font: 14px/21px "verdana";
 		color: #444;
 		-webkit-font-smoothing: antialiased; /* Fix for webkit rendering */
@@ -77,7 +77,7 @@
 	h6 { font-size: 14px; line-height: 21px; }
 	.subheader { color: #777; }
 
-	p { margin: 0 0 20px 0; }
+	p { margin: 0 0 5px 0; }
 	p img { margin: 0; }
 	p.lead { font-size: 21px; line-height: 27px; color: #777;  }
 
@@ -165,18 +165,18 @@
 	input[type="submit"]:hover,
 	input[type="reset"]:hover,
 	input[type="button"]:hover {
-		color: #222;
+/*		color: #222;
 		background: #ddd; /* Old browsers */
-		background: #ddd -moz-linear-gradient(top, rgba(255,255,255,.3) 0%, rgba(0,0,0,.3) 100%); /* FF3.6+ */
-		background: #ddd -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,.3)), color-stop(100%,rgba(0,0,0,.3))); /* Chrome,Safari4+ */
-		background: #ddd -webkit-linear-gradient(top, rgba(255,255,255,.3) 0%,rgba(0,0,0,.3) 100%); /* Chrome10+,Safari5.1+ */
-		background: #ddd -o-linear-gradient(top, rgba(255,255,255,.3) 0%,rgba(0,0,0,.3) 100%); /* Opera11.10+ */
-		background: #ddd -ms-linear-gradient(top, rgba(255,255,255,.3) 0%,rgba(0,0,0,.3) 100%); /* IE10+ */
-		background: #ddd linear-gradient(top, rgba(255,255,255,.3) 0%,rgba(0,0,0,.3) 100%); /* W3C */
-	  border: 1px solid #888;
+/*		background: #ddd -moz-linear-gradient(top, rgba(255,255,255,.3) 0%, rgba(0,0,0,.3) 100%); /* FF3.6+ */
+/*		background: #ddd -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,.3)), color-stop(100%,rgba(0,0,0,.3))); /* Chrome,Safari4+ */
+/*		background: #ddd -webkit-linear-gradient(top, rgba(255,255,255,.3) 0%,rgba(0,0,0,.3) 100%);  Chrome10+,Safari5.1+ 
+/*		background: #ddd -o-linear-gradient(top, rgba(255,255,255,.3) 0%,rgba(0,0,0,.3) 100%); /* Opera11.10+ */
+/*		background: #ddd -ms-linear-gradient(top, rgba(255,255,255,.3) 0%,rgba(0,0,0,.3) 100%); /* IE10+ */
+/*		background: #ddd linear-gradient(top, rgba(255,255,255,.3) 0%,rgba(0,0,0,.3) 100%); /* W3C */
+/*	  border: 1px solid #888;
 	  border-top: 1px solid #aaa;
-	  border-left: 1px solid #aaa; }
-
+	  border-left: 1px solid #aaa; }*/
+}
 	.button:active,
 	button:active,
 	input[type="submit"]:active,
@@ -291,7 +291,8 @@ h1{
     border-bottom: 1px solid #ff9000;
     border-top: 1px solid #ff9000;
     font-size: 27px;
-    line-height: 40px;    
+    line-height: 40px;
+    margin-top:41px;    
 }
 
 h2{
@@ -303,12 +304,14 @@ h2{
 h3{
 	font-size:17px;
 	text-align: center;
+	background-color: #ebebeb;
 }
 
 h4{
 	border-bottom: 1px solid #ff9000;
     border-top: 1px solid #ff9000;
 	margin-bottom: 10px;
+	margin-top:41px;    
 }
 
 #biedingen p, hr{
@@ -336,10 +339,6 @@ display: inline-block;
 .login{
 	margin-top: 5px;
 	margin-bottom: 7px;
-	-webkit-border-radius: 5px;
-	-moz-border-radius: 5px;
-	border-radius: 5px;
-	border: 2px solid grey;
 	padding: 5px;	
 	
 }
@@ -364,7 +363,7 @@ display: inline-block;
 
 .menubalk a{
 	height:40px;
-	width:186px;
+	width:auto;
 	display:block;
 	float:left;
 	color:#FFF;
@@ -373,12 +372,14 @@ display: inline-block;
 	text-align: center;
 	padding-top: 10px;
 	text-decoration: none;
+    padding: 10px 23px 0 23px;
 }
 
 .menubalk a:hover{
 	height:40px;
-	width:186px;
+	width:auto;
 	background-color:#ff9000;
+	padding: 10px 23px 0 23px;
 }
 
 .login button{
@@ -400,22 +401,37 @@ display: inline-block;
 
 /*---------------ZOEKEN --------------------*/
 .zoekknop{
-    border:1px solid #ff9000;
-    height: 31px;
+    height: 30px;
     position: relative;
     width: 120px;
     background-color: #ff9000;
     color:#FFF;
 }
 
+.zoeken .zoekknop input:hover{
+	background-color:#ff8a00; 
+
+}
+
 .zoeken{
-	height:42px;
+	height:41px;
 	margin-top:20px;
+	margin-bottom: -30px;
+}
+
+.zoeken form{
+	width:320px;
 }
 
 .zoekveld{
 	float:left;
     border: 1px solid #ff9000 !important;
+}
+
+.zoeken input{
+	border:1px solid #ff9000;
+	color:#FFF;
+	margin-left:-10px;
 }
 
 
@@ -517,11 +533,15 @@ display: inline-block;
 }
 
 .veiling{
-    border: 1px solid #f1efef;
-    height: 345px;
+	border: 1px solid #f2f2f2;
+    height: 360px;
     margin-bottom: 15px;
     margin-left: 4px !important;
     width: 246px !important;
+}
+
+.veiling:hover{
+	border: 1px solid #cacaca;
 }
 
 .veilingverlopen{
@@ -530,8 +550,8 @@ display: inline-block;
 }
 
 .veilinglopen {
-    background-color: #b7ffbe;
-    height:75px;
+    background-color: #dbdbdb;
+    height: 50px;
 }
 
 .veiling span{
@@ -541,27 +561,32 @@ display: inline-block;
 .veiling img{
     background-position: center center;
     height: 201px;
-    margin-left: 5px;
-    width: 237px;
+    width: auto;
 }
 
 .veiling p{
 	text-align: center;
 }
 
-#countdownTimer {
+/*#countdownTimer {
     height:30px;
     padding-top: 10px;
     margin-top: 40px;
     color: #ffffff;
     background: #ff9517;
     text-align: center;
-}
+} 
+
+DIT DOET NIKS?!
 
 #countdownTime {
     display: inline;
     font-size: 18px;
+}*/
 
+.countdownkleur{
+	color:#4a9ec9;
+	font-size: 18px;
 }
 
 #biedingen table {
@@ -647,12 +672,33 @@ display: inline-block;
 	margin-left: 175px;
 	margin-top: -25px;
 }
-
-.ganaarveilingbutton{
-	border:1px solid red;
-	margin-left:40%;
+.ganaarveilingbutton strong{
+	color:#FFF;
 }
 
+.ganaarveilingbutton{
+   background-color: #ff9517;
+    border-radius: 2px;
+    float: right;
+    height: 32px;
+    margin-left: 30px;
+    margin-top: 1px;
+    padding-top: 10px;
+    text-align: center;
+    width: 108px;
+    text-decoration: none;
+  }
+.button-bod{
+	margin-top:10px;
+}
+
+.ganaarveilingbutton:hover{
+	background-color:#ff8a00; 
+}
+
+h3 a{
+	text-decoration: none;
+}
  /*-------------- Contact -------------------*/
 .tekstlables{
  height:100px;
@@ -724,9 +770,9 @@ display: inline-block;
 .footer, .footer a
 {
 	height:50px;
-	background-color: #4a9ec9;
+	background-color: #3da1d4;
 	color: #FFF;
-    	border-radius: 5px;	
+    border-radius: 5px;	
 	text-align: center;
     margin-top: 20px;
 }
@@ -746,7 +792,6 @@ display: inline-block;
 .container 
 {
 	background-color: #FFF;
-	
 }
 
 #voorwaarden1, #voorwaarden2, #voorwaarden3
@@ -779,4 +824,8 @@ display: inline-block;
 .verkoperReg p
 {
 	font-weight:bold;
+}
+
+.bread{
+	float:left;
 }

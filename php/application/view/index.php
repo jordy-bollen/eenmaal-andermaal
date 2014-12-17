@@ -34,8 +34,12 @@ while( $hoogsteboden = sqlsrv_fetch_object($data['hoogsteboden'])) {
             <?php endif;
         endfor; ?>
         <div class="veilinglopen">
-            <p id="countdownTime<?= $time ?>"></p>
-            <p>Veiling loopt nog:</p><p id="countdownTime<?= $i ?>"></p>
+            <p><strong>Veiling loopt nog:</strong></p><p id="countdownTime<?= $i ?>"></p>
+            <p id="countdownTime<?= $time ?>" class="countdownkleur"></p>
+        </div>
+        <div class="button-bod">
+            
+        <a href="<?= SITE_URL ?>producten/<?= $voorwerp->voorwerpnummer . '-' . trim( preg_replace( "/[^0-9a-z]+/i", "",str_replace(" ","-",strtolower($voorwerp->titel)))) ?>" class="ganaarveilingbutton"> <strong> BIED MEE </strong> </a>
             <p>Hoogte bod: <strong>€800</strong></p>
         </div>
         <script type="text/javascript">
@@ -46,8 +50,6 @@ while( $hoogsteboden = sqlsrv_fetch_object($data['hoogsteboden'])) {
                     );
                 });
         </script>
-        
-        <a href="#" class="ganaarveilingbutton"> button </a>
     </div>
     <?php $time++; endwhile; ?>
 
@@ -63,7 +65,12 @@ while( $hoogsteboden = sqlsrv_fetch_object($data['hoogsteboden'])) {
             <?php endif;
         endfor; ?>
         <div class="veilinglopen">
-            <p id="countdownTime<?= $i ?>"></p>
+            <p><strong>Veiling loopt nog:</strong></p><p id="countdownTime<?= $i ?>" class="countdownkleur"></p>
+        </div>
+        <div class="button-bod">
+            
+        <a href="<?= SITE_URL ?>producten/<?= $voorwerp->voorwerpnummer . '-' . trim( preg_replace( "/[^0-9a-z]+/i", "",str_replace(" ","-",strtolower($voorwerp->titel)))) ?>" class="ganaarveilingbutton"><strong> BIED MEE</strong> </a>
+            
         </div>
         <script type="text/javascript">
             $("#countdownTime<?= $i ?>")
@@ -77,7 +84,6 @@ while( $hoogsteboden = sqlsrv_fetch_object($data['hoogsteboden'])) {
             if($hoogstebod[$j]->voorwerpnummer == $aflopend->voorwerpnummer): ?>
                 <p>Hoogste bod: <strong><?= $hoogstebod[$j]->hoogste ?></strong></p>
             <?php elseif($hoogstebod[$j]->hoogste == NULL): ?>test<?php  endif; endfor; ?>
-    <a href="#" class="ganaarveilingbutton"> button </a>
     </div>
     <?php $i++; endwhile; ?>
 
