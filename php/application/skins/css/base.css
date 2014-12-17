@@ -32,7 +32,7 @@
 		font: inherit;
 		vertical-align: baseline; 
 		}
-	article, aside, details, figcaption, figure, footer, 	header, hgroup, menu, nav, section {
+	article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
 		display: block; }
 	body {
 		line-height: 1; }
@@ -54,8 +54,8 @@
 /* #Basic Styles
 ================================================== */
 	body {
-		background-color: #dcf3ff;
-		font: 14px/21px "verdana";
+		background-color: FFF;
+		font: 12px "verdana";
 		color: #444;
 		-webkit-font-smoothing: antialiased; /* Fix for webkit rendering */
 		-webkit-text-size-adjust: 100%;
@@ -362,23 +362,24 @@ h4{
 }
 
 .menubalk a{
-	height:40px;
-	width:auto;
-	display:block;
-	float:left;
-	color:#FFF;
-	border-right: 2px solid #8fdaff;
-	text-align: center;
-	padding-top: 10px;
-	text-decoration: none;
-    padding: 10px 23px 0 23px;
+    border-bottom: 2px solid #8fdaff;
+    border-right: 2px solid #8fdaff;
+    color: #fff;
+    display: block;
+    float: left;
+    height: 40px;
+    padding-top: 18px;
+    text-align: center;
+    text-decoration: none;
+    width: 186px;
+	font-weight: bold;
 }
-
 .menubalk a:hover{
 	height:40px;
-	width:auto;
+	width: 186px;
 	background-color:#ff9000;
-	padding: 10px 23px 0 23px;
+    padding-top: 10px;
+	font-weight: bold;
 }
 
 .login button{

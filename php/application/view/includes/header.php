@@ -75,15 +75,15 @@
     ==================================================== -->
 
     <div class="sixteen columns menubalk">
-        <a href="<?= SITE_URL ?>">Home</a>
-        <a href="<?= SITE_URL ?>veilingen">Veilingen</a>
+        <a href="<?= SITE_URL ?>">HOME</a>
+        <a href="<?= SITE_URL ?>veilingen">VEILINGEN</a>
         <?php if(isset($_SESSION['loggedIn'])): ?>
-            <a href="<?= SITE_URL ?>veilingtoevoegen">Veiling toevoegen</a>
+            <a href="<?= SITE_URL ?>veilingtoevoegen">VEILING TOEVOEGEN</a>
         <?php else: ?>
-            <a href="<?= SITE_URL ?>registreren">Registreren</a>
+            <a href="<?= SITE_URL ?>registreren">REGISTREREN</a>
         <?php endif; ?>
-        <a href="<?= SITE_URL ?>algemeneVoorwaarden">Algemene voorwaarden</a>
-        <a href="<?= SITE_URL ?>contact">Contact</a>
+        <a href="<?= SITE_URL ?>algemeneVoorwaarden">ALGEMENE VOORWAARDEN</a>
+        <a href="<?= SITE_URL ?>contact">CONTACT</a>
     </div>
 
 
