@@ -102,7 +102,7 @@ foreach($crumbs as $crumb){
 }
 ?>
     </div>
-    <div class="seven columns zoeken">
+    <div class="six columns zoeken">
         <form method="POST" action="<?php echo SITE_URL ?>zoekresultaat">
             <input type="text" name="query" class="zoekveld"></input>
             <input type="submit" value="ZOEK" class="zoekknop"></input>

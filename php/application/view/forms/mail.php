@@ -2,5 +2,5 @@
       accept-charset='UTF-8'>
 <label for='email' >email*:</label>
         <input type='text' name='email' id='email' maxlength="50" /><br />
-    <input type='submit' name='submitMail' value='Submit' />
+    <input type='submit' class="zoekknop" name='submitMail' value='Submit' />
 </form>
