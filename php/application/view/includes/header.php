@@ -78,7 +78,7 @@
         <a href="<?= SITE_URL ?>">Home</a>
         <a href="<?= SITE_URL ?>veilingen">Veilingen</a>
         <?php if(isset($_SESSION['loggedIn'])): ?>
-            <a href="<?= SITE_URL ?>account">Mijn account</a>
+            <a href="<?= SITE_URL ?>veilingtoevoegen">Veiling toevoegen</a>
         <?php else: ?>
             <a href="<?= SITE_URL ?>registreren">Registreren</a>
         <?php endif; ?>

@@ -1,9 +1,9 @@
 <? $i = 0; ?>
 <div class="thirtheen columns"><h3>Advertentie plaatsen</h3>
-   <form id="kiesCategorie">
+   <form id="kiesCategorie" action="<?php SITE_URL ?>veilingtoevoegen" method="POST">
        <div class="veilingCat" >
                 <label for='rubriek' class="two column">Rubriek*</label><br>
-        <select id="main" name="rubriek" class="invoerveld" size="15">
+        <select id="main" name="main" class="invoerveld" size="15">
             <?php while( $rubriek = sqlsrv_fetch_object($data['hoofdrubrieken'])):
                 if($rubriek->rubriek == NULL):
                     ?>
@@ -20,8 +20,14 @@
        <div id="sub3" align="center">
            <img src="<?php SKINS_DIR ?>img/loader.gif" style="margin-top:8px; float:left" id="loader" alt="" />
        </div>
+       <div id="sub4" align="center">
+           <img src="<?php SKINS_DIR ?>img/loader.gif" style="margin-top:8px; float:left" id="loader" alt="" />
+       </div>
+       <div id="sub5" align="center">
+           <img src="<?php SKINS_DIR ?>img/loader.gif" style="margin-top:8px; float:left" id="loader" alt="" />
+       </div>
 
-                <input type='submit' name='submit' value='Advertentie plaatsen' />
+
    </form>
     <script type="text/javascript">
 
@@ -32,6 +38,10 @@
 
             $('#main').change(function(){
                 $('#sub1').fadeOut();
+                $('#sub2').empty();
+                $('#sub3').empty();
+                $('#sub4').empty();
+                $('#sub5').empty();
                 $('#loader').show();
                 $.post("childcats", {
                     parent_id: $('#main').val(),
@@ -45,9 +55,12 @@
 
             $('#sub1').change(function(){
                 $('#sub2').fadeOut();
+                $('#sub3').empty();
+                $('#sub4').empty();
+                $('#sub5').empty();
                 $('#loader').show();
                 $.post("childcats", {
-                    parent_id: $('#sub1').val(),
+                    parent_id: $('#subchild1').val(),
                     field_id: 2
                 }, function(response){
 
@@ -58,12 +71,39 @@
 
             $('#sub2').change(function(){
                 $('#sub3').fadeOut();
+                $('#sub4').empty();
+                $('#sub5').empty();
                 $('#loader').show();
                 $.post("childcats", {
-                    parent_id: $('#sub2').val()
+                    parent_id: $('#subchild2').val(),
+                    field_id: 3
                 }, function(response){
 
                     setTimeout("finishAjax('sub3', '"+escape(response)+"')", 400);
+                });
+                return false;
+            });
+            $('#sub3').change(function(){
+                $('#sub4').fadeOut();
+                $('#sub5').empty();
+                $('#loader').show();
+                $.post("childcats", {
+                    parent_id: $('#subchild3').val(),
+                    field_id: 4
+                }, function(response){
+
+                    setTimeout("finishAjax('sub4', '"+escape(response)+"')", 400);
+                });
+                return false;
+            });
+            $('#sub4').change(function(){
+                $('#loader').show();
+                $.post("childcats", {
+                    parent_id: $('#subchild4').val(),
+                    field_id: 5
+                }, function(response){
+
+                    setTimeout("finishAjax('sub5', '"+escape(response)+"')", 400);
                 });
                 return false;
             });

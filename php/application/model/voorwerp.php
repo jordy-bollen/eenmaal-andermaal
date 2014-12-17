@@ -95,5 +95,15 @@ WHERE cp.rubriekOpLaagsteNiveau IN (
         return $this->database->query("select TOP(3) * from Voorwerp WHERE veilingGesloten = 'niet' ORDER BY eindmoment ASC");
     }
 
+    public function voegVoorwerpToe($voorwerp) {
+        $this->database->query("INSERT INTO Voorwerp(titel, beschrijving, startprijs, betalingswijze, betalingsinstructie, plaatsnaam,
+            land, looptijd, startmoment, verzendkosten, verzendinstructies, verkoper) VALUES
+        ('".$voorwerp['titel']."', '".$voorwerp['beschrijving']."', ".$voorwerp['startprijs'].", '".$voorwerp['betalingswijze']."',
+            'Binnen 5 werkdagen', '".$voorwerp['plaatsnaam']."', 'nederland', ".$voorwerp['looptijd'].", '12-dec-2014 11:45:18', 3.84, 'Verzenden', '".$_SESSION['gebruikersnaam']."')");
+    }
+
+    public function voegVoorwerpRubriekToe($categorie) {
+        $this->database->query("INSERT INTO VoorwerpInRubriek(voorwerp, rubriekOpLaagsteNiveau)");
+    }
 
 } 
