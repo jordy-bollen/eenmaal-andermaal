@@ -39,7 +39,7 @@
     ==================================================== -->
     <div class="topBalk">
         <div class="eleven columns logo">
-            <img src="<?= SKINS_DIR ?>img/logo.png">
+           <a href="/"> <img src="<?= SKINS_DIR ?>img/logo.png"></a>
         </div>
         <div class="five columns login">
             <?php if(!isset($_SESSION['loggedIn'])): ?>
@@ -91,7 +91,16 @@
     ==================================================== -->
 
     <div class="nine columns ">
-        <p>Witruimte -> e.v.t breadcrumbs?</p>
+<p class="bread"> U bent nu hier:</p>
+
+       <p>   <?php    
+$crumbs = explode("/",$_SERVER["REQUEST_URI"]);
+$i = 0;
+foreach($crumbs as $crumb){
+  echo '<a href="">'.ucfirst(str_replace(array(".php",""),array(""," "),$crumb) . ' > ' . '</a>');
+  $i++;
+}
+?>
     </div>
     <div class="seven columns zoeken">
         <form method="POST" action="<?php echo SITE_URL ?>zoekresultaat">
@@ -99,4 +108,3 @@
             <input type="submit" value="ZOEK" class="zoekknop"></input>
         </form>
     </div>
-    

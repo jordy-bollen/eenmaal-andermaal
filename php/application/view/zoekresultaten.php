@@ -35,10 +35,20 @@ while( $hoogsteboden = sqlsrv_fetch_object($data['hoogsteboden'])) {
                         );
                     });
             </script>
+            
+             <div class="two columns">
+                <form action="producten/<?= $resultaat->voorwerpnummer . '-' . trim( preg_replace( "/[^0-9a-z]+/i", "",str_replace(" ","-",strtolower($resultaat->titel)))) ?>'>">
+                    <input type="submit" value="Bied mee" >
+                </form>
+            </div>     
+       
+            <div class="two columns hoogsteBod">
             <?php for( $j = 0; $j < count($hoogstebod); $j++ ):
                 if($hoogstebod[$j]->voorwerpnummer == $resultaat->voorwerpnummer): ?>
             <p>Hoogste bod: <strong><?= $hoogstebod[$j]->hoogste ?></strong></p>
             <?php endif; endfor; ?>
+            </div>
+            
         </div>
         
     <?php $i++;endif; endwhile; ?>
