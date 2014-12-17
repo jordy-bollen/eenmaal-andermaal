@@ -43,8 +43,12 @@ class account extends controller{
         $gebruikers = $modelGebruiker->getGebruiker($_SESSION['gebruikersnaam']);
         $this->loadView('includes/header');
         $this->data['gebruikers'] = $gebruikers;
+        if(isset($_POST['submitPersoonsgegevens'])) {
         $this->loadView('wijzigenpersoonsgegevens', $this->data);
+        }
+        else {
 
+        }
         $this->loadView('includes/footer');
     }
 } 

@@ -22,6 +22,21 @@ plaatsnaam, land, geboorteDatum, mailadres, wachtwoord, vraag, antwoordtekst, ve
         $this->database->query($gebruikerQuery);
     }
 
+    public function wijzig($gebruikersdata) {
+        $this->database->query("UPDATE Gebruiker SET gebruikersnaam = '".str_replace("'", "''",$gebruikersdata['gebruikersnaam'])."',
+        voornaam = '".str_replace("'", "''",$gebruikersdata['voornaam'])."',
+        achternaam = '".str_replace("'", "''",$gebruikersdata['achternaam'])."',
+        adresregel1 = '".str_replace("'", "''",$gebruikersdata['adres1'])."',
+        adresregel2 = '".str_replace("'", "''",$gebruikersdata['adres2'])."',
+        postcode = '".str_replace("'", "''",$gebruikersdata['postcode'])."',
+        plaatsnaam = '".str_replace("'", "''",$gebruikersdata['plaatsnaam'])."',
+        land = '".str_replace("'", "''",$gebruikersdata['land'])."',
+        geboorteDatum = '".str_replace("'", "''",$gebruikersdata['geboorteDatum'])."',
+        mailadres = '".str_replace("'", "''",$gebruikersdata['mailadres'])."'
+        WHERE
+        gebruikersnaam = '".str_replace("'", "''",$gebruikersdata['gebruikersnaam'])."'");
+    }
+
     /**
      * login
      *
