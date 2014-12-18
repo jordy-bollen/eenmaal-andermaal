@@ -1,5 +1,5 @@
 <? $i = 0; ?>
-<div class="thirtheen columns"><h3>Advertentie plaatsen</h3>
+<div class="thirtheen columns"><h4>Advertentie plaatsen</h4>
    <form id="kiesCategorie" action="<?php SITE_URL ?>veilingtoevoegen" method="POST">
        <div class="veilingCat" >
                 <label for='rubriek' class="two column">Rubriek*</label><br>

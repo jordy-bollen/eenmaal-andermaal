@@ -78,14 +78,13 @@ WHERE cp.rubriekOpLaagsteNiveau IN (
     }
 
 
-
     /**
      * getVoorwerp
      *
-     * Haalt specifiek voorwerp op op basis van parameter
+     * Methode om voorwerp op te halen op basis van id
      *
-     * @param $titel
-     * @return mixed
+     * @param $id
+     * @return bool|resource
      */
     public function getVoorwerp($id) {
         return $this->database->query("SELECT * FROM Voorwerp WHERE voorwerpnummer = '".$id."'");
@@ -99,11 +98,28 @@ WHERE cp.rubriekOpLaagsteNiveau IN (
         $this->database->query("INSERT INTO Voorwerp(titel, beschrijving, startprijs, betalingswijze, betalingsinstructie, plaatsnaam,
             land, looptijd, startmoment, verzendkosten, verzendinstructies, verkoper) VALUES
         ('".$voorwerp['titel']."', '".$voorwerp['beschrijving']."', ".$voorwerp['startprijs'].", '".$voorwerp['betalingswijze']."',
-            'Binnen 5 werkdagen', '".$voorwerp['plaatsnaam']."', 'nederland', ".$voorwerp['looptijd'].", '12-dec-2014 11:45:18', 3.84, 'Verzenden', '".$_SESSION['gebruikersnaam']."')");
+            '".$voorwerp['betalingsinstructie']."', '".$voorwerp['plaatsnaam']."', 'nederland', ".$voorwerp['looptijd'].", '".date("Y-m-d H:i:s")."', ".$voorwerp['verzendkosten'].", '".$voorwerp['verzendinstructies']."', '".$_SESSION['gebruikersnaam']."')");
+
     }
 
     public function voegVoorwerpRubriekToe($categorie) {
-        $this->database->query("INSERT INTO VoorwerpInRubriek(voorwerp, rubriekOpLaagsteNiveau)");
+        $queryVoorwerp = $this->database->query("select TOP(1) * from Voorwerp ORDER BY voorwerpnummer DESC");
+        while( $voorwerp = sqlsrv_fetch_object($queryVoorwerp)) {
+            $voorwerpVoorId = $voorwerp;
+        }
+        $this->database->query("INSERT INTO VoorwerpInRubriek(voorwerp, rubriekOpLaagsteNiveau) VALUES
+        (".$voorwerpVoorId->voorwerpnummer.", ".$categorie.")");
+
+    }
+
+    public function voegAfbeeldingenToe($product, $voorwerpafbeelding) {
+        if(!empty($product)) {
+            $queryVoorwerp = $this->database->query("select TOP(1) * from Voorwerp ORDER BY voorwerpnummer DESC");
+            while( $voorwerp = sqlsrv_fetch_object($queryVoorwerp)) {
+                $voorwerpVoorId = $voorwerp;
+            }
+            $this->database->query("INSERT INTO Bestand(filenaam, voorwerp) VALUES('".$voorwerpafbeelding."',".$voorwerpVoorId->voorwerpnummer.")");
+        }
     }
 
 } 
