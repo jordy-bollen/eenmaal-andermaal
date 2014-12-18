@@ -688,6 +688,19 @@ h4{
 h3 a{
 	text-decoration: none;
 }
+
+.input_fields_wrap {
+    padding: 20px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+}
+
+.input_fields_wrap input {
+    margin-top: 10px;
+}
+a.remove_field {
+    margin:0px 5px 0px 5px;
+}
  /*-------------- Contact -------------------*/
 .tekstlables{
  height:100px;

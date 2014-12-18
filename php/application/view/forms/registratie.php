@@ -72,11 +72,14 @@
                         <option value="Engeland">Engeland</option>
                     </select>
 
-                    <label for='telefoonnummer' class="three columns">Telefoonnummer*</label>
-                    <input type='text' name='telefoonnummer' class="invoerveld" maxlength="50" />
 
-                    <label for='mobiel' class="three columns">Mobiel</label>
-                    <input type='text' name='mobiel' class="invoerveld" maxlength=""50 />
+
+                    <div class="input_fields_wrap">
+                        <label for='telefoonnummer' class="three columns">Telefoonnummer*</label>
+                        <button class="add_field_button">Add More Fields</button>
+                        <div><input type="text" name="telefoonnummer[]"></div>
+                    </div>
+
 
                     <input id="submitRegistratie" type='submit' name='submitRegistratie' value='Registreer' class="registratiebutton"/>
                     <p><h6 class="veldenmet">Velden met een * zijn verplicht.</h6><p>
@@ -85,3 +88,23 @@
         </form>
     </div>
 </div>
+<script>
+    $(document).ready(function() {
+        var max_fields      = 10; //maximum input boxes allowed
+        var wrapper         = $(".input_fields_wrap"); //Fields wrapper
+        var add_button      = $(".add_field_button"); //Add button ID
+
+        var x = 1; //initlal text box count
+        $(add_button).click(function(e){ //on add input button click
+            e.preventDefault();
+            if(x < max_fields){ //max input box allowed
+                x++; //text box increment
+                $(wrapper).append('<div><input type="text" name="telefoonnummer[]"/><a href="#" class="remove_field">Remove</a></div>'); //add input box
+            }
+        });
+
+        $(wrapper).on("click",".remove_field", function(e){ //user click on remove text
+            e.preventDefault(); $(this).parent('div').remove(); x--;
+        })
+    });
+</script>

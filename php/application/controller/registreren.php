@@ -52,7 +52,6 @@ class registreren extends controller{
             $this->loadView('includes/footer');
             }
             else {
-                echo $this->code;
                 echo 'Voer een geldige code in.';
                 $this->loadView('includes/header');
                 $this->loadView('forms/validatie');
@@ -65,6 +64,7 @@ class registreren extends controller{
                echo'u heeft geregistreerd';
                 $gebruikersdata = $this->formatData($_POST);
                 $modelGebruiker->registreer($gebruikersdata);
+               $modelGebruiker->voegtelefoonnummerstoe($gebruikersdata, $gebruikersdata['gebruikersnaam']);
                 $this->loadView('includes/footer');
             }
         }
