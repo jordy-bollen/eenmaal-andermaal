@@ -566,11 +566,8 @@ display: inline-block;
 
 .veiling p{
 	text-align: center;
-<<<<<<< HEAD
 	margin-top:10px;
 	margin-bottom: 3px;
-=======
->>>>>>> 1dbb54f8ed533045346be695b40a1af4d615be3d
 }
 
 /*#countdownTimer {
@@ -764,10 +761,15 @@ h3 a{
 .veilingCat {
     width: 200px;
     float:left;
+    background-color: #3da1d4;
+    color: #ffffff;
+    margin-right:5px;
+    border-radius: 5px;
 }
 
 #kiesCategorie input {
     display: block;
+    clear: both;
 }
 
 /*--------------  FOOTER -----------------------*/
@@ -831,13 +833,11 @@ h3 a{
 	font-weight:bold;
 }
 
-<<<<<<< HEAD
-.bread{
+.bread {
 	float:left;
-=======
+}
 .veiling input
 {
 	margin-top: 15px;
 	margin-left: 7px;
->>>>>>> e5f30436492639b76c5edbcc39197bc917645ea0
 }

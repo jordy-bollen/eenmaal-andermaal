@@ -14,6 +14,7 @@ class veilingtoevoegen extends controller{
     }
 
     public function index() {
+        if($_SESSION['loggedIn'] == true) {
         $modelRubrieken = $this->loadModel('rubriek');
         $hoofdrubrieken = $modelRubrieken->getHoofdRubrieken();
         $this->data['hoofdrubrieken'] = $hoofdrubrieken;
@@ -47,9 +48,20 @@ class veilingtoevoegen extends controller{
             $this->loadView('includes/footer');
         }
         else if($_POST['submitVeiling']) {
+            if(isset($_FILES['afbeelding1']['name']))
+            {
             $modelVoorwerpen = $this->loadModel('voorwerp');
             $modelVoorwerpen->voegVoorwerpToe($_POST);
-            $modelVoorwerpen->voegVoorwerpRubriekToe($_POST);
+            $modelVoorwerpen->voegVoorwerpRubriekToe($_POST['rubriek']);
+                $new_file_name = strtolower($_FILES['afbeelding1']['name']);
+                $modelVoorwerpen->voegAfbeeldingenToe($_POST, $new_file_name);
+                define ('SITE_ROOT', realpath(dirname(__FILE__)));
+                move_uploaded_file($_FILES['afbeelding1']['tmp_name'], ROOT.'application\skins\img\producten\\'.$new_file_name);
+            }
+        }
+    }
+        else {
+            echo 'log eerst in voordat je een product kan plaatsen';
         }
     }
 

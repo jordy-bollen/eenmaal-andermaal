@@ -1,7 +1,7 @@
 
-<div class="thirtheen columns"><h3>Advertentie plaatsen</h3>
+<div class="thirtheen columns"><h4>Advertentie plaatsen</h4>
     <form id='plaatsAdvertentie' action='<?php SITE_URL ?>veilingtoevoegen' method='post'
-          accept-charset='UTF-8'>
+          accept-charset='UTF-8' enctype="multipart/form-data">
         <input type='hidden' name='submitted' id='submitted' value='1'/>
         <div id='invulVelden'>
             <div class="six columns">
@@ -35,6 +35,15 @@
                     <option value="Bankoverschrijving">Bankoverschrijving</option>
                     <option value="Creditcard">Creditcard</option>
                 </select>
+
+                <label for='betalingsinstructie' class="two column">Betalingsinstructies*</label><br>
+                <input type='text' name='betalingsinstructie' class="invoerveld" maxlength="50" />
+
+                <label for='verzendinstructies' class="two column">Verzendinstructies*</label><br>
+                <input type='text' name='verzendinstructies' class="invoerveld" maxlength="50" />
+
+                <label for='verzendkosten' class="two column">Verzendkosten*</label><br>
+                <input type='text' name='verzendkosten' class="invoerveld" maxlength="50" />
 
             </div>
             <div class="six columns">
