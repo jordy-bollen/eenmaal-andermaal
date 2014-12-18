@@ -39,7 +39,7 @@
     ==================================================== -->
     <div class="topBalk">
         <div class="eleven columns logo">
-           <a href="/"> <img src="<?= SKINS_DIR ?>img/logo.png"></a>
+           <a href="<?= SITE_URL ?>"> <img src="<?= SKINS_DIR ?>img/logo.png"></a>
         </div>
         <div class="five columns login">
             <?php if(!isset($_SESSION['loggedIn'])): ?>
