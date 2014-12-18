@@ -6,5 +6,5 @@ echo $vr->tekstVraag;
       accept-charset='UTF-8'>
 <label for='vraag' class="three columns" >Geheime vraag*</label>
 <input type="text" />
-    <input type='submit' name='submitVraag' value='Submit' />
+    <input type='submit' class="zoekknop" name='submitVraag' value='Submit' />
     </form>

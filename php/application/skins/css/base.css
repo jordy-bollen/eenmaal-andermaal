@@ -32,7 +32,7 @@
 		font: inherit;
 		vertical-align: baseline; 
 		}
-	article, aside, details, figcaption, figure, footer, 	header, hgroup, menu, nav, section {
+	article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
 		display: block; }
 	body {
 		line-height: 1; }
@@ -54,8 +54,8 @@
 /* #Basic Styles
 ================================================== */
 	body {
-		background-color: #dcf3ff;
-		font: 14px/21px "verdana";
+		background-color: FFF;
+		font: 12px "verdana";
 		color: #444;
 		-webkit-font-smoothing: antialiased; /* Fix for webkit rendering */
 		-webkit-text-size-adjust: 100%;
@@ -148,7 +148,7 @@
 	  -moz-border-radius: 3px;
 	  -webkit-border-radius: 3px;
 	  border-radius: 3px;
-	  color: #444;
+	  color: #FFF;
 	  display: inline-block;
 	  font-size: 11px;
 	  font-weight: bold;
@@ -230,7 +230,7 @@
 		font: 13px "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
 		color: #777;
 		margin: 0;
-		width: 210px;
+		width: 219px;
 		max-width: 100%;
 		display: block;
 		margin-bottom: 20px;
@@ -293,6 +293,7 @@ h1{
     font-size: 27px;
     line-height: 40px;
     margin-top:41px;    
+	padding-left:15px;
 }
 
 h2{
@@ -304,48 +305,43 @@ h2{
 h3{
 	font-size:17px;
 	text-align: center;
-	background-color: #ebebeb;
 }
 
 h4{
 	border-bottom: 1px solid #ff9000;
     border-top: 1px solid #ff9000;
 	margin-bottom: 10px;
-	margin-top:41px;    
+	margin-top:41px;  
+	padding-left:15px;  
 }
 
 #biedingen p, hr{
-margin: 0;
+	margin: 0;
 }
 
 #biedingen input
 {
-width:100px;
-display: inline-block;
+	width:100px;
+	display: inline-block;
 }
 
 .topBalk
 {
 	border:none;
-
 }
 
 .logo{
 	width:547px;
 	height:90px;
 	border:none;
+	margin-top:23px; 
+	padding-left:10px;
 }
 
 .login{
 	margin-top: 5px;
 	margin-bottom: 7px;
-	padding: 5px;	
-	
-}
-
-.logo
-{
-    margin-bottom: 5px;   
+	padding:5px 5px 5px 13px;	
 }
 
 .login form {
@@ -356,30 +352,34 @@ display: inline-block;
     margin-bottom: 2px;   
 }
 
+.login label{
+	width:230px;
+}
+
 .menubalk{
 	background-color: #3da1d4;
 	border:1px solid #e2e2e2;
 }
 
 .menubalk a{
-	height:40px;
-	width:auto;
-	display:block;
-	float:left;
-	color:#FFF;
-	border-right: 2px solid #8fdaff;
-	border-bottom: 2px solid #8fdaff;
-	text-align: center;
-	padding-top: 10px;
-	text-decoration: none;
-    padding: 10px 23px 0 23px;
+    border-bottom: 2px solid #8fdaff;
+    border-right: 2px solid #8fdaff;
+    color: #fff;
+    display: block;
+    float: left;
+    height: 40px;
+    padding-top: 18px;
+    text-align: center;
+    text-decoration: none;
+    width: 186px;
+	font-weight: bold;
 }
-
 .menubalk a:hover{
 	height:40px;
-	width:auto;
+	width: 186px;
 	background-color:#ff9000;
-	padding: 10px 23px 0 23px;
+    padding-top: 18px;
+	font-weight: bold;
 }
 
 .login button{
@@ -416,7 +416,8 @@ display: inline-block;
 .zoeken{
 	height:41px;
 	margin-top:20px;
-	margin-bottom: -30px;
+	margin-bottom: -http://localhost/eenmaal-andermaal/php/30px;
+	padding-left: 73px;	
 }
 
 .zoeken form{
@@ -431,7 +432,7 @@ display: inline-block;
 .zoeken input{
 	border:1px solid #ff9000;
 	color:#FFF;
-	margin-left:-10px;
+	margin-left:-24px;
 }
 
 
@@ -486,7 +487,7 @@ display: inline-block;
     height: auto;
     position: absolute;
     width: 162px;
-    left: 143px;
+    left: 133px;
     margin-top: -28px;    
 }
 
@@ -544,13 +545,12 @@ display: inline-block;
 	border: 1px solid #cacaca;
 }
 
-.veilingverlopen{
-	background-color: #ffdbdb;
+.veilingverlopen{	
 	width:100%;
 }
 
 .veilinglopen {
-    background-color: #dbdbdb;
+    background-color: #b8e3f9;
     height: 50px;
 }
 
@@ -566,25 +566,14 @@ display: inline-block;
 
 .veiling p{
 	text-align: center;
+<<<<<<< HEAD
 	margin-top:10px;
 	margin-bottom: 3px;
+=======
+	margin-top:5px;
+	margin-bottom: 5px;
+>>>>>>> 2b1888cbe270c7c7bab89e0f03db2d08e234019a
 }
-
-/*#countdownTimer {
-    height:30px;
-    padding-top: 10px;
-    margin-top: 40px;
-    color: #ffffff;
-    background: #ff9517;
-    text-align: center;
-} 
-
-DIT DOET NIKS?!
-
-#countdownTime {
-    display: inline;
-    font-size: 18px;
-}*/
 
 .countdownkleur{
 	color:#4a9ec9;
@@ -679,17 +668,18 @@ DIT DOET NIKS?!
 }
 
 .ganaarveilingbutton{
-   background-color: #ff9517;
+    background-color: #ff9517;
     border-radius: 2px;
     float: right;
     height: 32px;
-    margin-left: 30px;
+    margin-right: 10px;
     margin-top: 1px;
     padding-top: 10px;
     text-align: center;
     width: 108px;
     text-decoration: none;
   }
+
 .button-bod{
 	margin-top:10px;
 }
@@ -779,7 +769,7 @@ h3 a{
 	height:50px;
 	background-color: #3da1d4;
 	color: #FFF;
-    border-radius: 5px;	
+    padding-left:20px;	
 	text-align: center;
     margin-top: 20px;
 }
@@ -833,9 +823,16 @@ h3 a{
 	font-weight:bold;
 }
 
+<<<<<<< HEAD
 .bread {
 	float:left;
 }
+=======
+.bread{
+	float:left;
+}
+
+>>>>>>> 2b1888cbe270c7c7bab89e0f03db2d08e234019a
 .veiling input
 {
 	margin-top: 15px;
