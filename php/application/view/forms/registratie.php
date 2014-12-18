@@ -48,7 +48,7 @@
                     </select>
 
                     <label for='Antwoord' class="three columns">Geheim antwoord*</label>
-                    <input type='text' name='antwoord' class="invoerveld" maxlength="50" />
+                    <input type='password' name='antwoord' class="invoerveld" maxlength="50" />
                 </div>
                 <div class="six columns">
                     <!-- Persoongegevens
@@ -68,8 +68,8 @@
                     <label for='land' class="three columns">Land*</label>
                     <select name="land" class="lengte">
                         <option value="nederland">Nederland</option>
-                        <option value="nederland">Duitsland</option>
-                        <option value="nederland">Engeland</option>
+                        <option value="Duitsland">Duitsland</option>
+                        <option value="Engeland">Engeland</option>
                     </select>
 
                     <label for='telefoonnummer' class="three columns">Telefoonnummer*</label>

@@ -12,19 +12,14 @@
         </select>
        </div>
        <div id="sub1" align="center">
-           <img src="<?php SKINS_DIR ?>img/loader.gif" style="margin-top:8px; float:left" id="loader" alt="" />
        </div>
        <div id="sub2" align="center">
-           <img src="<?php SKINS_DIR ?>img/loader.gif" style="margin-top:8px; float:left" id="loader" alt="" />
        </div>
        <div id="sub3" align="center">
-           <img src="<?php SKINS_DIR ?>img/loader.gif" style="margin-top:8px; float:left" id="loader" alt="" />
        </div>
        <div id="sub4" align="center">
-           <img src="<?php SKINS_DIR ?>img/loader.gif" style="margin-top:8px; float:left" id="loader" alt="" />
        </div>
        <div id="sub5" align="center">
-           <img src="<?php SKINS_DIR ?>img/loader.gif" style="margin-top:8px; float:left" id="loader" alt="" />
        </div>
 
 

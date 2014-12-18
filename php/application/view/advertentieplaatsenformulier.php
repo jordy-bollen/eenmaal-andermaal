@@ -25,7 +25,7 @@
                     <option value="1">1 Dag</option>
                     <option value="3">3 Dagen</option>
                     <option value="5">5 Dagen</option>
-                    <option value="7">7 Dagen</option>
+                    <option value="7" selected="selected">7 Dagen</option>
                     <option value="10">10 Dagen</option>
                 </select>
 
@@ -40,7 +40,11 @@
                 <input type='text' name='betalingsinstructie' class="invoerveld" maxlength="50" />
 
                 <label for='verzendinstructies' class="two column">Verzendinstructies*</label><br>
-                <input type='text' name='verzendinstructies' class="invoerveld" maxlength="50" />
+                <select name="verzendinstructies" class="invoerveld">
+                    <option value="Ophalen">Ophalen</option>
+                    <option value="Ophalen of Verzenden">Ophalen of Verzenden</option>
+                    <option value="Verzenden">Verzenden</option>
+                </select>
 
                 <label for='verzendkosten' class="two column">Verzendkosten*</label><br>
                 <input type='text' name='verzendkosten' class="invoerveld" maxlength="50" />
