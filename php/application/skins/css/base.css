@@ -336,6 +336,7 @@ h4{
 	border:none;
 	margin-top:23px; 
 	padding-left:10px;
+	margin-bottom: 13px;
 }
 
 .login{
@@ -354,6 +355,7 @@ h4{
 
 .login label{
 	width:230px;
+	display: inline;
 }
 
 .menubalk{
@@ -707,7 +709,7 @@ a.remove_field {
 }
 .tekstlables .pmargin {
   margin-top:-1px;
-  margin-bottom: 29px;
+  margin-bottom: 35px;
   margin-left: 30px;
   font-weight: bold;
 }
@@ -754,23 +756,30 @@ a.remove_field {
 }
 
 /*------------------- Veiling toevoegen ---------------*/
-#kiesCategorie {
-    width: 800px;
-}
 
 .veilingCat {
-    width: 200px;
+    width: 176px;
     float:left;
     background-color: #3da1d4;
     color: #ffffff;
     margin-right:5px;
-    border-radius: 5px;
+}
+
+.label-rubriek{
+	padding-left:10px;
 }
 
 #kiesCategorie input {
     display: block;
     clear: both;
-}
+    background-color: #ff9000;
+    color: #fff;
+    display: block;
+    font-size: 13px;
+    height: 50px;
+    margin-top: 91px;
+    width: 200px;
+}	
 
 /*--------------  FOOTER -----------------------*/
 
@@ -825,9 +834,14 @@ a.remove_field {
 	-webkit-box-shadow:0 0 10px rgba(0, 0, 0, 0.5);
 	-moz-box-shadow:0 0 10px rgba(0, 0, 0, 0.5);
 	box-shadow:0 0 10px rgba(0, 0, 0, 0.5);
-	padding: 10px;
-	
+	padding: 10px;	
 }
+
+.accountMenu p
+{
+	margin: 0 0 35px 0;
+}
+
 .verkoperReg p
 {
 	font-weight:bold;
@@ -844,4 +858,14 @@ a.remove_field {
 {
 	margin-top: 15px;
 	margin-left: 7px;
+}
+
+.voorwaardenTotaal 
+{
+	margin-left: 15px;
+}
+
+.wijzigenPersoonForm
+{
+   margin-top: 25px;
 }
