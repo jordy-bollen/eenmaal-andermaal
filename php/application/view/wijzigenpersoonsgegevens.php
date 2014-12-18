@@ -32,7 +32,7 @@
                     <input type='text' name='email' value="<?= $gebruiker->mailadres ?>" maxlength="255"/>
 
                     <label for='telefoonnummer1'>Telefoonnummer 1</label>
-                    <input type='text' name='telefoonnummer1' maxlegnth="255"/>
+                    <input type='text' name='telefoonnummer1'  maxlegnth="255"/>
 
                     <label for='telefoonnummer2'>Telefoonnummer 2</label>
                     <input type='text' name='telefoonnummer2' maxlegnth="255"/>
@@ -52,7 +52,7 @@
 
                     <label for='land'>Land</label>
                     <input type='text' name='land' value="<?= $gebruiker->land ?>" maxlength="50"/>
-                    <div "">
+                    <div>
                     <input type='submit' name='submitPersoonsgegevens' value='Opslaan' class="opslaanbutton"/>
                 </form>
                 <?php endwhile; ?>
