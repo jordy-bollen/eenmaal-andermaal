@@ -336,6 +336,7 @@ h4{
 	border:none;
 	margin-top:23px; 
 	padding-left:10px;
+	margin-bottom: 13px;
 }
 
 .login{
@@ -354,6 +355,7 @@ h4{
 
 .login label{
 	width:230px;
+	display: inline;
 }
 
 .menubalk{
@@ -694,7 +696,7 @@ h3 a{
 }
 .tekstlables .pmargin {
   margin-top:-1px;
-  margin-bottom: 29px;
+  margin-bottom: 35px;
   margin-left: 30px;
   font-weight: bold;
 }
@@ -819,9 +821,14 @@ h3 a{
 	-webkit-box-shadow:0 0 10px rgba(0, 0, 0, 0.5);
 	-moz-box-shadow:0 0 10px rgba(0, 0, 0, 0.5);
 	box-shadow:0 0 10px rgba(0, 0, 0, 0.5);
-	padding: 10px;
-	
+	padding: 10px;	
 }
+
+.accountMenu p
+{
+	margin: 0 0 35px 0;
+}
+
 .verkoperReg p
 {
 	font-weight:bold;
@@ -838,4 +845,14 @@ h3 a{
 {
 	margin-top: 15px;
 	margin-left: 7px;
+}
+
+.voorwaardenTotaal 
+{
+	margin-left: 15px;
+}
+
+.wijzigenPersoonForm
+{
+   margin-top: 25px;
 }

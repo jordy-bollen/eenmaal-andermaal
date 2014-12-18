@@ -37,6 +37,7 @@
 
         <!-- TXT.php files zijn grote lappen tekst, vandaar dat ze extern opgeslagen zijn -->
         <div class="twelve columns">
+            <div class="voorwaardenTotaal">
             <?php include 'AlgemeneVoorwaardenTXT.php'; ?>
             <br>
             <hr>
@@ -46,6 +47,7 @@
             <hr>
             <br>
             <?php include 'RegelsCategorieenTXT.php'; ?>
+            </div>
         </div>
     </div>
 

@@ -5,7 +5,9 @@ while( $img = sqlsrv_fetch_object( $data['afbeeldingen'] )) {
     $i++;
 }
 ?>
-<div class="three columns rubriekenmenu">
+<div class="three columns">
+     <h2>Rubrieken</h2>
+    <div class="three columns rubriekenmenu">
     <ul>
         <?php while( $obj = sqlsrv_fetch_object( $data['rubrieken'] )): ?>
             <?php if($obj->rubriek == NULL): ?>
@@ -13,6 +15,7 @@ while( $img = sqlsrv_fetch_object( $data['afbeeldingen'] )) {
             <?php endif; ?>
         <?php endwhile; ?>
     </ul>
+    </div>
 </div>
 <?php while( $obj = sqlsrv_fetch_object( $data['voorwerp'] )): ?>
     <div id="content">

@@ -1,6 +1,8 @@
  <!-- Kopteksten
         ==================================================== -->
-         <h2>Rubrieken</h2>
+        
+            <div class="three columns">
+                <h2>Rubrieken</h2>
             <div class="three columns rubriekenmenu">
                 <ul>
                     <a href="#"><li>rubiek 1</li></a>
@@ -12,12 +14,13 @@
                     <a href="#">  <li>rubiek 1</li></a>
                 </ul>
             </div>
+                </div>
         
         <!-- Wijzigen persoonsgegevens
         ==================================================== -->
         <div id="content">
-            <div class="twelve columns">
-                <h1>Wijzigen Persoonsgegevens</h1>
+            <div class="twelve columns wijzigenPersoonForm">
+                
                 <div class="one column">&nbsp;</div>
                 <div class="six columns">
                     <form name="" method="" action="<?php SITE_URL ?>account/wijzigenpersoonsgegevens">
@@ -36,6 +39,8 @@
 
                     <label for='telefoonnummer2'>Telefoonnummer 2</label>
                     <input type='text' name='telefoonnummer2' maxlegnth="255"/>
+                       
+                    <input type='submit' name='submitPersoonsgegevens' value='Opslaan' class="opslaanbutton"/>
               
             </div>
                     <label for='adres1'>Adres 1</label>
@@ -52,9 +57,8 @@
 
                     <label for='land'>Land</label>
                     <input type='text' name='land' value="<?= $gebruiker->land ?>" maxlength="50"/>
-                    <div>
-                    <input type='submit' name='submitPersoonsgegevens' value='Opslaan' class="opslaanbutton"/>
+               
                 </form>
                 <?php endwhile; ?>
-                </div>
+               
             </div>
