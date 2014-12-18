@@ -741,23 +741,30 @@ h3 a{
 }
 
 /*------------------- Veiling toevoegen ---------------*/
-#kiesCategorie {
-    width: 800px;
-}
 
 .veilingCat {
-    width: 200px;
+    width: 176px;
     float:left;
     background-color: #3da1d4;
     color: #ffffff;
     margin-right:5px;
-    border-radius: 5px;
+}
+
+.label-rubriek{
+	padding-left:10px;
 }
 
 #kiesCategorie input {
     display: block;
     clear: both;
-}
+    background-color: #ff9000;
+    color: #fff;
+    display: block;
+    font-size: 13px;
+    height: 50px;
+    margin-top: 91px;
+    width: 200px;
+}	
 
 /*--------------  FOOTER -----------------------*/
 
