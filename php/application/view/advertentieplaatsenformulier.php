@@ -54,6 +54,9 @@
                 <label for='afbeeldingen' class="three columns">Afbeeldingen kiezen*</label><br>
 
                 <img id="uploadPreview" style="width: 100px; height: 100px;" />
+                <input id="uploadImage" type="file" name="afbeelding0" onchange="PreviewImage();" />
+
+                <img id="uploadPreview" style="width: 100px; height: 100px;" />
                 <input id="uploadImage" type="file" name="afbeelding1" onchange="PreviewImage();" />
 
                 <img id="uploadPreview" style="width: 100px; height: 100px;" />
@@ -61,9 +64,6 @@
 
                 <img id="uploadPreview" style="width: 100px; height: 100px;" />
                 <input id="uploadImage" type="file" name="afbeelding3" onchange="PreviewImage();" />
-
-                <img id="uploadPreview" style="width: 100px; height: 100px;" />
-                <input id="uploadImage" type="file" name="afbeelding4" onchange="PreviewImage();" />
 
                 <script type="text/javascript">
 

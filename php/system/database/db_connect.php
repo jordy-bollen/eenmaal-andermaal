@@ -33,7 +33,7 @@ class db_connect {
      * Maakt connectie met de database host
      */
     public function connect() {
-        $this->connectie = sqlsrv_connect("213.163.71.16\\SQLEXPRESS",$this->connectionInfo) or die(print_r( sqlsrv_errors(), true));
+        $this->connectie = sqlsrv_connect("mssql.iproject.icasites.nl",$this->connectionInfo) or die(print_r( sqlsrv_errors(), true));
 
     }
 
