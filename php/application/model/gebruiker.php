@@ -22,6 +22,12 @@ plaatsnaam, land, geboorteDatum, mailadres, wachtwoord, vraag, antwoordtekst, ve
         $this->database->query($gebruikerQuery);
     }
 
+    public function voegtelefoonnummerstoe($telefoonnummers, $gebruikersnaam) {
+        for($i = 0; $i < count($telefoonnummers['telefoonnummer']); $i++) {
+            $this->database->query("INSERT INTO Gebruikerstelefoon (gebruiker, telefoon) VALUES ('".$gebruikersnaam."', '".$telefoonnummers['telefoonnummer'][$i]."')");
+        }
+    }
+
     public function wijzig($gebruikersdata) {
         $this->database->query("UPDATE Gebruiker SET gebruikersnaam = '".str_replace("'", "''",$gebruikersdata['gebruikersnaam'])."',
         voornaam = '".str_replace("'", "''",$gebruikersdata['voornaam'])."',

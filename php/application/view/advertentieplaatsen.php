@@ -1,8 +1,8 @@
 <? $i = 0; ?>
-<div class="thirtheen columns"><h4>Advertentie plaatsen</h4>
+<div class="sixteen columns"><h4>Advertentie plaatsen</h4>
    <form id="kiesCategorie" action="<?php SITE_URL ?>veilingtoevoegen" method="POST">
        <div class="veilingCat" >
-                <label for='rubriek' class="two column">Rubriek*</label><br>
+                <label for='rubriek' class="two column label-rubriek">Rubriek*</label><br>
         <select id="main" name="main" class="invoerveld" size="15">
             <?php while( $rubriek = sqlsrv_fetch_object($data['hoofdrubrieken'])):
                 if($rubriek->rubriek == NULL):

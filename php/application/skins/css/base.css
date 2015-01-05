@@ -694,6 +694,19 @@ border: 1px solid #000000;
 h3 a{
 	text-decoration: none;
 }
+
+.input_fields_wrap {
+    padding: 20px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+}
+
+.input_fields_wrap input {
+    margin-top: 10px;
+}
+a.remove_field {
+    margin:0px 5px 0px 5px;
+}
  /*-------------- Contact -------------------*/
 .tekstlables{
  height:100px;
@@ -747,23 +760,30 @@ h3 a{
 }
 
 /*------------------- Veiling toevoegen ---------------*/
-#kiesCategorie {
-    width: 800px;
-}
 
 .veilingCat {
-    width: 200px;
+    width: 176px;
     float:left;
     background-color: #3da1d4;
     color: #ffffff;
     margin-right:5px;
-    border-radius: 5px;
+}
+
+.label-rubriek{
+	padding-left:10px;
 }
 
 #kiesCategorie input {
     display: block;
     clear: both;
-}
+    background-color: #ff9000;
+    color: #fff;
+    display: block;
+    font-size: 13px;
+    height: 50px;
+    margin-top: 91px;
+    width: 200px;
+}	
 
 /*--------------  FOOTER -----------------------*/
 

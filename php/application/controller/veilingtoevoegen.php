@@ -53,6 +53,12 @@ class veilingtoevoegen extends controller{
             $modelVoorwerpen = $this->loadModel('voorwerp');
             $modelVoorwerpen->voegVoorwerpToe($_POST);
             $modelVoorwerpen->voegVoorwerpRubriekToe($_POST['rubriek']);
+                for($i = 0; $i < $_FILES; $i++) {
+                    $new_file_name = strtolower($_FILES['afbeelding'.$i]['name']);
+                    $modelVoorwerpen->voegAfbeeldingenToe($_POST, $new_file_name);
+                    define ('SITE_ROOT', realpath(dirname(__FILE__)));
+                    move_uploaded_file($_FILES['afbeelding'.$i]['tmp_name'], ROOT.'application\skins\img\producten\\'.$new_file_name);
+                }
                 $new_file_name = strtolower($_FILES['afbeelding1']['name']);
                 $modelVoorwerpen->voegAfbeeldingenToe($_POST, $new_file_name);
                 define ('SITE_ROOT', realpath(dirname(__FILE__)));
