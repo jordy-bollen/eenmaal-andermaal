@@ -15,10 +15,10 @@ class gebruiker extends model{
      */
     public function registreer(array $gebruikersdata) {
        //gebruiker wordt toegevoegd aan database
-        $gebruikerQuery = "INSERT INTO Gebruiker (gebruikersnaam, voornaam, achternaam, adresregel1, adresregel2, postcode,
-plaatsnaam, land, geboorteDatum, mailadres, wachtwoord, vraag, antwoordtekst, verkoper)
-        VALUES ('".str_replace("'", "''",$gebruikersdata['gebruikersnaam'])."','".str_replace("'", "''",$gebruikersdata['voornaam'])."', '".str_replace("'", "''",$gebruikersdata['achternaam'])."', '".str_replace("'", "''",$gebruikersdata['adres1'])."', NULL, '".str_replace("'", "''",$gebruikersdata['postcode'])."', '".str_replace("'", "''",$gebruikersdata['plaats'])."', '".str_replace("'", "''",$gebruikersdata['land'])."'
-        , '".$gebruikersdata['geboortedatum']."', '".$gebruikersdata['email']."', '".$gebruikersdata['wachtwoord']."', ".$gebruikersdata['vraag']." ,'".$gebruikersdata['antwoord']."', 0)";
+        $gebruikerQuery = "INSERT INTO Gebruiker (gebruikersnaam, voornaam, achternaam, geslacht, adresregel1, adresregel2, postcode,
+plaatsnaam, land, geboorteDatum, mailadres, wachtwoord, vraag, antwoordtekst)
+        VALUES ('".str_replace("'", "''",$gebruikersdata['gebruikersnaam'])."','".str_replace("'", "''",$gebruikersdata['voornaam'])."', '".str_replace("'", "''",$gebruikersdata['achternaam'])."', '".$_POST['aanhef']."' ,'".str_replace("'", "''",$gebruikersdata['adres1'])."', NULL, '".str_replace("'", "''",$gebruikersdata['postcode'])."', '".str_replace("'", "''",$gebruikersdata['plaats'])."', '".str_replace("'", "''",$gebruikersdata['land'])."'
+        , '".$gebruikersdata['geboortedatum']."', '".$gebruikersdata['email']."', '".$gebruikersdata['wachtwoord']."', ".$gebruikersdata['vraag']." ,'".$gebruikersdata['antwoord']."')";
         $this->database->query($gebruikerQuery);
     }
 
@@ -67,6 +67,24 @@ plaatsnaam, land, geboorteDatum, mailadres, wachtwoord, vraag, antwoordtekst, ve
 
     public function checkMail($email) {
         return $this->database->query("SELECT * FROM Gebruiker WHERE mailadres ='".$email."'");
+    }
+
+    public function registreerVerkoper($verkoperdata) {
+        $gebruikerQuery = "INSERT INTO Verkoper (gebruiker, bank, bankrekening, controleOptie, creditcard)
+        VALUES ('".$_SESSION['gebruikersnaam']."','".$verkoperdata['banknaam']."', '".$verkoperdata['bankrekening']."', '".$verkoperdata['verificatieMethode']."', '".$verkoperdata['creditcard']."')";
+        $this->database->query($gebruikerQuery);
+    }
+
+    public function wijzigenPersoonsGegevens($gebruikersdata) {
+        $query = "UPDATE Gebruiker
+SET voornaam='".$gebruikersdata['voornaam']."', achternaam='".$gebruikersdata['achternaam']."', mailadres='".$gebruikersdata['email']."', adresregel1 = '".$gebruikersdata['adres1']."', adresregel2='".$gebruikersdata['adres2']."', postcode='".$gebruikersdata['postcode']."', plaatsnaam='".$gebruikersdata['plaats']."', land='".$gebruikersdata['land']."'
+WHERE gebruikersnaam='".$_SESSION['gebruikersnaam']."'";
+        $this->database->query($query);
+    }
+
+    public function wachtwoordWijzigen($gebruikersnaam, $wachtwoord) {
+        $query = "UPDATE gebruiker SET wachtwoord='".$wachtwoord."' WHERE gebruikersnaam='".$gebruikersnaam."'";
+        $this->database->query($query);
     }
 
 } 

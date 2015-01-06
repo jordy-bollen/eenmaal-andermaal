@@ -17,8 +17,8 @@
             
                 <div class="one column">
                     <a href="<?php SITE_URL ?>account/biedingen"><button>Go</button></a>
-                    <a href="http://localhost/eenmaal-andermaal/html/mijnadvertenties.php"><button>Go</button></a>
-                    <a href="http://localhost/eenmaal-andermaal/html/mijnverkopersaccountregistreren.php"><button>Go</button></a>
+                    <a href="<?php SITE_URL ?>account/mijnadvertenties"><button>Go</button></a>
+                    <a href="<?php SITE_URL ?>verkoper"><button>Go</button></a>
                 </div>
                 <div class="one column">&nbsp;</div>
                 <div class="four columns">
@@ -29,7 +29,7 @@
                 <div class="one column">
                     <a href="<?php SITE_URL ?>account/wijzigenpersoonsgegevens"><button>Go</button></a>
                     <a href="http://localhost/eenmaal-andermaal/html/wijzigenbankgegevens.php"><button>Go</button></a>
-                    <a href="http://localhost/eenmaal-andermaal/php/wijzigenwachtwoord"><button>Go</button></a>
+                    <a href="<?php SITE_URL ?>vergeten"><button>Go</button></a>
                </div> 
           </div>
         </div>

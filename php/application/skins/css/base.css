@@ -759,6 +759,15 @@ a.remove_field {
     border-collapse: collapse;
 }
 
+#bodoverzicht thead {
+    font-weight: bold;
+}
+
+#bodoverzicht td{
+    width: 200px;
+    border: 1px solid #000000;
+}
+
 /*------------------- Veiling toevoegen ---------------*/
 
 .veilingCat {

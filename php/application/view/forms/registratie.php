@@ -11,8 +11,8 @@
                 <div class="six columns">
                     <label for='aanhef' class="three columns">Aanhef*</label>
                     <select name="aanhef" class="geslacht">
-                        <option value="Dhr.">Dhr.</option>
-                        <option value="Mevr.">Mevr.</option>
+                        <option value="M">Dhr.</option>
+                        <option value="V">Mevr.</option>
                     </select>
                     <!-- Voornaam, achternaam, gebruikersnaam, e-mailadres, geboortedatum, wachtwoord en bevestig wachtwoord
                     ==================================================== -->
