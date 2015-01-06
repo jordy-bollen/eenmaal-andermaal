@@ -59,10 +59,11 @@ while( $hoogsteboden = sqlsrv_fetch_object($data['hoogsteboden'])) {
         ?>
     <div class="four columns veiling">
         <h3><a href="<?= SITE_URL ?>producten/<?= $aflopend->voorwerpnummer . '-' . trim( preg_replace( "/[^0-9a-z]+/i", "",str_replace(" ","-",strtolower($aflopend->titel)))) ?>"><?= $aflopend->titel ?></a></h3>
-        <?php for( $j = 0; $j < count($afbeeldingen); $j++ ):
-            if($afbeeldingen[$j]->voorwerp == $aflopend->voorwerpnummer): ?>
+        <?php $stop = false; for( $j = 0; $j < count($afbeeldingen); $j++ ):
+
+            if($afbeeldingen[$j]->voorwerp == $aflopend->voorwerpnummer && $stop == false): ?>
                 <img src="<?= SKINS_DIR ?>img/producten/<?php echo $afbeeldingen[$j]->filenaam; ?>">
-            <?php endif;
+            <?php $stop = true; endif;
         endfor; ?>
         <div class="veilinglopen">
             <p><strong>Veiling loopt nog:</strong></p><p id="countdownTime<?= $i ?>" class="countdownkleur"></p>

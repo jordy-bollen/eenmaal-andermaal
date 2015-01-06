@@ -28,23 +28,54 @@ class account extends controller{
     }
 
     public function biedingen() {
-        $modelGebruiker = $this->loadModel('gebruiker');
+        $modelRubrieken = $this->loadModel('rubriek');
+        $rubrieken = $modelRubrieken->getHoofdRubrieken();
+        $this->data['rubrieken'] = $rubrieken;
+        $modelVoorwerp = $this->loadModel('voorwerp');
         $modelBod = $this->loadModel('bod');
-        $gebruikers = $modelGebruiker->getGebruiker($_SESSION['gebruikersnaam']);
         $this->loadView('includes/header');
-        while( $gebruiker = sqlsrv_fetch_object( $gebruikers )) {
-            echo $gebruiker->gebruikersnaam;
-        }
+        $bodengebruiker = $modelBod->getBodenGebruiker($_SESSION['gebruikersnaam']);
+        $voorwerpen = $modelVoorwerp->getVoorwerpen();
+        $this->data['boden'] = $bodengebruiker;
+        $this->data['voorwerpen'] = $voorwerpen;
+        $this->loadView('biedingen', $this->data);
+        $this->loadView('includes/footer');
+    }
+
+    public function mijnadvertenties() {
+        $modelRubrieken = $this->loadModel('rubriek');
+        $rubrieken = $modelRubrieken->getHoofdRubrieken();
+        $this->data['rubrieken'] = $rubrieken;
+        $modelVoorwerp = $this->loadModel('voorwerp');
+        $modelBod = $this->loadModel('bod');
+        $this->loadView('includes/header');
+        $boden = $modelBod->getAlleBoden();
+        $voorwerpen = $modelVoorwerp->getVoorwerpFromGebruiker($_SESSION['gebruikersnaam']);
+        $this->data['boden'] = $boden;
+        $this->data['voorwerpen'] = $voorwerpen;
+        $this->loadView('mijnadvertenties', $this->data);
         $this->loadView('includes/footer');
     }
 
     public function wijzigenpersoonsgegevens() {
+
         $modelGebruiker = $this->loadModel('gebruiker');
+        if(!isset($_POST['submitPersoonsgegevens'])) {
         $gebruikers = $modelGebruiker->getGebruiker($_SESSION['gebruikersnaam']);
         $this->loadView('includes/header');
         $this->data['gebruikers'] = $gebruikers;
         
         $this->loadView('wijzigenpersoonsgegevens', $this->data);
         $this->loadView('includes/footer');
+        }
+        else {
+            $modelGebruiker->wijzigenPersoonsGegevens($_POST);
+            $this->loadView('includes/header');
+            $gebruikers = $modelGebruiker->getGebruiker($_SESSION['gebruikersnaam']);
+            $this->data['gebruikers'] = $gebruikers;
+
+            $this->loadView('wijzigenpersoonsgegevens', $this->data);
+            $this->loadView('includes/footer');
+        }
     }
 } 

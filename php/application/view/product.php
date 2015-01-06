@@ -31,8 +31,8 @@ while( $img = sqlsrv_fetch_object( $data['afbeeldingen'] )) {
                             <img src="<?= SKINS_DIR ?>img/producten/<?= $afbeeldingen[0]->filenaam ?>" width="200" height="200">
                             </div>
                             <div id="fotoklein">
-                            <div id="foto2"><img src="<?= SKINS_DIR ?>img/producten/<?= $afbeeldingen[0]->filenaam ?>" width="200" height="200"></div>
-                            <div id="foto3"><img src="<?= SKINS_DIR ?>img/producten/<?= $afbeeldingen[0]->filenaam ?>" width="200" height="200"></div>
+                            <div id="foto2"><?php if(isset($afbeeldingen[1]->filenaam)): ?><img src="<?= SKINS_DIR ?>img/producten/<?= $afbeeldingen[1]->filenaam  ?>" width="200" height="200"><?php endif; ?></div>
+                            <div id="foto3"><?php if(isset($afbeeldingen[2]->filenaam)): ?><img src="<?= SKINS_DIR ?>img/producten/<?= $afbeeldingen[2]->filenaam ?>" width="200" height="200"><?php endif; ?></div>
                             </div>
                          </div>
                         <div id ="countdownTimer">
