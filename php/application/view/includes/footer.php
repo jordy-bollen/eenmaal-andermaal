@@ -2,7 +2,7 @@
             ====================================================
             -->
 
-<?php include 'livechat.php'; ?>
+
 
 <div class="sixteen columns footer">
     <a href=<"<?= SITE_URL ?>pagina">Sitemap</a> -
