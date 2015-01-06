@@ -38,8 +38,8 @@ while( $hoogsteboden = sqlsrv_fetch_object($data['hoogsteboden'])) {
             <p id="countdownTime<?= $time ?>" class="countdownkleur"></p>
         </div>
         <div class="button-bod">
-            
-        <a href="<?= SITE_URL ?>producten/<?= $voorwerp->voorwerpnummer . '-' . trim( preg_replace( "/[^0-9a-z]+/i", "",str_replace(" ","-",strtolower($voorwerp->titel)))) ?>" class="ganaarveilingbutton"> <strong> BIED MEE </strong> </a>
+
+            <a href="<?= SITE_URL ?>producten/<?= $voorwerp->voorwerpnummer . '-' . trim( preg_replace( "/[^0-9a-z]+/i", "",str_replace(" ","-",strtolower($voorwerp->titel)))) ?>" class="ganaarveilingbutton"> <strong> BIED MEE </strong> </a>
             <p>Hoogte bod: <strong>€800</strong></p>
         </div>
         <script type="text/javascript">

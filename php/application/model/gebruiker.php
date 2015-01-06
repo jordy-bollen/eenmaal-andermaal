@@ -87,4 +87,10 @@ WHERE gebruikersnaam='".$_SESSION['gebruikersnaam']."'";
         $this->database->query($query);
     }
 
+    public function wijzigVerkoper($gebruikersdata) {
+        $query = "UPDATE Verkoper SET bank='".$gebruikersdata['bank']."', bankrekening='".$gebruikersdata['rekeningnummer']."', creditcard='".$gebruikersdata['creditcardnummer']."'
+         WHERE gebruiker='".$_SESSION['gebruikersnaam']."'";
+        $this->database->query($query);
+    }
+
 } 
