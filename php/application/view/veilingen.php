@@ -41,7 +41,7 @@ while( $hoogsteboden = sqlsrv_fetch_object($data['hoogsteboden'])) {
         </div>
                     <div class="button-bod">
             
-        <a href="<?= SITE_URL ?>producten/<?= $voorwerp->voorwerpnummer . '-' . trim( preg_replace( "/[^0-9a-z]+/i", "",str_replace(" ","-",strtolower($voorwerp->titel)))) ?>" class="ganaarveilingbutton"> <strong> BIED MEE </strong> </a>
+        <a href="<?= SITE_URL ?>producten/<?= $obj->voorwerpnummer . '-' . trim( preg_replace( "/[^0-9a-z]+/i", "",str_replace(" ","-",strtolower($obj->titel)))) ?>" class="ganaarveilingbutton"> <strong> BIED MEE </strong> </a>
 
         </div>
             <script type="text/javascript">
