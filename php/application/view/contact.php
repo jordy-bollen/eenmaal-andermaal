@@ -27,5 +27,5 @@
         <input type="text" name="telefoon" maxlength="30" size="30">
         <input type="text" name="onderwerp" maxlength="50" size="30">
         <textarea  name="bericht" maxlength="1000" cols="40" rows="5"></textarea><p class="verplicht"><h6>Velden met * zijn verplicht.</p></h6>
-        <input type="submit" value="Versturen" class="verstuur">
+        <input type="submit" value="Versturen" class="zoekknop">
     </div>
