@@ -33,7 +33,9 @@ class verkoper extends controller{
             else {
                 $gebruikerModel = $this->loadModel('gebruiker');
                 $gebruikerModel->registreerVerkoper($_POST);
-                echo 'verkoper geregistreerd';
+                $this->loadView('includes/header');
+                echo '<div>verkoper geregistreerd</div>';
+                $this->loadView('includes/footer');
             }
         }
         }

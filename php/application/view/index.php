@@ -28,10 +28,10 @@ while( $hoogsteboden = sqlsrv_fetch_object($data['hoogsteboden'])) {
     ?>
     <div class="four columns veiling">
         <h3><a href="<?= SITE_URL ?>producten/<?= $voorwerp->voorwerpnummer . '-' . trim( preg_replace( "/[^0-9a-z]+/i", "",str_replace(" ","-",strtolower($voorwerp->titel)))) ?>"><?= $voorwerp->titel ?></a></h3>
-        <?php for( $j = 0; $j < count($afbeeldingen); $j++ ):
-            if($afbeeldingen[$j]->voorwerp == $voorwerp->voorwerpnummer): ?>
+        <?php $stop = false; for( $j = 0; $j < count($afbeeldingen); $j++ ):
+            if($afbeeldingen[$j]->voorwerp == $voorwerp->voorwerpnummer && $stop == false): ?>
                 <img src="<?= SKINS_DIR ?>img/producten/<?php echo $afbeeldingen[$j]->filenaam; ?>">
-            <?php endif;
+            <?php $stop =true; endif;
         endfor; ?>
         <div class="veilinglopen">
             <p><strong>Veiling loopt nog:</strong></p><p id="countdownTime<?= $i ?>"></p>
@@ -40,7 +40,10 @@ while( $hoogsteboden = sqlsrv_fetch_object($data['hoogsteboden'])) {
         <div class="button-bod">
 
             <a href="<?= SITE_URL ?>producten/<?= $voorwerp->voorwerpnummer . '-' . trim( preg_replace( "/[^0-9a-z]+/i", "",str_replace(" ","-",strtolower($voorwerp->titel)))) ?>" class="ganaarveilingbutton"> <strong> BIED MEE </strong> </a>
-            <p>Hoogte bod: <strong>€800</strong></p>
+            <?php for( $j = 0; $j < count($hoogstebod); $j++ ):
+                if($hoogstebod[$j]->voorwerpnummer == $voorwerp->voorwerpnummer): ?>
+                    <p>Hoogste bod: <strong><?= $hoogstebod[$j]->hoogste ?></strong></p>
+                <?php elseif($hoogstebod[$j]->hoogste == NULL): ?>test<?php  endif; endfor; ?>
         </div>
         <script type="text/javascript">
             $("#countdownTime<?= $time ?>")

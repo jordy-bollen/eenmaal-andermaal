@@ -53,21 +53,110 @@ class producten extends controller{
             $this->loadView('includes/footer');
         }
         else {
+            if(isset($hoogstebod)) {
+            if($hoogstebod  < $_POST['bodbedrag'] && $_POST['bodbedrag'] > 0) {
+                if($hoogstebod > 1 && $hoogstebod < 50){
+                    if($hoogstebod + 0.50  < $_POST['bodbedrag']) {
+                            if ($_COOKIE['gebruikersnaam'] != $_POST['verkoper']) {
+                            $bodinformatie = $_POST;
+                            $bodinformatie['bodbedrag'] = str_replace(",",".",$bodinformatie['bodbedrag']);
+                            $bodinformatie['bodbedrag'] = round( $bodinformatie['bodbedrag'], 2, PHP_ROUND_HALF_DOWN);
+                            $bodinformatie['tijd'] = date("Y-m-d H:i:s");
+                            $bodinformatie['gebruiker'] = $_SESSION['gebruikersnaam'];
+                            $modelBod->registreerBod($bodinformatie);
+                            echo 'Bod geplaatst';
+                            header("location:" .SITE_URL. 'producten/' .$lastSegment );
+                            }
+                    }
+                    else {
+                        echo '<div>minimale verhoging is 0.50 cent</div>';
+                    }
+                }
+                else if($hoogstebod >= 50 && $hoogstebod < 500) {
+                    if($hoogstebod + 1  < $_POST['bodbedrag']) {
+                            if ($_COOKIE['gebruikersnaam'] != $_POST['verkoper']) {
+                            $bodinformatie = $_POST;
+                            $bodinformatie['bodbedrag'] = str_replace(",",".",$bodinformatie['bodbedrag']);
+                            $bodinformatie['bodbedrag'] = round( $bodinformatie['bodbedrag'], 2, PHP_ROUND_HALF_DOWN);
+                            $bodinformatie['tijd'] = date("Y-m-d H:i:s");
+                            $bodinformatie['gebruiker'] = $_SESSION['gebruikersnaam'];
+                            $modelBod->registreerBod($bodinformatie);
+                            echo 'Bod geplaatst';
+                            header("location:" .SITE_URL. 'producten/' .$lastSegment );
+                            }
+                    }
+                    else {
+                        echo '<div>minimale verhoging is 1 euro</div>';
+                    }
+                }
+                else if($hoogstebod >= 500 && $hoogstebod < 1000) {
+                    if($hoogstebod + 5  < $_POST['bodbedrag']) {
+                            if ($_COOKIE['gebruikersnaam'] != $_POST['verkoper']) {
+                            $bodinformatie = $_POST;
+                            $bodinformatie['bodbedrag'] = str_replace(",",".",$bodinformatie['bodbedrag']);
+                            $bodinformatie['bodbedrag'] = round( $bodinformatie['bodbedrag'], 2, PHP_ROUND_HALF_DOWN);
+                            $bodinformatie['tijd'] = date("Y-m-d H:i:s");
+                            $bodinformatie['gebruiker'] = $_SESSION['gebruikersnaam'];
+                            $modelBod->registreerBod($bodinformatie);
+                            echo 'Bod geplaatst';
+                            header("location:" .SITE_URL. 'producten/' .$lastSegment );
+                            }
+                    }
+                    else {
+                        echo '<div>minimale verhoging is 5 euro</div>';
+                    }
+                }
+                else if($hoogstebod >= 1000 && $hoogstebod < 5000) {
+                    if($hoogstebod + 10  < $_POST['bodbedrag']) {
+                        if ($_COOKIE['gebruikersnaam'] != $_POST['verkoper']) {
+                            $bodinformatie = $_POST;
+                            $bodinformatie['bodbedrag'] = str_replace(",",".",$bodinformatie['bodbedrag']);
+                            $bodinformatie['bodbedrag'] = round( $bodinformatie['bodbedrag'], 2, PHP_ROUND_HALF_DOWN);
+                            $bodinformatie['tijd'] = date("Y-m-d H:i:s");
+                            $bodinformatie['gebruiker'] = $_SESSION['gebruikersnaam'];
+                            $modelBod->registreerBod($bodinformatie);
+                            echo 'Bod geplaatst';
+                            header("location:" .SITE_URL. 'producten/' .$lastSegment );
+                        }
+                    }
+                    else {
+                        echo '<div>minimale verhoging is 10 euro</div>';
+                    }
+                }
+                else if($hoogstebod >= 5000) {
+                    if($hoogstebod + 50  < $_POST['bodbedrag']) {
+                        if ($_COOKIE['gebruikersnaam'] != $_POST['verkoper']) {
+                            $bodinformatie = $_POST;
+                            $bodinformatie['bodbedrag'] = str_replace(",",".",$bodinformatie['bodbedrag']);
+                            $bodinformatie['bodbedrag'] = round( $bodinformatie['bodbedrag'], 2, PHP_ROUND_HALF_DOWN);
+                            $bodinformatie['tijd'] = date("Y-m-d H:i:s");
+                            $bodinformatie['gebruiker'] = $_SESSION['gebruikersnaam'];
+                            $modelBod->registreerBod($bodinformatie);
+                            echo 'Bod geplaatst';
+                            header("location:" .SITE_URL. 'producten/' .$lastSegment );
+                        }
+                    }
+                    else {
+                        echo '<div>minimale verhoging is 50 euro</div>';
+                    }
+                }
 
-            if($hoogstebod < $_POST['bodbedrag'] && $_POST['bodbedrag'] > 0) {
-                if ($_COOKIE['gebruikersnaam'] != $_POST['verkoper']) {
-            $bodinformatie = $_POST;
-                $bodinformatie['bodbedrag'] = str_replace(",",".",$bodinformatie['bodbedrag']);
-                $bodinformatie['bodbedrag'] = round( $bodinformatie['bodbedrag'], 2, PHP_ROUND_HALF_DOWN);
-            $bodinformatie['tijd'] = date("Y-m-d H:i:s");
-            $bodinformatie['gebruiker'] = $_SESSION['gebruikersnaam'];
-            $modelBod->registreerBod($bodinformatie);
-            echo 'Bod geplaatst';
-                header("location:" .SITE_URL. 'producten/' .$lastSegment );
-            }
             }
             else {
                 echo 'Bod niet geplaatst error..';
+            }
+            }
+            else {
+                if ($_COOKIE['gebruikersnaam'] != $_POST['verkoper']) {
+                    $bodinformatie = $_POST;
+                    $bodinformatie['bodbedrag'] = str_replace(",",".",$bodinformatie['bodbedrag']);
+                    $bodinformatie['bodbedrag'] = round( $bodinformatie['bodbedrag'], 2, PHP_ROUND_HALF_DOWN);
+                    $bodinformatie['tijd'] = date("Y-m-d H:i:s");
+                    $bodinformatie['gebruiker'] = $_SESSION['gebruikersnaam'];
+                    $modelBod->registreerBod($bodinformatie);
+                    echo 'Bod geplaatst';
+                    header("location:" .SITE_URL. 'producten/' .$lastSegment );
+                }
             }
             $this->loadView('includes/header');
             $this->loadView('product', $this->data);

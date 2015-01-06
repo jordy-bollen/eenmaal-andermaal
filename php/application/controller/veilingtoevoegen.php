@@ -19,9 +19,21 @@ class veilingtoevoegen extends controller{
         $hoofdrubrieken = $modelRubrieken->getHoofdRubrieken();
         $this->data['hoofdrubrieken'] = $hoofdrubrieken;
         if(!isset($_POST['submitRubriek']) && !isset($_POST['submitVeiling'])) {
+            $modelGebruiker = $this->loadModel('gebruiker');
+            $gebruiker = $modelGebruiker->getGebruiker($_SESSION['gebruikersnaam']);
+            while( $gebruikerverkoper = sqlsrv_fetch_object( $gebruiker )) {
+                $verkoper = $gebruikerverkoper;
+            }
+            if($verkoper->verkoper == 1) {
         $this->loadView('includes/header');
         $this->loadView('advertentieplaatsen', $this->data);
         $this->loadView('includes/footer');
+            }
+            else {
+                $this->loadView('includes/header');
+                echo '<div>U moet als verkoper zijn geregistreerd.</div>';
+                $this->loadView('includes/footer');
+            }
         }
         else if(isset($_POST['submitRubriek'])){
             $this->loadView('includes/header');
@@ -67,7 +79,9 @@ class veilingtoevoegen extends controller{
         }
     }
         else {
-            echo 'log eerst in voordat je een product kan plaatsen';
+            $this->loadView('includes/header');
+            echo '<div>log eerst in voordat je een product kan plaatsen</div>';
+            $this->loadView('includes/footer');
         }
     }
 

@@ -26,7 +26,7 @@
                     <input type='text' name='gebruikersnaam' class="invoerveld" maxlength="50" />
 
                     <label for='email' class="three columns">E-mailadres*</label>
-                    <input type='text' name='email' class="invoerveld" value="<?php echo $_POST['email'] ?>" maxlength="50" />
+                    <input type='text' name='email' class="invoerveld" value="<?php echo $_POST['email'] ?>" maxlength="50" disabled />
 
                     <label for='geboortedatum' class="three columns">Geboortedatum*</label>
                     <input type='text' name='geboortedatum' class="datum "id="datepicker"  maxlength="50" />

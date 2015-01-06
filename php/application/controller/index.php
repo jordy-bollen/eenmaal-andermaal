@@ -18,6 +18,7 @@ class index extends controller{
         //haal data op
         $aflopend = $modelVoorwerpen->getAflopendeVoorwerpen();
         $this->rubrieken = $this->modelRubrieken->getHoofdRubrieken();
+        $this->rubrieken2 = $this->modelRubrieken->getHoofdRubrieken();
         $afbeeldingen = $modelBestanden->getAfbeeldingen();
         $hoogsteboden = $modelVoorwerpen->getVoorwerpHoogsteBod();
         $alleVoorwerpen = $modelVoorwerpen->getVoorwerpen();
@@ -25,6 +26,7 @@ class index extends controller{
         //maak data klaar voor view
         $this->data['voorwerpen'] = $alleVoorwerpen;
         $this->data['rubrieken'] = $this->rubrieken;
+        $this->data['rubrieken2'] = $this->rubrieken2;
         $this->data['aflopend'] = $aflopend;
         $this->data['afbeeldingen'] = $afbeeldingen;
         $this->data['hoogsteboden'] = $hoogsteboden;

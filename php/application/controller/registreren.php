@@ -37,6 +37,8 @@ class registreren extends controller{
         $this->loadView('includes/footer');
         }
         else if(isset($_POST['submitMail'])) {
+            $rows = sqlsrv_fetch_array($modelGebruiker->checkMail($_POST['email']));
+            if(!$rows) {
             $this->code = $this->createRandomCode();
             $this->mailUser($_POST['email'], $this->code);
             $this->data['code'] = $this->code;
@@ -44,6 +46,12 @@ class registreren extends controller{
             $this->loadView('includes/header');
             $this->loadView('forms/validatie');
             $this->loadView('includes/footer');
+            }
+            else {
+                $this->loadView('includes/header');
+            echo '<div>email bestaat al in de database. <a href="'.SITE_URL.'registreren">Ga terug</a></div>';
+                $this->loadView('includes/footer');
+            }
         }
         else if(isset($_POST['submitValidatie'])) {
             if($_POST['code'] == $_SESSION['checkcode']) {
@@ -59,6 +67,7 @@ class registreren extends controller{
             }
         }
            else {
+
                session_unset($_SESSION['checkcode']);
                 $this->loadView('includes/header');
                echo'u heeft geregistreerd';
@@ -66,8 +75,10 @@ class registreren extends controller{
                 $modelGebruiker->registreer($gebruikersdata);
                $modelGebruiker->voegtelefoonnummerstoe($gebruikersdata, $gebruikersdata['gebruikersnaam']);
                 $this->loadView('includes/footer');
+               }
+
             }
-        }
+
 
     /**
      * createRandomCode

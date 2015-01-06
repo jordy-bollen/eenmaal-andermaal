@@ -21,6 +21,7 @@
                 <select name="banknaam">
                     <option value="ABN Amro">Abn Amro</option>
                     <option value="SNS Bank">SNS Bank</option>
+                    <option value="Rabobank">Rabobank</option>
                 </select>
 
                 <label for='rekeningnummer' >Rekeningnummer</label>

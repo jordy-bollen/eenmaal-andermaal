@@ -20,7 +20,9 @@ class account extends controller{
         $modelRubrieken = $this->loadModel('rubriek');
         $gebruiker = $modelGebruiker->getGebruiker($_SESSION['gebruikersnaam']);
         $rubrieken = $modelRubrieken->getHoofdRubrieken();
+        $rubrieken2 = $modelRubrieken->getHoofdRubrieken();
         $this->data['rubrieken'] = $rubrieken;
+        $this->data['rubrieken2'] = $rubrieken2;
         $this->data['gebruiker'] = $gebruiker;
         $this->loadView('includes/header');
         $this->loadView('account', $this->data);
@@ -30,6 +32,9 @@ class account extends controller{
     public function biedingen() {
         $modelRubrieken = $this->loadModel('rubriek');
         $rubrieken = $modelRubrieken->getHoofdRubrieken();
+        $rubrieken2 = $modelRubrieken->getHoofdRubrieken();
+        $this->data['rubrieken'] = $rubrieken;
+        $this->data['rubrieken2'] = $rubrieken2;
         $this->data['rubrieken'] = $rubrieken;
         $modelVoorwerp = $this->loadModel('voorwerp');
         $modelBod = $this->loadModel('bod');
@@ -45,6 +50,9 @@ class account extends controller{
     public function mijnadvertenties() {
         $modelRubrieken = $this->loadModel('rubriek');
         $rubrieken = $modelRubrieken->getHoofdRubrieken();
+        $rubrieken2 = $modelRubrieken->getHoofdRubrieken();
+        $this->data['rubrieken'] = $rubrieken;
+        $this->data['rubrieken2'] = $rubrieken2;
         $this->data['rubrieken'] = $rubrieken;
         $modelVoorwerp = $this->loadModel('voorwerp');
         $modelBod = $this->loadModel('bod');

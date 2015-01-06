@@ -26,6 +26,7 @@ class veilingen extends controller{
         $modelRubrieken = $this->loadModel('rubriek');
         $modelBestanden = $this->loadModel('bestand');
         $rubrieken = $modelRubrieken->getHoofdRubrieken();
+        $rubrieken2 = $modelRubrieken->getHoofdRubrieken();
         $alleRubrieken = $modelRubrieken->getAlleRubrieken();
         $alleVoorwerpen = $modelVoorwerp->getVoorwerpen();
         $hoogsteboden = $modelVoorwerp->getVoorwerpHoogsteBod();
@@ -35,6 +36,7 @@ class veilingen extends controller{
         $this->data['hoogsteboden'] = $hoogsteboden;
         $this->data['allerubrieken'] = $alleRubrieken;
         $this->data['rubrieken'] = $rubrieken;
+        $this->data['rubrieken2'] = $rubrieken2;
         $this->data['afbeeldingen'] = $afbeeldingen;
         if(count($this->segments) <= 4) {
         $this->loadView('includes/header');

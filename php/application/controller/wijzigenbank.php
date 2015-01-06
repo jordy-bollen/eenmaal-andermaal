@@ -31,7 +31,9 @@ class wijzigenbank extends controller{
             if($wachtwoord == $_POST['wachtwoord']) {
                 $modelGebruiker = $this->loadModel('gebruiker');
                 $modelGebruiker->wijzigVerkoper($_POST);
-                echo 'test';
+                $this->loadView('includes/header');
+                $this->loadView('wijzigenbankgegevens', $this->data);
+                $this->loadView('includes/footer');
             }
             else {
                 echo 'wachtwoord verkeerd';
