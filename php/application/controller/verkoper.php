@@ -27,8 +27,11 @@ class verkoper extends controller{
         $this->loadView('includes/footer');
             }
         else if(isset($_POST['submitVerkoper']) && isset($_POST['verificatieMethode'])){
-            if($_POST['verificatieMethode'] == 'post') {
-                $this->mailUser('Om als verkoper te registreren mail de administrator', $_POST['mail']);
+            if($_POST['verificatieMethode'] == 'Post') {
+                $this->loadView('includes/header');
+                echo '<div>U heeft een mail ontvangen met verdere instructies</div>';
+                $this->loadView('includes/footer');
+                $this->mailUser('Om als verkoper te registreren mail de administrator', $dezegebruiker->mailadres);
             }
             else {
                 $gebruikerModel = $this->loadModel('gebruiker');

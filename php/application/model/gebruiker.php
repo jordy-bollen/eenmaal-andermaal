@@ -69,6 +69,8 @@ plaatsnaam, land, geboorteDatum, mailadres, wachtwoord, vraag, antwoordtekst)
         return $this->database->query("SELECT * FROM Gebruikerstelefoon");
     }
 
+
+
     public function checkMail($email) {
         return $this->database->query("SELECT * FROM Gebruiker WHERE mailadres ='".$email."'");
     }

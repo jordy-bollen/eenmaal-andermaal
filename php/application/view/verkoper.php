@@ -2,7 +2,7 @@
 ==================================================== -->
 <div class="thirtheen columns">
     <h1>Verkoper Registreren</h1>
-    <form id='registreerVerkoper' action='' method='post'
+    <form id='registreerVerkoper' action='<?= SITE_URL ?>verkoper' method='POST'
           accept-charset='UTF-8'>
         <input type='hidden' name='submitted' id='submitted' value='1'/>
         <div id='registratievelden'>
