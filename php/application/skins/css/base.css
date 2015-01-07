@@ -463,9 +463,10 @@ border: 1px solid #000000;
     background-position: 150px 17px;
     background-repeat: no-repeat;
     border-bottom: 1px solid #ff9000;
-    min-height: 25px;
+    height: 25px;
     margin-bottom: 0;
     padding: 10px 10px 7px;
+    display: block;
 }
 
 .rubriekenmenu li:hover{
@@ -475,6 +476,19 @@ border: 1px solid #000000;
     background-position: 150px 17px;
     background-repeat: no-repeat;
 }
+
+#menu li ul {
+    background-color: red;
+    display:none;
+    position:absolute;
+}
+
+#menu li:hover ul {
+    margin-top: -20px;
+    margin-left: 150px;
+    display:block;
+}
+
 .rubriekenmenu h2 {
     background-color: #ffffff;
 }

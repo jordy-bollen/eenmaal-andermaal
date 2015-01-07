@@ -17,15 +17,17 @@
     </div>
 
     <div class="four column inputvelden">
+        <form name="" method="POST" action="<?php echo SITE_URL ?>contact">
         <select name="aanhef" class="input">
             <option value="Dhr.">Dhr.</option>
             <option value="Mevr.">Mevr.</option>
         </select>
-        <input type="text" name="Voornaam" maxlength="50" size="30">
-        <input type="text" name="Achternaam" maxlength="50" size="30">
-        <input type="text" name="emailadres" maxlength="80" size="30">
+        <input type="text" name="voornaam" maxlength="50" size="30">
+        <input type="text" name="achternaam" maxlength="50" size="30">
+        <input type="text" name="email" maxlength="80" size="30">
         <input type="text" name="telefoon" maxlength="30" size="30">
         <input type="text" name="onderwerp" maxlength="50" size="30">
         <textarea  name="bericht" maxlength="1000" cols="40" rows="5"></textarea><p class="verplicht"><h6>Velden met * zijn verplicht.</p></h6>
-        <input type="submit" value="Versturen" class="zoekknop">
+        <input type="submit" value="Versturen" name="submitContact" class="zoekknop">
+            </form>
     </div>

@@ -30,9 +30,16 @@ class contact extends controller{
     }
 
     private function mailUser($data) {
-        $message = wordwrap('Er is een bericht binnengekomen via het contactformulier. dit bericht luidt als volgt:
-
-        ', 70, "\r\n");
-        mail($email, 'Registratiecode', $message);
+        $message = '<html><body>';
+        $message .= '<p>Het volgende Bericht is verstuurd via het contact formulier</p>';
+        $message .= '<p>Onderwerp: '.$data['onderwerp'].'</p>';
+        $message .= '<p>Bericht:</p>';
+        $message .= '<p>'.$data['bericht'].'</p>';
+        $message .= '<p>Voornaam: '.$data['voornaam'].'</p>';
+        $message .= '<p>Achternaam: '.$data['achternaam'].'</p>';
+        $message .= '<p>Email: '.$data['email'].'</p>';
+        $message .= '<p>Telefoon: '.$data['telefoon'].'</p>';
+        $message .= '</body></html>';
+        mail('jordy.bollen@outlook.com', 'Contactformulier', $message);
     }
 } 
