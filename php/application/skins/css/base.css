@@ -485,45 +485,42 @@ border: 1px solid #000000;
 
 /*-------------- RUBRIEKEN SUBMENU ------------------*/
 
-
-#menu li ul.sub-menu
-{
-    background-color: #b8e3f9;
-    display: none;
-    height: auto;
-    position: absolute;
-    width: 162px;
-    left: 133px;
-    margin-top: -28px;    
+.sub-ul{
+	display:none;
 }
 
-#menu li:hover ul.sub-menu
-{
-	display: block;
-	color:#FFF;	
-} 
-
-.menu-sub a:hover {
-	color:#FFF;
+.sub-ul ul:hover{
+	display:block;
 }
 
-#menu li ul.sub-menu-twee
-{
-	clear: both;
-    background-color: #b8e3f9;
-    display: none;
-    height: auto;
-    position: absolute;
-    width: 162px;
-    left: 143px;
-    margin-top: -28px;    
+.sub-li ul{
+    display:none;
+	position:absolute;
 }
 
-#menu li:hover ul.sub-menu-twee
-{
-	display: block;
-	color:#FFF;	
-} 
+.sub-a{
+
+}
+
+/*
+--------test
+*/
+#horizontalmenu li {
+float:left; position:relative; padding-right:100; display:block;
+border:4px solid #CC55FF; 
+border-style:inset;
+float:left;
+}
+#horizontalmenu li ul {
+    display:none;
+position:absolute;
+}
+#horizontalmenu li:hover ul{
+    display:block;
+    background:red;
+height:auto; width:8em; 
+}
+
 
 
 /*-------------- CONTENT --------------------*/
@@ -544,7 +541,7 @@ border: 1px solid #000000;
     height: 360px;
     margin-bottom: 15px;
     margin-left: 4px !important;
-    width: 246px !important;
+    width: 246px !important;	
 }
 
 .veiling:hover{
@@ -684,7 +681,7 @@ border: 1px solid #000000;
   }
 
 .button-bod{
-	margin-top:10px;
+    padding-top: 10px;
 }
 
 .ganaarveilingbutton:hover{
@@ -869,8 +866,16 @@ a.remove_field {
 
 .veiling input
 {
-	margin-top: 15px;
-	margin-left: 7px;
+    margin-left: 130px;
+    margin-top: 0px;
+    display: block;
+    height: 41px;
+    width: 100px;
+    background-color: #ff9517;
+    font-size: 13px;
+    text-shadow: none;
+	font-weight:bold;
+	display: block;
 }
 
 .voorwaardenTotaal 
@@ -881,4 +886,13 @@ a.remove_field {
 .wijzigenPersoonForm
 {
    margin-top: 25px;
+}
+
+.zoekknopganaarveiling{
+	margin-left: 174px !important;
+    margin-top: -43px;
+}
+
+.hoogstebod{
+	width: 100px;
 }
