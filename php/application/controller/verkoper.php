@@ -28,7 +28,7 @@ class verkoper extends controller{
             }
         else if(isset($_POST['submitVerkoper']) && isset($_POST['verificatieMethode'])){
             if($_POST['verificatieMethode'] == 'post') {
-                echo 'nog niet mogelijk';
+                $this->mailUser('Om als verkoper te registreren mail de administrator', $_POST['mail']);
             }
             else {
                 $gebruikerModel = $this->loadModel('gebruiker');
@@ -44,5 +44,9 @@ class verkoper extends controller{
             echo 'u bent al verkoper';
             $this->loadView('includes/footer');
         }
+    }
+    private function mailUser($bericht, $email) {
+        $message = wordwrap($bericht, 70, "\r\n");
+        mail($email, 'Verkoperaccount', $message);
     }
 } 

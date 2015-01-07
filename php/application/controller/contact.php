@@ -17,6 +17,8 @@ class contact extends controller{
         $modelRubrieken = $this->loadModel('rubriek');
         $rubrieken = $modelRubrieken->getHoofdRubrieken();
         $this->data['rubrieken'] = $rubrieken;
+        $rubrieken2 = $modelRubrieken->getHoofdRubrieken();
+        $this->data['rubrieken2'] = $rubrieken2;
         if(!isset($_POST['submitContact'])) {
         $this->loadView('includes/header');
         $this->loadView('contact', $this->data);

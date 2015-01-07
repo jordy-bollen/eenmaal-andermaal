@@ -10,14 +10,11 @@
 class zoeken extends model{
 
     /**
-     * getVragen
-     *
-     * Haalt alle vragen op voor het vraag/antwoord veld in het formulier
-     *
+     * @param $query
      * @return bool|resource
      */
     public function getZoekresultaten($query) {
-       return $this->database->query("SELECT * FROM Voorwerp WHERE titel LIKE '%".$query."%'");
+       return $this->database->query("SELECT * FROM Voorwerp WHERE titel LIKE '%".str_replace("'", "''",$query)."%'");
       
         
 

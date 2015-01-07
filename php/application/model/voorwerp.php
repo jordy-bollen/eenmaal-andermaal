@@ -19,14 +19,24 @@ class voorwerp extends model{
 
 }
 
+    /**
+     * @return bool|resource
+     */
     public function getVoorwerpHoogsteBod() {
         return $this->database->query("SELECT v.voorwerpnummer, MAX(b.bodbedrag) AS hoogste FROM Voorwerp v INNER JOIN bod b ON b.voorwerp = v.voorwerpnummer GROUP BY ALL v.voorwerpnummer");
     }
 
+    /**
+     * @return bool|resource
+     */
     public function getPopulaireVoorwerpen() {
         return $this->database->query("SELECT top(3) v.voorwerpnummer, v.titel, v.eindmoment, count(b.bodbedrag) AS aantalboden FROM Voorwerp v INNER JOIN bod b ON b.voorwerp = v.voorwerpnummer GROUP BY v.voorwerpnummer, v.titel, v.eindmoment, v.veilingGesloten HAVING v.veilingGesloten = 0 ORDER BY count(b.bodbedrag) DESC");
     }
 
+    /**
+     * @param $gebruikersnaam
+     * @return bool|resource
+     */
     public function getVoorwerpFromGebruiker($gebruikersnaam) {
         return $this->database->query("select * from voorwerp where verkoper = '".$gebruikersnaam."'");
     }
@@ -94,6 +104,9 @@ WHERE cp.rubriekOpLaagsteNiveau IN (
         return $this->database->query("SELECT * FROM Voorwerp WHERE voorwerpnummer = '".$id."'");
     }
 
+    /**
+     * @return bool|resource
+     */
     public function getAflopendeVoorwerpen() {
         return $this->database->query("select TOP(3) * from Voorwerp WHERE veilingGesloten = 0 ORDER BY eindmoment ASC");
     }

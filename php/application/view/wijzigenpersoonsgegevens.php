@@ -1,20 +1,7 @@
  <!-- Kopteksten
         ==================================================== -->
-        
-            <div class="three columns">
-                <h2>Rubrieken</h2>
-            <div class="three columns rubriekenmenu">
-                <ul>
-                    <a href="#"><li>rubiek 1</li></a>
-                    <a href="#"><li>rubiek 1</li></a>
-                    <a href="#"> <li>rubiek 1</li></a>
-                    <a href="#"> <li>rubiek 1</li></a>
-                    <a href="#"> <li>rubiek 1</li></a>
-                    <a href="#">  <li>rubiek 1</li></a>
-                    <a href="#">  <li>rubiek 1</li></a>
-                </ul>
-            </div>
-                </div>
+
+ <?php include 'includes/rubriekenMenu.php'; ?>
         
         <!-- Wijzigen persoonsgegevens
         ==================================================== -->
@@ -33,14 +20,13 @@
 
                     <label for='email'>E-mailadres</label>
                     <input type='text' name='email' value="<?= $gebruiker->mailadres ?>" maxlength="255"/>
+                        <?php while( $telefoon = sqlsrv_fetch_object( $data['telefoon'] )) { if ($telefoon->gebruiker == $_SESSION['gebruikersnaam']) {?>
 
-                        <div class="input_fields_wrap">
                             <label for='telefoonnummer' class="three columns">Telefoonnummer*</label>
-                            <button class="add_field_button">Add More Fields</button>
-                            <div><input type="text" name="telefoonnummer[]"></div>
-                        </div>
+                        <input type='text' name='telefoonnmmer' value="<?= $telefoon->telefoon ?>" maxlength="255"/>
 
-                       
+                        <?php }} ?>
+
 
               
             </div>

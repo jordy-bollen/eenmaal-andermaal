@@ -57,7 +57,7 @@ class account extends controller{
         $modelVoorwerp = $this->loadModel('voorwerp');
         $modelBod = $this->loadModel('bod');
         $this->loadView('includes/header');
-        $boden = $modelBod->getAlleBoden();
+        $boden = $modelBod->getHoogsteBoden();
         $voorwerpen = $modelVoorwerp->getVoorwerpFromGebruiker($_SESSION['gebruikersnaam']);
         $this->data['boden'] = $boden;
         $this->data['voorwerpen'] = $voorwerpen;
@@ -66,13 +66,19 @@ class account extends controller{
     }
 
     public function wijzigenpersoonsgegevens() {
-
+        $modelRubrieken = $this->loadModel('rubriek');
+        $rubrieken = $modelRubrieken->getHoofdRubrieken();
+        $rubrieken2 = $modelRubrieken->getHoofdRubrieken();
+        $this->data['rubrieken'] = $rubrieken;
+        $this->data['rubrieken2'] = $rubrieken2;
+        $this->data['rubrieken'] = $rubrieken;
         $modelGebruiker = $this->loadModel('gebruiker');
         if(!isset($_POST['submitPersoonsgegevens'])) {
         $gebruikers = $modelGebruiker->getGebruiker($_SESSION['gebruikersnaam']);
+        $telefoonnummers = $modelGebruiker->getGebruikerTelefoon();
         $this->loadView('includes/header');
         $this->data['gebruikers'] = $gebruikers;
-        
+            $this->data['telefoon'] = $telefoonnummers;
         $this->loadView('wijzigenpersoonsgegevens', $this->data);
         $this->loadView('includes/footer');
         }

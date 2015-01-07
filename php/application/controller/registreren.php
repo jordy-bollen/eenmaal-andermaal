@@ -21,6 +21,7 @@ class registreren extends controller{
     }
 
     public function index() {
+        if(!isset($_SESSION['gebruikersnaam'])) {
         //models voor vragen en gebruikers inladen en vervolgens de benodigde data ophalen
         $modelVraag = $this->loadModel('vraag');
         $modelGebruiker = $this->loadModel('gebruiker');
@@ -73,10 +74,16 @@ class registreren extends controller{
                echo'u heeft geregistreerd';
                 $gebruikersdata = $this->formatData($_POST);
                 $modelGebruiker->registreer($gebruikersdata);
+
                $modelGebruiker->voegtelefoonnummerstoe($gebruikersdata, $gebruikersdata['gebruikersnaam']);
                 $this->loadView('includes/footer');
                }
-
+    }
+        else {
+            $this->loadView('includes/header');
+            echo '<div>U bent al ingelogd, log eerst uit voordat u kan registreren</div>';
+            $this->loadView('includes/footer');
+        }
             }
 
 

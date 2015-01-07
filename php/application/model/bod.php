@@ -26,6 +26,10 @@ INSERT INTO Bod(voorwerp, bodbedrag, gebruiker, bodmoment) VALUES
         return $this->database->query("SELECT TOP 1 bodbedrag FROM Bod WHERE voorwerp = ".$productid." ORDER BY bodbedrag DESC");
     }
 
+    public function getHoogsteBoden() {
+        return $this->database->query("SELECT DISTINCT voorwerp, max(bodbedrag) AS bodbedrag FROM Bod  GROUP BY voorwerp");
+    }
+
     public function getBodenGebruiker($gebruikersnaam) {
         return $this->database->query("SELECT * FROM Bod WHERE gebruiker = '".$gebruikersnaam."' ORDER BY bodbedrag DESC");
     }

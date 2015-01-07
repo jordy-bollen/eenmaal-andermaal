@@ -1,6 +1,12 @@
 <!-- Kopteksten
        ==================================================== -->
-<?php include 'includes/rubriekenMenu.php'; ?>
+<?php include 'includes/rubriekenMenu.php';
+$i = 0;
+while( $voorwerp = sqlsrv_fetch_object( $data['voorwerpen'] )) {
+    $voorwerpen[$i] = $voorwerp;
+    $i++;
+}
+?>
 
 <!-- Mijn biedingen
 ==================================================== -->
@@ -10,9 +16,9 @@
         <table id="bodoverzicht"><thead><td>voorwerp</td><td>bedrag</td></thead>
     <?php
 while( $bod = sqlsrv_fetch_object( $data['boden'] )) {
-    while( $voorwerp = sqlsrv_fetch_object( $data['voorwerpen'] )) {
-        if($voorwerp->voorwerpnummer == $bod->voorwerp) {
-    echo '<tr><td>'.$voorwerp->titel.'</td><td>' .$bod->bodbedrag . '</tr>';
+    for( $i = 0; $i < count($voorwerpen); $i++ ) {
+        if($voorwerpen[$i]->voorwerpnummer == $bod->voorwerp) {
+    echo '<tr><td><a href="'.SITE_URL ?>producten/<?= $voorwerpen[$i]->voorwerpnummer . '-' . trim( preg_replace( "/[^0-9a-z]+/i", "",str_replace(" ","-",strtolower($voorwerpen[$i]->titel)))).'">'.$voorwerpen[$i]->titel.'</a></td><td>' .$bod->bodbedrag . '</tr>';
         }
     }
 } ?></table>    </div>
