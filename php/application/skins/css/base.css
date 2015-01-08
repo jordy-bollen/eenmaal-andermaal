@@ -340,13 +340,10 @@ h4{
 }
 
 .login{
-	margin-top: 5px;
-	margin-bottom: 7px;
-	padding:5px 5px 5px 13px;
-	border-radius: 10px 10px 10px 10px;
--moz-border-radius: 10px 10px 10px 10px;
--webkit-border-radius: 10px 10px 10px 10px;
-border: 1px solid #000000;
+    border: 1px solid #d2d2d2;
+    margin-bottom: 7px;
+    margin-top: 5px;
+    padding: 13px 5px 16px 13px;
 }
 
 .login form {
@@ -467,26 +464,34 @@ border: 1px solid #000000;
     margin-bottom: 0;
     padding: 10px 10px 7px;
     display: block;
+    width:auto;
 }
 
 .rubriekenmenu li:hover{
 	background-color:#ff9517;
-	color:#FFF;	
-	background-image: url("../img/white-arrow.png");
+	border-left: 3px solid #45b5f0;	
+    background-image: url("../img/white-arrow.png");
     background-position: 150px 17px;
     background-repeat: no-repeat;
 }
 
 #menu li ul {
-    background-color: red;
+    background-color: #b8e3f9;
     display:none;
     position:absolute;
+    color:#000000;
+
 }
 
 #menu li:hover ul {
     margin-top: -20px;
-    margin-left: 150px;
+    margin-left: 145px;
     display:block;
+    color:#000000;
+    background-image: url("../img/white-arrow.png");
+    background-position: right;  
+    background-repeat: no-repeat;
+
 }
 
 .rubriekenmenu h2 {
@@ -628,11 +633,8 @@ border: 1px solid #000000;
     margin-top: 50px;
 }
 
-#productOmschrijving p {
-
--webkit-box-shadow:0 0 10px rgba(0, 0, 0, 0.5);
-	-moz-box-shadow:0 0 10px rgba(0, 0, 0, 0.5);
-	box-shadow:0 0 10px rgba(0, 0, 0, 0.5);
+#productOmschrijving p {	
+	border: 1px solid #e3e3e3;
 	padding: 5px;  
 }
 
@@ -716,7 +718,7 @@ border: 1px solid #000000;
   }
 
 .button-bod{
-	margin-top:10px;
+	margin-top:-7px;
 }
 
 .ganaarveilingbutton:hover{
@@ -919,4 +921,18 @@ padding: 20px;
 .wijzigenPersoonForm
 {
    margin-top: 25px;
+}
+.ganaarveilingzoek{
+    background-color: #ff9517;
+    border-radius: 2px;
+    float: right;
+    height: 39px;
+    margin-right: -25px;
+    margin-top: 1px;
+    padding-top: 10px;
+    text-align: center;
+    text-decoration: none;
+    width: 108px;
+    font-size:13px !important;
+
 }

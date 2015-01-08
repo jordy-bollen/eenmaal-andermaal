@@ -69,7 +69,7 @@
                            <p>Plaats bod</p>
                            <form action="" method="post">
                             <input type="text" name="bod" id="bod" width="10px">  
-                            <input type="submit" value="Bied nu">
+                            <input type="submit" value="Bied nu" class="button-bod">
                                <hr>
                             <p>Gebruiker:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Bod:</p>
                                <hr>
