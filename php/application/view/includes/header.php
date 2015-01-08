@@ -59,6 +59,7 @@
 
                     </label>
                 </form>
+                <a href="<?php echo SITE_URL ?>wachtwoordvergeten" >Wachtwoord vergeten</a>
             <?php else: ?>
                 <?php if($_SESSION['loggedIn'] != false): ?>
                     <p>Gebruiker: <?= $_SESSION['gebruikersnaam'] ?></p>

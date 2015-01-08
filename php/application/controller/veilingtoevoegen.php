@@ -14,7 +14,7 @@ class veilingtoevoegen extends controller{
     }
 
     public function index() {
-        if($_SESSION['loggedIn'] == true) {
+        if(isset($_SESSION['loggedIn'])) {
         $modelRubrieken = $this->loadModel('rubriek');
         $hoofdrubrieken = $modelRubrieken->getHoofdRubrieken();
         $this->data['hoofdrubrieken'] = $hoofdrubrieken;
@@ -31,7 +31,8 @@ class veilingtoevoegen extends controller{
             }
             else {
                 $this->loadView('includes/header');
-                echo '<div>U moet als verkoper zijn geregistreerd.</div>';
+                $this->data['melding'] = 'U moet als verkoper zijn geregistreerd';
+                $this->loadView('foutmelding', $this->data);
                 $this->loadView('includes/footer');
             }
         }
@@ -60,10 +61,26 @@ class veilingtoevoegen extends controller{
             $this->loadView('includes/footer');
         }
         else if($_POST['submitVeiling']) {
+            echo strlen($_POST['titel']);
+            if(strlen($_POST['titel']) < 2) {
+                $this->loadView('includes/header');
+                $this->data['melding'] = 'Titel moet langer zijn dan 2 karakters';
+                $this->loadView('foutmelding', $this->data);
+                $this->loadView('includes/footer');
+            }
+            else if($_POST['startprijs'] < 1) {
+                $this->loadView('includes/header');
+                $this->data['melding'] = 'Startprijs moet groter zijn dan 1';
+                $this->loadView('foutmelding', $this->data);
+                $this->loadView('includes/footer');
+            }
+            else {
             define ('SITE_ROOT', realpath(dirname(__FILE__)));
 
 
             $modelVoorwerpen = $this->loadModel('voorwerp');
+            $_POST['verzendkosten'] = str_replace(",",".",$_POST['verzendkosten']);
+            $_POST['startprijs'] = str_replace(",",".",$_POST['startprijs']);
             $modelVoorwerpen->voegVoorwerpToe($_POST);
             $modelVoorwerpen->voegVoorwerpRubriekToe($_POST['rubriek']);
 
@@ -74,13 +91,15 @@ class veilingtoevoegen extends controller{
                 $modelVoorwerpen->voegAfbeeldingenToe($_POST, $new_file_name);
 
                 move_uploaded_file($_FILES['afbeelding'.$i]['tmp_name'], ROOT.'application\skins\img\producten\\'.$new_file_name);
+                    }
             }
         }
         }
     }
         else {
             $this->loadView('includes/header');
-            echo '<div>log eerst in voordat je een product kan plaatsen</div>';
+            $this->data['melding'] = 'U moet ingelogd zijn';
+            $this->loadView('foutmelding', $this->data);
             $this->loadView('includes/footer');
         }
     }

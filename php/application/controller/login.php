@@ -20,8 +20,6 @@ class login extends controller{
 
     public function verifyLogin($gebruikersnaam, $wachtwoord) {
     $modelGebruiker = $this->loadModel('gebruiker');
-        echo $gebruikersnaam;
-        echo $wachtwoord;
         $query = $modelGebruiker->login($gebruikersnaam, $wachtwoord);
         $rows = sqlsrv_fetch_array($query);
     if($rows) {

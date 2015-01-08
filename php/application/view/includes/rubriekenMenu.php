@@ -20,7 +20,7 @@ while( $rub = sqlsrv_fetch_object( $data['rubrieken2'] )) {
                     <?php for($i = 0; $i < count($sub); $i++):
                         if($sub[$i]->rubriek == $obj->rubrieknummer):
                             ?>
-                            <li><?= $sub[$i]->rubrieknaam ?></li>
+                        <a href="<?= SITE_URL ?>veilingen/<?= $sub[$i]->rubrieknummer . '-' . trim( preg_replace( "/[^0-9a-z]+/i", "", str_replace(" ","",strtolower($sub[$i]->rubrieknaam)))) ?>"> <li><?= $sub[$i]->rubrieknaam ?></li></a>
                         <?php endif; endfor; ?>
 
                         </ul>

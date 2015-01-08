@@ -22,7 +22,7 @@ class zoekresultaat extends controller{
         $modelBestanden = $this->loadModel('bestand');
         $rubrieken = $modelRubrieken->getHoofdRubrieken();
         $alleRubrieken = $modelRubrieken->getAlleRubrieken();
-        $alleVoorwerpen = $modelVoorwerp->getVoorwerpen();
+        $alleVoorwerpen = $modelVoorwerp->getVoorwerpen(1000);
         $hoogsteboden = $modelVoorwerp->getVoorwerpHoogsteBod();
         $afbeeldingen = $modelBestanden->getAfbeeldingen();
 

@@ -81,7 +81,8 @@ class registreren extends controller{
     }
         else {
             $this->loadView('includes/header');
-            echo '<div>U bent al ingelogd, log eerst uit voordat u kan registreren</div>';
+            $this->data['melding'] = ' bent al ingelogd, log eerst uit alvorens u kan registreren';
+            $this->loadView('foutmelding', $this->data);
             $this->loadView('includes/footer');
         }
             }

@@ -28,23 +28,44 @@ class veilingen extends controller{
         $rubrieken = $modelRubrieken->getHoofdRubrieken();
         $rubrieken2 = $modelRubrieken->getHoofdRubrieken();
         $alleRubrieken = $modelRubrieken->getAlleRubrieken();
-        $alleVoorwerpen = $modelVoorwerp->getVoorwerpen();
+        $aantalproducten = 9;
+        $alleVoorwerpen = $modelVoorwerp->getVoorwerpen($aantalproducten);
         $hoogsteboden = $modelVoorwerp->getVoorwerpHoogsteBod();
         $afbeeldingen = $modelBestanden->getAfbeeldingen();
 
-        $this->data['veilingen'] = $alleVoorwerpen;
+        $aantalvoorwerpen = $modelVoorwerp->countVoorwerpen();
+        while( $v = sqlsrv_fetch_object( $aantalvoorwerpen )) {
+          $aantalvoorwerp =  $v->aantal;
+        }
+        $aantalpaginas = ceil($aantalvoorwerp / $aantalproducten);
+        echo $aantalpaginas;
+        $this->data['aantalpaginas'] = $aantalpaginas;
         $this->data['hoogsteboden'] = $hoogsteboden;
         $this->data['allerubrieken'] = $alleRubrieken;
         $this->data['rubrieken'] = $rubrieken;
         $this->data['rubrieken2'] = $rubrieken2;
         $this->data['afbeeldingen'] = $afbeeldingen;
         if(count($this->segments) <= 4) {
+        $this->data['veilingen'] = $alleVoorwerpen;
         $this->loadView('includes/header');
         $this->loadView('veilingen', $this->data);
         $this->loadView('includes/footer');
         }
         else
          {
+
+             $lastSegment = $this->segments[count($this->segments) - 1];
+             if(!strpos($lastSegment,'-') && count($this->segments) < 6 ) {
+                 $paginanummer = $lastSegment;
+
+                 echo $paginanummer;
+                 $voorwerpenpagina = $modelVoorwerp->getVoorwerpenPagina($aantalproducten, $paginanummer);
+                 $this->data['veilingen'] = $voorwerpenpagina;
+                 $this->loadView('includes/header');
+                 $this->loadView('veilingen', $this->data);
+                 $this->loadView('includes/footer');
+             }
+             else {
              unset($this->segments[0]);
              unset($this->segments[1]);
              unset($this->segments[2]);
@@ -52,13 +73,17 @@ class veilingen extends controller{
             $lastSegment = $this->segments[count($this->segments) - 1];
              $string  = explode("-", $lastSegment, 3);
              $id = $string[0];
+                 $this->data['veilingen'] = $alleVoorwerpen;
              $rubriek = $modelRubrieken->getRubriek($id);
-            $veilingen = $modelVoorwerp->getVoorwerpenRubriek($id);
+
+            $veilingen = $modelVoorwerp->getVoorwerpenRubriek($id, 50);
             $this->data['veilingen'] = $veilingen;
              $this->data['rubriek'] = $rubriek;
+
             $this->loadView('includes/header');
              $this->loadView('veilingen', $this->data);
             $this->loadView('includes/footer');
+             }
         }
     }
 

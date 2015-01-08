@@ -14,10 +14,30 @@ class voorwerp extends model{
      *
      * @return mixed
      */
-    public function getVoorwerpen() {
-    return $this->database->query('SELECT * FROM Voorwerp');
+    public function getVoorwerpen($aantalproducten) {
+    return $this->database->query('SELECT TOP '.$aantalproducten.' * FROM Voorwerp WHERE veilingGesloten = 0');
 
 }
+
+    public function getVoorwerpenalle() {
+        return $this->database->query('SELECT * FROM Voorwerp WHERE veilingGesloten = 0');
+
+    }
+
+    public function getVoorwerpenPagina($aantalproducten, $paginanummer) {
+        return $this->database->query("SELECT * FROM (
+        SELECT
+        ROW_NUMBER() OVER (ORDER BY voorwerpnummer ASC) AS rownumber, *
+        FROM voorwerp
+        WHERE veilingGesloten = 0
+        ) AS foo
+        WHERE rownumber >= ".$aantalproducten." * (".$paginanummer." - 1) AND rownumber <= (".$aantalproducten." * ".$paginanummer.") - 1");
+
+    }
+
+    public function countVoorwerpen() {
+        return $this->database->query("SELECT COUNT(voorwerpnummer) AS aantal FROM Voorwerp WHERE veilingGesloten = 0");
+    }
 
     /**
      * @return bool|resource
@@ -49,13 +69,13 @@ class voorwerp extends model{
      * @param $id
      * @return mixed
      */
-    public function getVoorwerpenRubriek($id) {
+    public function getVoorwerpenRubriek($id, $aantalproducten) {
         $rubriekNaam = $this->database->query("SELECT rubrieknaam FROM Rubriek WHERE rubrieknummer = ".$id."");
         while( $obj = sqlsrv_fetch_object( $rubriekNaam )) {
         $rubriekQuery = $obj->rubrieknaam;
     }
         $rubriek = $rubriekQuery;
-        return $this->database->query("SELECT p.*
+        return $this->database->query("SELECT TOP ".$aantalproducten." p.*
 FROM Voorwerp p
    JOIN VoorwerpInRubriek cp on p.voorwerpnummer = cp.voorwerp
 WHERE cp.rubriekOpLaagsteNiveau IN (
@@ -88,7 +108,54 @@ WHERE cp.rubriekOpLaagsteNiveau IN (
       LEFT JOIN rubriek c4 ON c3.rubrieknummer = c4.rubriek
       LEFT JOIN rubriek c5 ON c4.rubrieknummer = c5.rubriek
    WHERE c.rubrieknaam = '".str_replace("'", "''",$rubriek)."'
-);");
+) AND veilingGesloten = 0;");
+    }
+
+    public function getVoorwerpenRubriekPagina($id, $aantalproducten, $paginanummer) {
+        $rubriekNaam = $this->database->query("SELECT rubrieknaam FROM Rubriek WHERE rubrieknummer = ".$id."");
+        while( $obj = sqlsrv_fetch_object( $rubriekNaam )) {
+            $rubriekQuery = $obj->rubrieknaam;
+        }
+        $rubriek = $rubriekQuery;
+        return $this->database->query("SELECT TOP ".$aantalproducten." p.*
+FROM (
+        SELECT
+        ROW_NUMBER() OVER (ORDER BY p.voorwerpnummer ASC) AS rownumber, *
+        FROM voorwerp p
+        WHERE veilingGesloten = 0
+        ) AS foo
+   JOIN VoorwerpInRubriek cp on p.voorwerpnummer = cp.voorwerp
+WHERE cp.rubriekOpLaagsteNiveau IN (
+   SELECT c.rubrieknummer
+   FROM rubriek c
+   WHERE c.rubrieknaam = '".str_replace("'", "''",$rubriek)."'
+   UNION ALL
+   SELECT c2.rubrieknummer
+   FROM rubriek c
+      LEFT JOIN rubriek c2 ON c.rubrieknummer = c2.rubriek
+   WHERE c.rubrieknaam = '".str_replace("'", "''",$rubriek)."'
+   UNION ALL
+   SELECT c3.rubrieknummer
+   FROM rubriek c
+      LEFT JOIN rubriek c2 ON c.rubrieknummer = c2.rubriek
+      LEFT JOIN rubriek c3 ON c2.rubrieknummer = c3.rubriek
+   WHERE c.rubrieknaam = '".str_replace("'", "''",$rubriek)."'
+   UNION ALL
+   SELECT c4.rubrieknummer
+   FROM rubriek c
+      LEFT JOIN rubriek c2 ON c.rubrieknummer = c2.rubriek
+      LEFT JOIN rubriek c3 ON c2.rubrieknummer = c3.rubriek
+      LEFT JOIN rubriek c4 ON c3.rubrieknummer = c4.rubriek
+   WHERE c.rubrieknaam = '".str_replace("'", "''",$rubriek)."'
+   UNION ALL
+   SELECT c5.rubrieknummer
+   FROM rubriek c
+      LEFT JOIN rubriek c2 ON c.rubrieknummer = c2.rubriek
+      LEFT JOIN rubriek c3 ON c2.rubrieknummer = c3.rubriek
+      LEFT JOIN rubriek c4 ON c3.rubrieknummer = c4.rubriek
+      LEFT JOIN rubriek c5 ON c4.rubrieknummer = c5.rubriek
+   WHERE c.rubrieknaam = '".str_replace("'", "''",$rubriek)."'
+) AND veilingGesloten = 0 AND rownumber >= ".$aantalproducten." * (".$paginanummer." - 1) AND rownumber <= (".$aantalproducten." * ".$paginanummer.") - 1;");
     }
 
 

@@ -52,6 +52,8 @@ while( $img = sqlsrv_fetch_object( $data['afbeeldingen'] )) {
                             <p>Verkoper: <?= $obj->verkoper ?></p>
                             <p>Locatie: <?= $obj->plaatsnaam ?></p>
                             <p>Betaalmethode: <?= $obj->betalingswijze ?></p>
+                            <p>Startbod: <?= $obj->startprijs ?></p>
+                            <p>Verzendinstructies: <?= $obj->verzendinstructies ?></p>
                         </div>
                         <div id="biedingen">
                            <h2>Biedingen</h2>

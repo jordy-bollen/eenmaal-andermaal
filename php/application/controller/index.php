@@ -21,7 +21,7 @@ class index extends controller{
         $this->rubrieken2 = $this->modelRubrieken->getHoofdRubrieken();
         $afbeeldingen = $modelBestanden->getAfbeeldingen();
         $hoogsteboden = $modelVoorwerpen->getVoorwerpHoogsteBod();
-        $alleVoorwerpen = $modelVoorwerpen->getVoorwerpen();
+        $alleVoorwerpen = $modelVoorwerpen->getVoorwerpenalle();
         $populair = $modelVoorwerpen->getPopulaireVoorwerpen();
         //maak data klaar voor view
         $this->data['voorwerpen'] = $alleVoorwerpen;

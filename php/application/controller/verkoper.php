@@ -35,6 +35,10 @@ class verkoper extends controller{
             }
             else {
                 $gebruikerModel = $this->loadModel('gebruiker');
+                echo $_POST['bankrekening'];
+                if(!isset($_POST['bankrekening'])) {
+                    $_POST['bankrekening'] = NULL;
+                }
                 $gebruikerModel->registreerVerkoper($_POST);
                 $this->loadView('includes/header');
                 echo '<div>verkoper geregistreerd</div>';
@@ -44,7 +48,8 @@ class verkoper extends controller{
         }
         else {
             $this->loadView('includes/header');
-            echo 'u bent al verkoper';
+            $this->data['melding'] = 'U bent al als verkoper geregistreerd';
+            $this->loadView('foutmelding', $this->data);
             $this->loadView('includes/footer');
         }
     }
