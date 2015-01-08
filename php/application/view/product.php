@@ -61,7 +61,7 @@ while( $img = sqlsrv_fetch_object( $data['afbeeldingen'] )) {
                             <input type="text" name="bodbedrag" id="bod" width="10px">
                                <input type="hidden" name="voorwerp" value="<?= $obj->voorwerpnummer ?>">
                                <input type="hidden" name="verkoper" value="<?= $obj->verkoper ?>">
-                            <input type="submit" name="submitBod" value="Bied nu">
+                            <input type="submit" name="submitBod" value="Bied nu" class="button-bod">
                                <?php else: ?>
                                <p>log eerst in om te bieden</p>
                                <?php endif; ?>

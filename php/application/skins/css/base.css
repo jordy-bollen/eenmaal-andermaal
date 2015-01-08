@@ -340,13 +340,10 @@ h4{
 }
 
 .login{
-	margin-top: 5px;
-	margin-bottom: 7px;
-	padding:5px 5px 5px 13px;
-	border-radius: 10px 10px 10px 10px;
--moz-border-radius: 10px 10px 10px 10px;
--webkit-border-radius: 10px 10px 10px 10px;
-border: 1px solid #000000;
+    border: 1px solid #d2d2d2;
+    margin-bottom: 7px;
+    margin-top: 5px;
+    padding: 13px 5px 16px 13px;
 }
 
 .login form {
@@ -467,26 +464,34 @@ border: 1px solid #000000;
     margin-bottom: 0;
     padding: 10px 10px 7px;
     display: block;
+    width:auto;
 }
 
 .rubriekenmenu li:hover{
 	background-color:#ff9517;
-	color:#FFF;	
-	background-image: url("../img/white-arrow.png");
+	border-left: 3px solid #45b5f0;	
+    background-image: url("../img/white-arrow.png");
     background-position: 150px 17px;
     background-repeat: no-repeat;
 }
 
 #menu li ul {
-    background-color: red;
+    background-color: #b8e3f9;
     display:none;
     position:absolute;
+    color:#000000;
+
 }
 
 #menu li:hover ul {
     margin-top: -20px;
-    margin-left: 150px;
+    margin-left: 145px;
     display:block;
+    color:#000000;
+    background-image: url("../img/white-arrow.png");
+    background-position: right;  
+    background-repeat: no-repeat;
+
 }
 
 .rubriekenmenu h2 {
@@ -499,42 +504,45 @@ border: 1px solid #000000;
 
 /*-------------- RUBRIEKEN SUBMENU ------------------*/
 
-.sub-ul{
-	display:none;
+
+#menu li ul.sub-menu
+{
+    background-color: #b8e3f9;
+    display: none;
+    height: auto;
+    position: absolute;
+    width: 162px;
+    left: 133px;
+    margin-top: -28px;    
 }
 
-.sub-ul ul:hover{
-	display:block;
+#menu li:hover ul.sub-menu
+{
+	display: block;
+	color:#FFF;	
+} 
+
+.menu-sub a:hover {
+	color:#FFF;
 }
 
-.sub-li ul{
-    display:none;
-	position:absolute;
+#menu li ul.sub-menu-twee
+{
+	clear: both;
+    background-color: #b8e3f9;
+    display: none;
+    height: auto;
+    position: absolute;
+    width: 162px;
+    left: 143px;
+    margin-top: -28px;    
 }
 
-.sub-a{
-
-}
-
-/*
---------test
-*/
-#horizontalmenu li {
-float:left; position:relative; padding-right:100; display:block;
-border:4px solid #CC55FF; 
-border-style:inset;
-float:left;
-}
-#horizontalmenu li ul {
-    display:none;
-position:absolute;
-}
-#horizontalmenu li:hover ul{
-    display:block;
-    background:red;
-height:auto; width:8em; 
-}
-
+#menu li:hover ul.sub-menu-twee
+{
+	display: block;
+	color:#FFF;	
+} 
 
 
 /*-------------- CONTENT --------------------*/
@@ -555,7 +563,7 @@ height:auto; width:8em;
     height: 360px;
     margin-bottom: 15px;
     margin-left: 4px !important;
-    width: 246px !important;	
+    width: 246px !important;
 }
 
 .veiling:hover{
@@ -607,11 +615,8 @@ height:auto; width:8em;
     margin-top: 50px;
 }
 
-#productOmschrijving p {
-
--webkit-box-shadow:0 0 10px rgba(0, 0, 0, 0.5);
-	-moz-box-shadow:0 0 10px rgba(0, 0, 0, 0.5);
-	box-shadow:0 0 10px rgba(0, 0, 0, 0.5);
+#productOmschrijving p {	
+	border: 1px solid #e3e3e3;
 	padding: 5px;  
 }
 
@@ -695,7 +700,7 @@ height:auto; width:8em;
   }
 
 .button-bod{
-    padding-top: 10px;
+	margin-top:-7px;
 }
 
 .ganaarveilingbutton:hover{
@@ -880,16 +885,8 @@ a.remove_field {
 
 .veiling input
 {
-    margin-left: 130px;
-    margin-top: 0px;
-    display: block;
-    height: 41px;
-    width: 100px;
-    background-color: #ff9517;
-    font-size: 13px;
-    text-shadow: none;
-	font-weight:bold;
-	display: block;
+	margin-top: 15px;
+	margin-left: 7px;
 }
 
 .voorwaardenTotaal 
@@ -901,12 +898,17 @@ a.remove_field {
 {
    margin-top: 25px;
 }
+.ganaarveilingzoek{
+    background-color: #ff9517;
+    border-radius: 2px;
+    float: right;
+    height: 39px;
+    margin-right: -25px;
+    margin-top: 1px;
+    padding-top: 10px;
+    text-align: center;
+    text-decoration: none;
+    width: 108px;
+    font-size:13px !important;
 
-.zoekknopganaarveiling{
-	margin-left: 174px !important;
-    margin-top: -43px;
-}
-
-.hoogstebod{
-	width: 100px;
 }
