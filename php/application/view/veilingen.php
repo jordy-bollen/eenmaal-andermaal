@@ -25,7 +25,11 @@ while( $hoogsteboden = sqlsrv_fetch_object($data['hoogsteboden'])) {
 
 
     
+<<<<<<< HEAD
     <?php $i = 0; if(isset($data['veilingen'])): while( $obj = sqlsrv_fetch_object($data['veilingen'])): ?>
+=======
+    <?php $i = 0; while( $obj = sqlsrv_fetch_object($data['veilingen'])): ?>
+>>>>>>> edd54b1da70d9ed3cf6ecaffdb7d67c297a996c6
 
     <div class="four columns veiling">
             <h3><a href="<?= SITE_URL ?>producten/<?= $obj->voorwerpnummer . '-' . trim( preg_replace( "/[^0-9a-z]+/i", "",str_replace(" ","-",strtolower($obj->titel)))) ?>"><?= $obj->titel ?></a></h3>
@@ -68,7 +72,11 @@ while( $hoogsteboden = sqlsrv_fetch_object($data['hoogsteboden'])) {
     <div style="clear:both"></div>
     <div id="pagenav">
         <p class="pagina">pagina:</p> <ul>
+<<<<<<< HEAD
     <?php for($i = 1; $i <= $data['aantalpaginas'] && $i < 17; $i++):
+=======
+    <?php for($i = 1; $i <= $data['aantalpaginas']; $i++):
+>>>>>>> edd54b1da70d9ed3cf6ecaffdb7d67c297a996c6
         if($i == 1):
         ?>
             <li><a href="<?php echo SITE_URL . 'veilingen'; ?>"><?= $i ?></a></li>

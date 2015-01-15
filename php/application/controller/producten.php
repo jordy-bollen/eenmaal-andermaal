@@ -57,7 +57,10 @@ class producten extends controller{
         else {
             if(isset($hoogstebod)) {
             if($hoogstebod  < $_POST['bodbedrag'] && $_POST['bodbedrag'] > 0 && $hoogstebodgebruiker != $_SESSION['gebruikersnaam']) {
+<<<<<<< HEAD
 
+=======
+>>>>>>> edd54b1da70d9ed3cf6ecaffdb7d67c297a996c6
                 if($hoogstebod > 1 && $hoogstebod < 50){
                     if($hoogstebod + 0.50  < $_POST['bodbedrag']) {
                             if ($_SESSION['gebruikersnaam'] != $_POST['verkoper']) {
@@ -171,6 +174,10 @@ class producten extends controller{
                 $this->data['melding'] = 'Uw bod is niet geldig, of u probeert uzelf te overbieden. <a href="'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'].'">Ga terug</a>';
                 $this->loadView('foutmelding', $this->data);
                 $this->loadView('includes/footer');
+<<<<<<< HEAD
+=======
+            }
+>>>>>>> edd54b1da70d9ed3cf6ecaffdb7d67c297a996c6
             }
         }
             else {

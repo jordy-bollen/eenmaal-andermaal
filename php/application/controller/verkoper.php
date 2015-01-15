@@ -34,6 +34,10 @@ class verkoper extends controller{
             }
             else {
                 $gebruikerModel = $this->loadModel('gebruiker');
+<<<<<<< HEAD
+=======
+                echo $_POST['bankrekening'];
+>>>>>>> edd54b1da70d9ed3cf6ecaffdb7d67c297a996c6
                 if(!isset($_POST['bankrekening'])) {
                     $_POST['bankrekening'] = NULL;
                 }

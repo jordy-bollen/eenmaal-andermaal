@@ -121,6 +121,7 @@ $(function() {
         }
     });
 
+<<<<<<< HEAD
     $("#bankgegevens").validate({
 
         // Specify the validation rules
@@ -152,6 +153,8 @@ $(function() {
         }
     });
 
+=======
+>>>>>>> edd54b1da70d9ed3cf6ecaffdb7d67c297a996c6
 
     $("#submitRegistratie").click(function(){
         $(".error").hide();

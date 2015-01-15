@@ -38,6 +38,10 @@ class veilingen extends controller{
           $aantalvoorwerp =  $v->aantal;
         }
         $aantalpaginas = ceil($aantalvoorwerp / $aantalproducten);
+<<<<<<< HEAD
+=======
+        echo $aantalpaginas;
+>>>>>>> edd54b1da70d9ed3cf6ecaffdb7d67c297a996c6
         $this->data['aantalpaginas'] = $aantalpaginas;
         $this->data['hoogsteboden'] = $hoogsteboden;
         $this->data['allerubrieken'] = $alleRubrieken;
@@ -56,12 +60,18 @@ class veilingen extends controller{
              $lastSegment = $this->segments[count($this->segments) - 1];
              if(!strpos($lastSegment,'-') && count($this->segments) < 6 ) {
                  $paginanummer = $lastSegment;
+<<<<<<< HEAD
+=======
+
+                 echo $paginanummer;
+>>>>>>> edd54b1da70d9ed3cf6ecaffdb7d67c297a996c6
                  $voorwerpenpagina = $modelVoorwerp->getVoorwerpenPagina($aantalproducten, $paginanummer);
                  $this->data['veilingen'] = $voorwerpenpagina;
                  $this->loadView('includes/header');
                  $this->loadView('veilingen', $this->data);
                  $this->loadView('includes/footer');
              }
+<<<<<<< HEAD
              else if(count($this->segments) == 6) {
                  unset($this->segments[0]);
                  unset($this->segments[1]);
@@ -76,6 +86,8 @@ class veilingen extends controller{
                  $this->loadView('veilingen', $this->data);
                  $this->loadView('includes/footer');
              }
+=======
+>>>>>>> edd54b1da70d9ed3cf6ecaffdb7d67c297a996c6
              else {
              unset($this->segments[0]);
              unset($this->segments[1]);
