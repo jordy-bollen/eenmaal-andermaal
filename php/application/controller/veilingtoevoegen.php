@@ -61,16 +61,9 @@ class veilingtoevoegen extends controller{
             $this->loadView('includes/footer');
         }
         else if($_POST['submitVeiling']) {
-<<<<<<< HEAD
             if(strlen($_POST['titel']) < 2 || !preg_match('_^[0-9a-z]+$_i', $_POST['titel'])) {
                 $this->loadView('includes/header');
                 $this->data['melding'] = 'Titel moet langer zijn dan 2 karakters en mag alleen letters en cijfers bevatten';
-=======
-            echo strlen($_POST['titel']);
-            if(strlen($_POST['titel']) < 2) {
-                $this->loadView('includes/header');
-                $this->data['melding'] = 'Titel moet langer zijn dan 2 karakters';
->>>>>>> edd54b1da70d9ed3cf6ecaffdb7d67c297a996c6
                 $this->loadView('foutmelding', $this->data);
                 $this->loadView('includes/footer');
             }

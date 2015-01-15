@@ -19,14 +19,11 @@ class voorwerp extends model{
 
 }
 
-<<<<<<< HEAD
     public function getVoorwerpid($id) {
         return $this->database->query("SELECT * FROM Voorwerp WHERE voorwerpnummer = ".$id);
 
     }
 
-=======
->>>>>>> edd54b1da70d9ed3cf6ecaffdb7d67c297a996c6
     public function getVoorwerpenalle() {
         return $this->database->query('SELECT * FROM Voorwerp WHERE veilingGesloten = 0');
 
