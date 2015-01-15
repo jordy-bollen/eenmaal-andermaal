@@ -27,12 +27,11 @@ while( $hoogsteboden = sqlsrv_fetch_object($data['hoogsteboden'])) {
         <div class="veilinglopen">
             <p><strong>Veiling loopt nog:</strong></p><p id="countdownTime<?= $i ?>" class="countdownkleur"></p>
         </div>
-        
-<!--         <div class="button-bod">
+                <div class="button-bod">
             
-   <p class="hoogstebod">Hoogte bod:</br> <strong>€800</strong></p>
-        </div> -->
-
+        <a href="<?= SITE_URL ?>producten/<?= $voorwerp->voorwerpnummer . '-' . trim( preg_replace( "/[^0-9a-z]+/i", "",str_replace(" ","-",strtolower($voorwerp->titel)))) ?>" class="ganaarveilingbutton"> <strong> BIED MEE </strong> </a>
+            <p>Hoogte bod: <strong>€800</strong></p>
+        </div>
             <script type="text/javascript">
                 $("#countdownTime<?= $i ?>")
                     .countdown("<?php echo date_format($resultaat->eindmoment,'Y-m-d H:m:s'); ?>", function(event) {
@@ -42,20 +41,18 @@ while( $hoogsteboden = sqlsrv_fetch_object($data['hoogsteboden'])) {
                     });
             </script>
             
+             <div class="two columns">
+                <form action="producten/<?= $resultaat->voorwerpnummer . '-' . trim( preg_replace( "/[^0-9a-z]+/i", "",str_replace(" ","-",strtolower($resultaat->titel)))) ?>'>">
+                    <input type="submit" value="Bied mee" >
+                </form>
+            </div>     
+       
             <div class="two columns hoogsteBod">
             <?php for( $j = 0; $j < count($hoogstebod); $j++ ):
                 if($hoogstebod[$j]->voorwerpnummer == $resultaat->voorwerpnummer): ?>
             <p>Hoogste bod: <strong><?= $hoogstebod[$j]->hoogste ?></strong></p>
             <?php endif; endfor; ?>
             </div>
-            
-             <div class="two columns button-bod">
-                <form action="producten/<?= $resultaat->voorwerpnummer . '-' . trim( preg_replace( "/[^0-9a-z]+/i", "",str_replace(" ","-",strtolower($resultaat->titel)))) ?>'>">
-                    <input type="submit" value="BIED MEE" class="ganaarveilingzoek" >
-                </form>
-            </div>     
-       
-
             
         </div>
         

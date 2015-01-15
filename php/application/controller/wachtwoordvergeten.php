@@ -6,7 +6,7 @@
  * Time: 12:51
  */
 
-class vergeten extends controller{
+class wachtwoordvergeten extends controller{
 
     function __constructor() {
         parent::__construct();
@@ -17,12 +17,12 @@ class vergeten extends controller{
         $modelGebruiker = $this->loadModel('gebruiker');
         if(!isset($_POST['submitMail']) && !isset($_POST['submitVraag'])) {
         $this->loadView('includes/header');
-        $this->loadView('forms/mailVergeten');
+        $this->loadView('forms/mailgebruikerVergeten');
         $this->loadView('includes/footer');
         }
-        if(isset($_POST['submitMail'])) {
+        if(isset($_POST['submitMail']) && isset($_POST['gebruiker'])) {
             $rows = sqlsrv_fetch_array($modelGebruiker->checkMail($_POST['email']));
-            $gebruikers = $modelGebruiker->getGebruiker($_SESSION['gebruikersnaam']);
+            $gebruikers = $modelGebruiker->getGebruiker($_POST['gebruiker']);
             while( $gebruiker = sqlsrv_fetch_object( $gebruikers )){
                 $gebruikermail = $gebruiker;
             }
@@ -56,10 +56,6 @@ class vergeten extends controller{
             $code = $this->createRandomCode();
             $this->mailUser($_POST['email'], $code);
             $modelGebruiker->wachtwoordWijzigen($_SESSION['gebruikersnaam'], $code);
-                $this->loadView('includes/header');
-                $this->data['melding'] = 'Uw wachtwoord is verstuurd naar uw emailadres';
-                $this->loadView('voltooid', $this->data);
-                $this->loadView('includes/footer');
             }
             else {
                 echo 'Foutief antwoord ingevoerd. <a href="'.SITE_URL.'vergeten">Ga terug</a>';

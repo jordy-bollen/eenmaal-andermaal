@@ -3,7 +3,7 @@
         <h1>Wijzigen Bankgegevens</h1>
         <div class="one column">&nbsp;</div>
         <div class="six columns">
-            <form id='register' action='<?php SITE_URL ?>wijzigenbank' method='POST'
+            <form id='bankgegevens' action='<?php SITE_URL ?>wijzigenbank' method='POST'
                   accept-charset='UTF-8'>
             <label for='wachtwoord'>Wachtwoord</label>
             <input type='password' name='wachtwoord' maxlength="255"/>

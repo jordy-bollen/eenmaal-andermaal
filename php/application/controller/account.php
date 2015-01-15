@@ -40,7 +40,7 @@ class account extends controller{
         $modelBod = $this->loadModel('bod');
         $this->loadView('includes/header');
         $bodengebruiker = $modelBod->getBodenGebruiker($_SESSION['gebruikersnaam']);
-        $voorwerpen = $modelVoorwerp->getVoorwerpen();
+        $voorwerpen = $modelVoorwerp->getVoorwerpen(90000);
         $this->data['boden'] = $bodengebruiker;
         $this->data['voorwerpen'] = $voorwerpen;
         $this->loadView('biedingen', $this->data);
@@ -83,6 +83,7 @@ class account extends controller{
         $this->loadView('includes/footer');
         }
         else {
+            $_POST['postcode'] = $this->formatData($_POST['postcode']);
             $modelGebruiker->wijzigenPersoonsGegevens($_POST);
             $this->loadView('includes/header');
             $gebruikers = $modelGebruiker->getGebruiker($_SESSION['gebruikersnaam']);
@@ -91,5 +92,10 @@ class account extends controller{
             $this->loadView('wijzigenpersoonsgegevens', $this->data);
             $this->loadView('includes/footer');
         }
+    }
+
+    private function formatData($postcode) {
+        $postcodegoed = str_replace(' ','',$postcode);
+        return $postcodegoed;
     }
 } 

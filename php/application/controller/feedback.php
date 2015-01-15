@@ -17,8 +17,14 @@ class feedback extends controller{
         $modelRubrieken = $this->loadModel('rubriek');
         $rubrieken = $modelRubrieken->getHoofdRubrieken();
         $this->data['rubrieken'] = $rubrieken;
+        $rubrieken2 = $modelRubrieken->getHoofdRubrieken();
+        $this->data['rubrieken2'] = $rubrieken2;
+        if(isset($_GET['verkoper']) && isset($_GET['gebruiker'])) {
+            $this->data['verkoper'] = $_GET['verkoper'];
+            $this->data['gebruiker'] = $_GET['gebruiker'];
         $this->loadView('includes/header');
         $this->loadView('feedback', $this->data);
         $this->loadView('includes/footer');
+        }
     }
 } 

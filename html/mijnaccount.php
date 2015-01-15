@@ -15,7 +15,6 @@
         ==================================================== -->
         <div id="content">
         <h1>Mijn Account</h1>           
-            <div class="one column">&nbsp;</div>
             <div class="eleven columns main">
                 <div class="four columns">
                     <p class="mijnaccount">Mijn Biedingen</p>
@@ -28,7 +27,6 @@
                     <a href="http://localhost/eenmaal-andermaal/html/mijnadvertenties.php"><button>Go</button></a>
                     <a href="http://localhost/eenmaal-andermaal/html/mijnverkopersaccountregistreren.php"><button>Go</button></a>
                 </div>
-                <div class="one column">&nbsp;</div>
                 <div class="four columns">
                     <p>Wijzigen Persoonsgegvens</p>
                     <p>Wijzigen Bankgegevens</p>

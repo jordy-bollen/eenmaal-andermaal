@@ -30,7 +30,7 @@ while( $hoogsteboden = sqlsrv_fetch_object($data['hoogsteboden'])) {
         <h3><a href="<?= SITE_URL ?>producten/<?= $voorwerp->voorwerpnummer . '-' . trim( preg_replace( "/[^0-9a-z]+/i", "",str_replace(" ","-",strtolower($voorwerp->titel)))) ?>"><?= $voorwerp->titel ?></a></h3>
         <?php $stop = false; for( $j = 0; $j < count($afbeeldingen); $j++ ):
             if($afbeeldingen[$j]->voorwerp == $voorwerp->voorwerpnummer && $stop == false): ?>
-                <img src="<?= SKINS_DIR ?>img/producten/<?php echo $afbeeldingen[$j]->filenaam; ?>">
+                <img src="<?= PICS_DIR ?><?php echo $afbeeldingen[$j]->filenaam; ?>">
             <?php $stop =true; endif;
         endfor; ?>
         <div class="veilinglopen">
@@ -65,7 +65,7 @@ while( $hoogsteboden = sqlsrv_fetch_object($data['hoogsteboden'])) {
         <?php $stop = false; for( $j = 0; $j < count($afbeeldingen); $j++ ):
 
             if($afbeeldingen[$j]->voorwerp == $aflopend->voorwerpnummer && $stop == false): ?>
-                <img src="<?= SKINS_DIR ?>img/producten/<?php echo $afbeeldingen[$j]->filenaam; ?>">
+                <img src="<?= PICS_DIR ?><?php echo $afbeeldingen[$j]->filenaam; ?>">
             <?php $stop = true; endif;
         endfor; ?>
         <div class="veilinglopen">

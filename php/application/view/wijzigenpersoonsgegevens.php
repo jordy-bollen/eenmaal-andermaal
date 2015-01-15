@@ -9,7 +9,7 @@
             <div class="twelve columns wijzigenPersoonForm">
                 
                 <div class="one column">&nbsp;</div>
-                <div class="six columns">
+                <div class="six columns formleft">
                     <form name="" method="POST" action="<?php echo SITE_URL ?>account/wijzigenpersoonsgegevens">
                     <?php while( $gebruiker = sqlsrv_fetch_object( $data['gebruikers'] )): ?>
                     <label for='voornaam'>Voornaam</label>
@@ -20,16 +20,12 @@
 
                     <label for='email'>E-mailadres</label>
                     <input type='text' name='email' value="<?= $gebruiker->mailadres ?>" maxlength="255"/>
-                        <?php while( $telefoon = sqlsrv_fetch_object( $data['telefoon'] )) { if ($telefoon->gebruiker == $_SESSION['gebruikersnaam']) {?>
 
-                            <label for='telefoonnummer' class="three columns">Telefoonnummer*</label>
-                        <input type='text' name='telefoonnmmer' value="<?= $telefoon->telefoon ?>" maxlength="255"/>
-
-                        <?php }} ?>
 
 
               
             </div>
+                <div class="six columns formright">
                     <label for='adres1'>Adres 1</label>
                     <input type='text' name='adres1' value="<?= $gebruiker->adresregel1 ?>" maxlength="50"/>
 
@@ -47,5 +43,6 @@
 
                 <?php endwhile; ?>
                 <input type='submit' name='submitPersoonsgegevens' value='Opslaan' class="opslaanbutton"/>
+                </div>
                 </form>
             </div>

@@ -11,13 +11,13 @@
         <p class="pmargin">Voornaam*</p>
         <p class="pmargin">Achternaam*</p>
         <p class="pmargin">E-mailadres*</p>
-        <p class="pmargin">Telefeoon</p>
+        <p class="pmargin">Telefoon</p>
         <p class="pmargin">Onderwerp*</p>
         <p class="pmargin">Bericht*</p>
     </div>
 
     <div class="four column inputvelden">
-        <form name="" method="POST" action="<?php echo SITE_URL ?>contact">
+        <form id="contactform" name="" method="POST" action="<?php echo SITE_URL ?>contact">
         <select name="aanhef" class="input">
             <option value="Dhr.">Dhr.</option>
             <option value="Mevr.">Mevr.</option>

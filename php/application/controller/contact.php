@@ -26,6 +26,10 @@ class contact extends controller{
         }
         else {
            $this->mailUser($_POST);
+            $this->data['melding'] = 'Uw bericht is verstuurd. Wij nemen zo snel mogelijk contact met u op.';
+            $this->loadView('includes/header');
+            $this->loadView('voltooid', $this->data);
+            $this->loadView('includes/footer');
         }
     }
 

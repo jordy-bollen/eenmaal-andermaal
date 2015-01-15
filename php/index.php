@@ -8,6 +8,32 @@
  */
 
 /**
+ * zet de tijdzone
+ */
+date_default_timezone_set('Europe/Amsterdam');
+?>
+<script type="text/javascript">
+$(document).ready(function(){
+    setInterval(function() {
+        jQuery.ajax({
+            type: "GET",
+            url: "sessioncheck.php",
+            dataType:"json",
+            success:function(response){
+            if (response) {
+                window.location.href = 'check.php';
+            }
+            else {
+                // Process the expected results...
+            }
+        }
+
+        });
+    }, 30000);
+});
+</script>
+<?php
+/**
  * Definieer directory seperator en root van de applicatie
  */
 define('DS', DIRECTORY_SEPARATOR);
@@ -17,7 +43,7 @@ define("ROOT", __DIR__ ."/");
 define("SITE_URL", "http://localhost/eenmaal-andermaal/php/");
 //styles
 define("SKINS_DIR", SITE_URL . "application/skins/");
-
+define("PICS_DIR", SITE_URL . "http://iproject1.icasites.nl/pics");
 define("VAL_DIR", SITE_URL . "application/validation/");
 define("MAIL_DIR", ROOT . "mail/Mail/");
 /**

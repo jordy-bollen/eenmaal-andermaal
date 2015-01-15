@@ -32,7 +32,8 @@ class wijzigenbank extends controller{
                 $modelGebruiker = $this->loadModel('gebruiker');
                 $modelGebruiker->wijzigVerkoper($_POST);
                 $this->loadView('includes/header');
-                $this->loadView('wijzigenbankgegevens', $this->data);
+                $this->data['melding'] = 'Uw bankgegevens zijn succesvol gewijzigd';
+                $this->loadView('voltooid', $this->data);
                 $this->loadView('includes/footer');
             }
             else {

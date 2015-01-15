@@ -4,19 +4,8 @@ while( $img = sqlsrv_fetch_object( $data['afbeeldingen'] )) {
     $afbeeldingen[$i] = $img;
     $i++;
 }
+include 'includes/rubriekenMenu.php';
 ?>
-<div class="three columns">
-     <h2>Rubrieken</h2>
-    <div class="three columns rubriekenmenu">
-    <ul>
-        <?php while( $obj = sqlsrv_fetch_object( $data['rubrieken'] )): ?>
-            <?php if($obj->rubriek == NULL): ?>
-                <li><a href="<?= SITE_URL ?>veilingen/<?= $obj->rubrieknummer . '-' . trim( preg_replace( "/[^0-9a-z]+/i", "", str_replace(" ","",strtolower($obj->rubrieknaam)))) ?>"><?= $obj->rubrieknaam ?></a></li>
-            <?php endif; ?>
-        <?php endwhile; ?>
-    </ul>
-    </div>
-</div>
 <?php while( $obj = sqlsrv_fetch_object( $data['voorwerp'] )): ?>
     <div id="content">
 
@@ -28,11 +17,11 @@ while( $img = sqlsrv_fetch_object( $data['afbeeldingen'] )) {
                   <div class="six columns">
                         <div id="advertentieFotos">
                             <div id="foto1">
-                            <img src="<?= SKINS_DIR ?>img/producten/<?= $afbeeldingen[0]->filenaam ?>" width="200" height="200">
+                            <img src="<?= PICS_DIR . $afbeeldingen[0]->filenaam ?>" width="200" height="200">
                             </div>
                             <div id="fotoklein">
-                            <div id="foto2"><?php if(isset($afbeeldingen[1]->filenaam)): ?><img src="<?= SKINS_DIR ?>img/producten/<?= $afbeeldingen[1]->filenaam  ?>" width="200" height="200"><?php endif; ?></div>
-                            <div id="foto3"><?php if(isset($afbeeldingen[2]->filenaam)): ?><img src="<?= SKINS_DIR ?>img/producten/<?= $afbeeldingen[2]->filenaam ?>" width="200" height="200"><?php endif; ?></div>
+                            <div id="foto2"><?php if(isset($afbeeldingen[1]->filenaam)): ?><img src="<?= PICS_DIR ?><?= $afbeeldingen[1]->filenaam  ?>" width="200" height="200"><?php endif; ?></div>
+                            <div id="foto3"><?php if(isset($afbeeldingen[2]->filenaam)): ?><img src="<?= PICS_DIR ?><?= $afbeeldingen[2]->filenaam ?>" width="200" height="200"><?php endif; ?></div>
                             </div>
                          </div>
                         <div id ="countdownTimer">
@@ -52,6 +41,8 @@ while( $img = sqlsrv_fetch_object( $data['afbeeldingen'] )) {
                             <p>Verkoper: <?= $obj->verkoper ?></p>
                             <p>Locatie: <?= $obj->plaatsnaam ?></p>
                             <p>Betaalmethode: <?= $obj->betalingswijze ?></p>
+                            <p>Startbod: <?= $obj->startprijs ?></p>
+                            <p>Verzendinstructies: <?= $obj->verzendinstructies ?></p>
                         </div>
                         <div id="biedingen">
                            <h2>Biedingen</h2>
@@ -61,7 +52,7 @@ while( $img = sqlsrv_fetch_object( $data['afbeeldingen'] )) {
                             <input type="text" name="bodbedrag" id="bod" width="10px">
                                <input type="hidden" name="voorwerp" value="<?= $obj->voorwerpnummer ?>">
                                <input type="hidden" name="verkoper" value="<?= $obj->verkoper ?>">
-                            <input type="submit" name="submitBod" value="Bied nu" class="button-bod">
+                            <input type="submit" name="submitBod" value="Bied nu">
                                <?php else: ?>
                                <p>log eerst in om te bieden</p>
                                <?php endif; ?>

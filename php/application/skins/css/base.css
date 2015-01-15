@@ -340,10 +340,13 @@ h4{
 }
 
 .login{
-    border: 1px solid #d2d2d2;
-    margin-bottom: 7px;
-    margin-top: 5px;
-    padding: 13px 5px 16px 13px;
+	margin-top: 5px;
+	margin-bottom: 7px;
+	padding:5px 5px 5px 13px;
+	border-radius: 10px 10px 10px 10px;
+-moz-border-radius: 10px 10px 10px 10px;
+-webkit-border-radius: 10px 10px 10px 10px;
+border: 1px solid #000000;
 }
 
 .login form {
@@ -464,13 +467,12 @@ h4{
     margin-bottom: 0;
     padding: 10px 10px 7px;
     display: block;
-    width:auto;
 }
 
 .rubriekenmenu li:hover{
 	background-color:#ff9517;
-	border-left: 3px solid #45b5f0;	
-    background-image: url("../img/white-arrow.png");
+	color:#FFF;	
+	background-image: url("../img/white-arrow.png");
     background-position: 150px 17px;
     background-repeat: no-repeat;
 }
@@ -479,19 +481,12 @@ h4{
     background-color: #b8e3f9;
     display:none;
     position:absolute;
-    color:#000000;
-
 }
 
 #menu li:hover ul {
     margin-top: -20px;
-    margin-left: 145px;
+    margin-left: 150px;
     display:block;
-    color:#000000;
-    background-image: url("../img/white-arrow.png");
-    background-position: right;  
-    background-repeat: no-repeat;
-
 }
 
 .rubriekenmenu h2 {
@@ -560,7 +555,7 @@ h4{
 
 .veiling{
 	border: 1px solid #f2f2f2;
-    height: 360px;
+    height: 400px;
     margin-bottom: 15px;
     margin-left: 4px !important;
     width: 246px !important;
@@ -597,6 +592,24 @@ h4{
 	margin-bottom: 5px;
 }
 
+#pagenav li {
+    float: left;
+
+    background-color: #4a9ec9;
+    padding: 10px;
+    margin-right: 10px;
+    border-radius: 5px;
+}
+
+#pagenav li a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+#pagenav p {
+    float: left;
+}
+
 .countdownkleur{
 	color:#4a9ec9;
 	font-size: 18px;
@@ -615,8 +628,11 @@ h4{
     margin-top: 50px;
 }
 
-#productOmschrijving p {	
-	border: 1px solid #e3e3e3;
+#productOmschrijving p {
+
+-webkit-box-shadow:0 0 10px rgba(0, 0, 0, 0.5);
+	-moz-box-shadow:0 0 10px rgba(0, 0, 0, 0.5);
+	box-shadow:0 0 10px rgba(0, 0, 0, 0.5);
 	padding: 5px;  
 }
 
@@ -700,7 +716,7 @@ h4{
   }
 
 .button-bod{
-	margin-top:-7px;
+	margin-top:10px;
 }
 
 .ganaarveilingbutton:hover{
@@ -808,7 +824,13 @@ a.remove_field {
     height: 50px;
     margin-top: 91px;
     width: 200px;
-}	
+}
+
+/*------------- Foutmelding --------------------*/
+.foutmelding {
+border: 1px solid red;
+padding: 20px;
+}
 
 /*--------------  FOOTER -----------------------*/
 
@@ -898,17 +920,13 @@ a.remove_field {
 {
    margin-top: 25px;
 }
-.ganaarveilingzoek{
-    background-color: #ff9517;
-    border-radius: 2px;
-    float: right;
-    height: 39px;
-    margin-right: -25px;
-    margin-top: 1px;
-    padding-top: 10px;
-    text-align: center;
-    text-decoration: none;
-    width: 108px;
-    font-size:13px !important;
 
+.formleft {
+    float:left !important;
+    width: 200px !important;
+}
+
+.formright {
+    width: 300px !important;
+    float: right !important;
 }

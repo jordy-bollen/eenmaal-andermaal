@@ -19,7 +19,6 @@ class verkoper extends controller{
         while( $gebruiker = sqlsrv_fetch_object( $gebruikers )) {
             $dezegebruiker = $gebruiker;
         }
-        echo $dezegebruiker->verkoper;
         if ($dezegebruiker->verkoper == 0) {
         if(!isset($_POST['registreer']) && !isset($_POST['verificatieMethode'])) {
         $this->loadView('includes/header');
@@ -35,6 +34,9 @@ class verkoper extends controller{
             }
             else {
                 $gebruikerModel = $this->loadModel('gebruiker');
+                if(!isset($_POST['bankrekening'])) {
+                    $_POST['bankrekening'] = NULL;
+                }
                 $gebruikerModel->registreerVerkoper($_POST);
                 $this->loadView('includes/header');
                 echo '<div>verkoper geregistreerd</div>';
@@ -44,7 +46,8 @@ class verkoper extends controller{
         }
         else {
             $this->loadView('includes/header');
-            echo 'u bent al verkoper';
+            $this->data['melding'] = 'U bent al als verkoper geregistreerd';
+            $this->loadView('foutmelding', $this->data);
             $this->loadView('includes/footer');
         }
     }

@@ -59,6 +59,7 @@
 
                     </label>
                 </form>
+                <a href="<?php echo SITE_URL ?>wachtwoordvergeten" >Wachtwoord vergeten</a>
             <?php else: ?>
                 <?php if($_SESSION['loggedIn'] != false): ?>
                     <p>Gebruiker: <?= $_SESSION['gebruikersnaam'] ?></p>
@@ -91,16 +92,9 @@
     ==================================================== -->
 
     <div class="nine columns ">
-<p class="bread"> U bent nu hier:</p>
+<p class="bread"> </p>
 
-       <p>   <?php    
-$crumbs = explode("/",$_SERVER["REQUEST_URI"]);
-$i = 0;
-foreach($crumbs as $crumb){
-  echo '<a href="">'.ucfirst(str_replace(array(".php",""),array(""," "),$crumb) . ' > ' . '</a>');
-  $i++;
-}
-?>
+
     </div>
     <div class="six columns zoeken">
         <form method="POST" action="<?php echo SITE_URL ?>zoekresultaat">
